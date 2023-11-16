@@ -1,0 +1,110 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+.image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.connect-with-us {
+    margin-top: 40px;
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.value {
+    text-align: center;
+    flex: 1;
+}
+
+.additional-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.about-us,
+.our-work {
+    flex: 1;
+}
+
+.center-image {
+    display: block;
+    margin: 40px auto;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.contact-box,
+.visit-us-box {
+    flex: 1;
+    text-align: center;
+}
+
+/* Otros estilos ... */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

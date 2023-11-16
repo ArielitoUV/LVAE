@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core import views
 
 urlpatterns = [
+    path('',views.index,name="index"),
+    path('iniciosesion/',views.iniciosesion,name="iniciosesion"),
+    path('registroal/',views.registroal,name="registroal"),
+    path('registroap/',views.registroap,name="registroap"),
+    path('rs/',views.rs,name="rs"),
+    path('gestionperfil/',views.gestionperfil,name="gestionperfil"),
+    path('donaciones/',views.donaciones,name="donaciones"),
+    path('comunidad/',views.comunidad,name="comunidad"),
+    path('becas/',views.becas,name="becas"),
     path('admin/', admin.site.urls),
 ]
