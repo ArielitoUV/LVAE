@@ -100,7 +100,6 @@ body {
     text-align: center;
 }
 
-/* Otros estilos ... */
 
 footer {
     background-color: #333;
@@ -133,4 +132,10 @@ footer {
 
 .bordered {
     border: 1px solid black;
+}
+
+.icon {
+    width: 30px; /* Establece el ancho deseado */
+    height: 30px; /* Establece la altura deseada */
+    margin: 0 10px; /* Ajusta el espacio entre los íconos */
 }
