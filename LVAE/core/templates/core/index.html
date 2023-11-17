@@ -9,7 +9,9 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo"></div>
+        <div class="logo">
+            <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo de La Vía al Éxito" style="width: 50px; height: auto;">
+        </div>        
         <div class="brand">La Vía al Éxito</div>
         <div class="options">
             <a href="/becas/">Becas</a>
@@ -33,7 +35,7 @@
             <div class="text-content">
                 <h3>TODO EMPIEZA CON UN SUEÑO</h3>
                 <h5>Seis años conectado a la comunidad con recursos para ayudar a alcanzar sus metas educativas</h5>
-                <button class="btn">Dona ahora</button>
+                <a href="/donaciones/" class="btn">Dona ahora</a>
             </div>
             <div class="image">
                 <!-- Puedes colocar tu imagen aquí -->
@@ -138,10 +140,10 @@
 
     <footer class="footer">
         <div class="footer-images">
-            <img src="{% static 'assets/img/aliado1.png' %}" alt="Image 1">
-            <img src="{% static 'assets/img/aliado2.png' %}" alt="Image 2">
-            <img src="{% static 'assets/img/aliado3.png' %}" alt="Image 3">
-            <img src="{% static 'assets/img/aliado4.png' %}" alt="Image 4">
+            <img src="{% static 'assets/img/aliado1.png' %}" alt="Image 1" class="aliado">
+            <img src="{% static 'assets/img/aliado2.png' %}" alt="Image 2" class="aliado">
+            <img src="{% static 'assets/img/aliado3.png' %}" alt="Image 3" class="aliado">
+            <img src="{% static 'assets/img/aliado4.png' %}" alt="Image 4" class="aliado">
         </div>
         <div class="footer-message">
             <h2>Nuestros Aliados</h2>
