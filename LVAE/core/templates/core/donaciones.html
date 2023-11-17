@@ -3,47 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Vía al Éxito</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            display: flex;
-            align-items: center;
-        }
-
-        .donation-container {
-            text-align: center;
-            padding: 50px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        button {
-            font-size: 1.5em;
-            padding: 15px 30px;
-            background-color: #000000;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        p {
-            margin-top: 20px;
-            color: #333;
-            line-height: 1.6;
-        }
-    </style>
+    <title>La Vía al Éxito</title> 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles-donaciones.css' %}">
 </head>
 <body>
     <div class="donation-container">
-        <button>Dona Ahora!</button>
-        <p>Su donación puede ayudar a una persona a tener un futuro mejor.</p>
+        <button>
+            <img src="{% static 'assets/img/tarjeta.png' %}" alt="" >
+
+            Dona Ahora!
+        </button>
+                <div class="text-container">
+                    <p>Su donación puede ayudar a una persona</p>
+                    <p>a tener un futuro mejor.</p>
+                </div>
+                <div class="image-container">
+                    <img src="{% static 'assets/img/corazon.png' %}" alt="">
+                    <img src="{% static 'assets/img/corazon.png' %}" alt="">
+                    <img src="{% static 'assets/img/corazon.png' %}" alt="">
+                    <img src="{% static 'assets/img/corazon.png' %}" alt="">
+                    <img src="{% static 'assets/img/corazon.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>
