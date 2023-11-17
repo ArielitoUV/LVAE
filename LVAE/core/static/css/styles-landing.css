@@ -90,24 +90,25 @@ body {
 
 .contact-section {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no haya suficiente espacio */
     justify-content: space-between;
     margin-top: 40px;
+    text-align: left;
 }
 
 .contact-box,
 .visit-us-box {
-    flex: 1;
+    flex-basis: 48%; /* Establece el ancho base para evitar que se superpongan */
     text-align: center;
+    margin-bottom: 20px; /* Agrega un margen inferior para separar los bloques */
 }
 
-
-footer {
+.footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
 }
-
 
 .language {
     display: inline-block;
@@ -138,4 +139,44 @@ footer {
     width: 30px; /* Establece el ancho deseado */
     height: 30px; /* Establece la altura deseada */
     margin: 0 10px; /* Ajusta el espacio entre los íconos */
+}
+
+/* Nueva sección agregada */
+.social-subscribe-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.social-follow,
+.subscribe-newsletter {
+    flex-basis: 48%;
+}
+
+.response-block {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-images img {
+    width: 48%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.footer-message {
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }

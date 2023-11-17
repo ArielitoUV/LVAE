@@ -93,27 +93,60 @@
             </div>
         </div>
 
-        <img src="{% static 'assets/img/central.png' %}" alt="Imagen Central" class="center-image">
+        <img src="{% static 'assets/img/central.png' %}" alt="Imagen Central" class="center-image" style="max-width: 50%; height: auto;">
 
         <div class="contact-section bordered">
             <div class="contact-box">
                 <h2>Contacto</h2>
-                <p>Mantente en contacto con el equipo de La Vía al Éxito</p>
-                <p>Dirección: 345 Somerset Street Suite 9 North Plainfield,
-                    New Jersey, 07060, US</p>
-                <p>Correo: contact@laviaalexito.com</p>
-                <p>Teléfono: 732-319-7884</p>
+                <p><img src="{% static 'assets/img/mapa.png' %}" alt="icon" class="icon"> Dirección: 345 Somerset Street Suite 9, North Plainfield, New Jersey, 07060, US</p>
+                <p><img src="{% static 'assets/img/gmail.png' %}" alt="icon" class="icon"> Correo: <a href="mailto:contact@laviaalexito.com">contact@laviaalexito.com</a></p>
+                <p><img src="{% static 'assets/img/telefono.png' %}" alt="icon" class="icon"> Teléfono: <a href="tel:+17323197884">732-319-7884</a></p>
             </div>
-
-            <div class="visit-us-box bordered">
+            <div class="visit-us-box">
                 <h2>Visítanos</h2>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24226.804237068925!2d-74.430538!3d40.622151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ba20355aaaab%3A0x3c832829592a82f5!2s345%20Somerset%20St%20Suit%209%2C%20North%20Plainfield%2C%20NJ%2007060!5e0!3m2!1ses-419!2sus!4v1700139670560!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
+
+        <div class="social-subscribe-container">
+            <div class="social-follow">
+                <h2>Síguenos</h2>
+                <div class="social-icons">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="{% static 'assets/img/facebook.png' %}" alt="Facebook" class="icon">
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="{% static 'assets/img/twitter.png' %}" alt="Twitter" class="icon">
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="{% static 'assets/img/instagram.png' %}" alt="Instagram" class="icon">
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="{% static 'assets/img/youtube.png' %}" alt="YouTube" class="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="subscribe-newsletter">
+                <h2>Suscríbete a nuestro boletín</h2>
+                <div class="response-block">
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button class="btn">Suscribirse</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2022 La Vía al Éxito. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <div class="footer-images">
+            <img src="{% static 'assets/img/aliado1.png' %}" alt="Image 1">
+            <img src="{% static 'assets/img/aliado2.png' %}" alt="Image 2">
+            <img src="{% static 'assets/img/aliado3.png' %}" alt="Image 3">
+            <img src="{% static 'assets/img/aliado4.png' %}" alt="Image 4">
+        </div>
+        <div class="footer-message">
+            <h2>Nuestros Aliados</h2>
+            <p>En La Vía al Éxito sabemos que la integración y la verdadera solidaridad entre la comunidad, las empresas y las instituciones hacen realidad los más grandes proyectos.</p>
+        </div>
     </footer>
 </body>
 </html>
