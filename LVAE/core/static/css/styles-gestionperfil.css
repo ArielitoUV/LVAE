@@ -15,7 +15,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 400px;
+    max-width: 500px; /* Ajusta el ancho máximo del contenedor según tus necesidades */
     width: 100%;
     box-sizing: border-box;
 }
@@ -32,17 +32,21 @@ h1, h2 {
 
 form {
     margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #555;
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
 }
 
-input {
-    width: calc(100% - 16px); /* Ajusta el ancho con padding incluido */
-    padding: 10px;
+.form-row label,
+.form-row input {
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    padding: 15px; /* Ajusta el relleno del cuadro según tus necesidades */
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 6px;
@@ -52,7 +56,7 @@ input {
 input[type="submit"] {
     background-color: #904caf;
     color: white;
-    padding: 12px 20px;
+    padding: 15px 20px; /* Ajusta el relleno del botón según tus necesidades */
     border: none;
     cursor: pointer;
     width: 100%;

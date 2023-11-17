@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualizar Datos - La Vía al Éxito</title>
-    <link rel="stylesheet" href="/LVAE/core/static/css/styles-gestionperfil.css">
+    <title>La Vía al Éxito</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles-gestionperfil.css' %}">
+    
 </head>
 <body>
 
@@ -17,24 +19,36 @@
         <h2>Actualizar Datos</h2>
 
         <form>
-            <label for="email">Correo Electrónico Actual</label>
-            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico actual" required>
+            <div class="form-row">
+                <label for="email">Correo Electrónico Actual</label>
+                <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico actual" required>
+            </div>
 
-            <label for="respuestaEmail">Correo Electrónico Actualizado</label>
-            <input type="text" id="respuestaEmail" name="respuestaEmail" placeholder="Ingrese su correo electrónico actualizado" required>
+            <div class="form-row">
+                <label for="respuestaEmail">Correo Electrónico Actualizado</label>
+                <input type="text" id="respuestaEmail" name="respuestaEmail" placeholder="Ingrese su correo electrónico actualizado" required>
+            </div>
 
-            <label for="password">Contraseña Actual</label>
-            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña actual" required>
+            <div class="form-row">
+                <label for="password">Contraseña Actual</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña actual" required>
+            </div>
 
-            <label for="respuestaPassword">Contraseña Actualizada</label>
-            <input type="text" id="respuestaPassword" name="respuestaPassword" placeholder="Ingrese su contraseña actualizada" required>
+            <div class="form-row">
+                <label for="respuestaPassword">Contraseña Actualizada</label>
+                <input type="text" id="respuestaPassword" name="respuestaPassword" placeholder="Ingrese su contraseña actualizada" required>
+            </div>
 
-            <label for="telefono">Número Telefónico Actual</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número telefónico actual" required>
-            
-            <label for="respuestaTelefono">Número Telefónico Actualizado</label>
-            <input type="text" id="respuestaTelefono" name="respuestaTelefono" placeholder="Ingrese su número telefónico actualizado" required>
-            
+            <div class="form-row">
+                <label for="telefono">Número Telefónico Actual</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número telefónico actual" required>
+            </div>
+
+            <div class="form-row">
+                <label for="respuestaTelefono">Número Telefónico Actualizado</label>
+                <input type="text" id="respuestaTelefono" name="respuestaTelefono" placeholder="Ingrese su número telefónico actualizado" required>
+            </div>
+
             <input type="submit" value="Enviar">
         </form>
     </div>
