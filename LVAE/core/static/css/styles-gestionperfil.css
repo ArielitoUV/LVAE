@@ -18,6 +18,8 @@ body {
     max-width: 800px; /* Ajusta el ancho máximo del contenedor según tus necesidades */
     width: 100%;
     box-sizing: border-box;
+    max-height: 100vh; 
+    overflow-y: auto;
 }
 
 .center-image {
