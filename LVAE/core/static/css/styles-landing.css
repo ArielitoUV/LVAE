@@ -182,3 +182,9 @@ body {
 .footer-message {
     margin-top: 20px;
 }
+
+.right-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
