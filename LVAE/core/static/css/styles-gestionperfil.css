@@ -20,10 +20,12 @@ body {
     box-sizing: border-box;
 }
 
-.icon img {
-    width: 80px; /* Ajusta el tamaño según tu icono */
-    border-radius: 50%; /* Hace que el icono sea circular */
-    margin-bottom: 20px;
+.center-image {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    bottom: -10px;
 }
 
 h1, h2 {
