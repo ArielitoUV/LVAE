@@ -6,15 +6,31 @@
     <title>La Vía al Éxito</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles-registro.css' %}">
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 </head>
 <body>
 
+    <div class="idioma-container">
+        <div class="custom-select" id="customSelect">
+            <span>Español</span>
+            <img src="{% static 'assets/img/idioma_español.png' %}" alt="Español">
+        </div>
+
+        <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
+        <div class="custom-options" id="customOptions">
+            <div class="custom-option" onclick="selectOption('es', 'Español', '{% static "assets/img/idioma_español.png" %}')">Español</div>
+            <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static "assets/img/idioma_ingles.png" %}')">Ingles</div>
+        </div>
+    </div>
+
     <div class="registration-container">
+        <img src="/LVAE/core/static/assets/img/logo.png" alt="Imagen de La Vía al Éxito" class="top-image">
+        <div class="icon">
         <div class="icon"></div>
         <h1>Registro</h1>
-        <form>
+        <form action="" method="POST">
 
-            <label for="role">Selecciona tu rol:</label>
+            <label for="role">Selecciona tu ocupación:</label>
             <select name="role" id="role">
                 <option value="apoderado">Apoderado</option>
                 <option value="estudiante">Estudiante</option>
@@ -35,10 +51,15 @@
             <label for="telefono">Número de teléfono:</label>
             <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required>
 
+
+
+            <div class="g-recaptcha" data-sitekey="6LcdFg8pAAAAAHH2KUwzva58LENLlDLAG0foR_uF" data-action="LOGIN"></div>
+
             <div class="checkbox-group">
                 <input type="checkbox" id="notificaciones" name="notificaciones">
                 <label for="notificaciones">Recibir notificaciones en su correo</label>
             </div>
+
 
             <div class="checkbox-group">
                 <input type="checkbox" id="terminos" name="terminos" required>
@@ -51,5 +72,25 @@
         <p>¿Ya tienes una cuenta? - <a href="/iniciosesion/">Inicia Sesión</a></p>
     </div>
 
+
+    <script>
+        function selectOption(value, text, imagePath) {
+            document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+            document.getElementById('customOptions').classList.remove('show');
+        }
+
+        document.getElementById('customSelect').addEventListener('click', function () {
+            document.getElementById('customOptions').classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!event.target.matches('.custom-select')) {
+                var options = document.getElementById('customOptions');
+                if (options.classList.contains('show')) {
+                    options.classList.remove('show');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
