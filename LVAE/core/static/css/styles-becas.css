@@ -3,14 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Esto centra verticalmente en la página */
 }
 
 .container {
     max-width: 800px;
+    margin: 50px auto; /* Ajusta el margen para centrar en la página */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
