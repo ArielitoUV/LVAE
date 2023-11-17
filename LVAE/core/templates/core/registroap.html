@@ -70,6 +70,21 @@
 
         <p>¿Ya tienes una cuenta? - <a href="{% url 'iniciosesion' %}">Inicia Sesión</a></p>
     </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-images">
+            <img src="{% static 'assets/img/aliado1.png' %}" alt="Image 1" class="aliado">
+            <img src="{% static 'assets/img/aliado2.png' %}" alt="Image 2" class="aliado">
+            <img src="{% static 'assets/img/aliado3.png' %}" alt="Image 3" class="aliado">
+            <img src="{% static 'assets/img/aliado4.png' %}" alt="Image 4" class="aliado">
+        </div>
+        <div class="footer-message">
+            <h2>Nuestros Aliados</h2>
+            <p>En La Vía al Éxito sabemos que la integración y la verdadera solidaridad entre la comunidad, las empresas y las instituciones hacen realidad los más grandes proyectos.</p>
+        </div>
+    </footer>
+
         <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
     <script>
         function selectOption(value, text, imagePath) {
