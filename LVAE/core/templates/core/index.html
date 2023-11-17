@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Vía al Éxito</title>
-    <link rel="stylesheet" href="/LVAE/core/static/css/styles-landing.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles-landing.css' %}">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo"></div>
         <div class="brand">La Vía al Éxito</div>
         <div class="options">
-            <a href="#">Becas</a>
-            <a href="#">Donaciones</a>
+            <a href="/becas/">Becas</a>
+            <a href="/donaciones/">Donaciones</a>
             <a href="#">Comunidad</a>
-            <a href="#">Redes Sociales</a>
-            <button class="btn">Registrarse</button>
-            <button class="btn">Iniciar Sesión</button>
+            <a href="/rs/">Redes Sociales</a>
+            <a href="/registroap/" class="btn">Registrarse</a>
+            <a href="/iniciosesion/" class="btn">Iniciar Sesión</a>
             <div class="language">
                 <div class="language-tab">Español</div>
                 <div class="language-options">
