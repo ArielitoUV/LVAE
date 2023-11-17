@@ -15,7 +15,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 500px; /* Ajusta el ancho máximo del contenedor según tus necesidades */
+    max-width: 800px; /* Ajusta el ancho máximo del contenedor según tus necesidades */
     width: 100%;
     box-sizing: border-box;
 }
@@ -53,16 +53,21 @@ form {
     box-sizing: border-box;
 }
 
+
 input[type="submit"] {
     background-color: #904caf;
     color: white;
     padding: 15px 20px; /* Ajusta el relleno del botón según tus necesidades */
     border: none;
     cursor: pointer;
-    width: 100%;
+    margin-top: 15px; /* Añadido para separar el botón de los campos de entrada */
+    width: 100%; /* Ajusta el ancho según tus necesidades */
     border-radius: 8px;
     transition: background-color 0.3s;
+    margin-left: 170px; /* Centra el botón alineándolo al margen derecho */
+    margin-right: 100px; /* Centra el botón alineándolo al margen izquierdo */
 }
+
 
 input[type="submit"]:hover {
     background-color: #9251b1;
