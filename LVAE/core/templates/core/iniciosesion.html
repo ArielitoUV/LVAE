@@ -1,14 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/LVAE/core/static/css/styles-iniciosesion.css">
+
     <title>La Vía al Éxito</title>
+    <link rel="stylesheet" href="{% static 'css/styles-iniciosesion.css' %}">
 </head>
 <body>
     <div class="login-container">
-        <img src="/LVAE/core/static/assets/img/logo.png" alt="Imagen de La Vía al Éxito" class="top-image">
+        <img src="{% static 'assets/img/logo.png' %}" alt="Imagen de La Vía al Éxito" class="top-image">
         <div class="icon">
         </div>
         <h1>La Vía al Éxito</h1>
@@ -23,7 +26,7 @@
             <div class="password-container">
                 <input type="password" id="password" name="password" required>
                 <span class="toggle-password" onclick="togglePasswordVisibility()">
-                    <img src="/LVAE/core/static/assets/img/eye_closed.png" alt="Mostrar/Ocultar contraseña" id="eyeIcon">
+                    <img src="{% static 'assets/img/eye_closed.png' %}" alt="Mostrar/Ocultar contraseña" id="eyeIcon">
                 </span>
             </div>
 
@@ -43,25 +46,24 @@
         </div>
 
         <p class="forgot-password">
-            ¿Olvidó su contraseña? <a href="/LVAE/core/templates/core/gestionperfil.html">Restablecer contraseña</a>
+            ¿Olvidó su contraseña? <a href="{% url 'gestionperfil' %}">Restablecer contraseña</a>
         </p>
 
         <p class="join-now">
-            ¿Aún no tienes una cuenta? <a href="/LVAE/core/templates/core/registroap.html">Únete</a>
+            ¿Aún no tienes una cuenta? <a href="{% url 'registroap' %}">Únete</a>
         </p>
     </div>
-
-    
 
     <!-- Contenedor de idioma y las img -->
     <div class="idioma-container">
         <div class="custom-select" id="customSelect">
             <span>Español</span>
-            <img src="/LVAE/core/static/assets/img/idioma_español.png" alt="Español">
+            <img src="{% static 'assets/img/idioma_español.png' %}" alt="Español">
         </div>
+                <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
         <div class="custom-options" id="customOptions">
-            <div class="custom-option" onclick="selectOption('es', 'Español', '/LVAE/core/static/assets/img/idioma_español.png')">Español</div>
-            <div class="custom-option" onclick="selectOption('en', 'Ingles', '/LVAE/core/static/assets/img/idioma_ingles.png')">Ingles</div>
+            <div class="custom-option" onclick="selectOption('es', 'Español', '{% static 'assets/img/idioma_español.png' %}')">Español</div>
+            <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
         </div>
     </div>
     <!-- el script gestiona el select personalizado, junto con la imagen del ojito -->
@@ -77,10 +79,10 @@
 
             if (passwordInput.type === 'password') {
                 passwordInput.type = 'text';
-                eyeIcon.src = '/LVAE/core/static/assets/img/open_eye.png';
+                eyeIcon.src = "{% static 'assets/img/open_eye.png' %}";
             } else {
                 passwordInput.type = 'password';
-                eyeIcon.src = '/LVAE/core/static/assets/img/closed_eye.png';
+                eyeIcon.src = "{% static 'assets/img/closed_eye.png' %}";
             }
         }
 

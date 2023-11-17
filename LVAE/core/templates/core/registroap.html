@@ -18,8 +18,8 @@
 
         <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
         <div class="custom-options" id="customOptions">
-            <div class="custom-option" onclick="selectOption('es', 'Español', '{% static "assets/img/idioma_español.png" %}')">Español</div>
-            <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static "assets/img/idioma_ingles.png" %}')">Ingles</div>
+            <div class="custom-option" onclick="selectOption('es', 'Español', '{% static 'assets/img/idioma_español.png' %}')">Español</div>
+            <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
         </div>
     </div>
 
@@ -68,7 +68,7 @@
             <input type="submit" value="Enviar">
         </form>
 
-        <p>¿Ya tienes una cuenta? - <a href="/iniciosesion/">Inicia Sesión</a></p>
+        <p>¿Ya tienes una cuenta? - <a href="{% url 'iniciosesion' %}">Inicia Sesión</a></p>
     </div>
         <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
     <script>
