@@ -6,9 +6,6 @@ def index(request):
 def iniciosesion(request):
     return render(request, "core/iniciosesion.html")
 
-def registroal(request):
-    return render(request, "core/registroal.html")
-
 def registroap(request):
     return render(request, "core/registroap.html")
 
