@@ -26,15 +26,33 @@
 button {
     font-size: 1.5em;
     padding: 15px 30px;
-    background-color: #2E8540; /* o un tono más claro o más oscuro de verde */
-    color: white;
+    background-color: white; /* o el color que prefieras */
+    color: #5D26C1; /* Ajusta el color del texto según la visibilidad */
     border: none;
-    border-radius: 50%;
+    border-radius: 50%; /* Hace que los bordes sean circulares */
     cursor: pointer;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+
+/* Sobrescribe los estilos de Bootstrap para el botón */
+button:active,
+button:focus {
+    outline: none; /* Elimina el contorno al hacer clic o enfocar */
+    box-shadow: none; /* Elimina la sombra al hacer clic o enfocar */
+}
+
+/* Añade un estilo de transición suave para una apariencia más pulida */
+button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cambia el color al hacer hover */
+button:hover {
+    background-color: #4c7aaf;
+    color: white;
 }
 
 
