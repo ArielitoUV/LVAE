@@ -140,7 +140,6 @@ body {
     margin: 0 10px;
 }
 
-/* Nueva sección agregada */
 .social-subscribe-container {
     display: flex;
     justify-content: space-between;
@@ -175,7 +174,6 @@ body {
     margin-top: 20px;
 }
 
-/* Nuevos estilos para la barra de navegación */
 .navbar-nav {
     display: flex;
     gap: 30px;
@@ -200,4 +198,6 @@ body {
     color: white;
 }
 
-
+.bordered {
+    border-radius: 20px;
+}
