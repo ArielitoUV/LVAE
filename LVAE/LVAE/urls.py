@@ -24,7 +24,6 @@ urlpatterns = [
     path('rs/',views.rs,name="rs"),
     path('gestionperfil/',views.gestionperfil,name="gestionperfil"),
     path('donaciones/',views.donaciones,name="donaciones"),
-    path('comunidad/',views.comunidad,name="comunidad"),
     path('becas/',views.becas,name="becas"),
     path('admin/', admin.site.urls),
 ]

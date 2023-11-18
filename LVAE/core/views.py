@@ -18,8 +18,5 @@ def gestionperfil(request):
 def donaciones(request):
     return render(request, "core/donaciones.html")
 
-def comunidad(request):
-    return render(request, "core/comunidad.html")
-
 def becas(request):
     return render(request, "core/becas.html")
