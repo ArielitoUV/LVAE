@@ -2,11 +2,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background: #59C173;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra horizontal y verticalmente */
-    height: 100vh; /* Ajusta según tus necesidades */
+    justify-content: center;
+    height: 100vh;
 }
 
 .center-container {
@@ -15,31 +17,32 @@
 
 .donation-container {
     padding: 50px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.568); /* Fondo blanco con opacidad */
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: inline-block; /* Permite centrar horizontalmente */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    display: inline-block;
 }
 
 button {
     font-size: 1.5em;
     padding: 15px 30px;
-    background-color: rgb(89, 102, 102);
+    background-color: #2E8540; /* o un tono más claro o más oscuro de verde */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    display: block; /* Asegura que el botón ocupe toda la anchura disponible */
+    display: block;
 }
 
+
 button img {
-    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
-    margin-right: 10px; /* Espacio entre la imagen y el texto del botón */
-    width: 30px; /* Ajusta el ancho de la imagen según tus necesidades */
-    height: auto; /* Mantiene la proporción de la imagen */
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 30px;
+    height: auto;
 }
 
 .image-container {
@@ -49,16 +52,16 @@ button img {
 }
 
 .image-container img {
-    width: 30px; /* Ajusta el ancho de las imágenes según tus necesidades */
-    height: auto; /* Mantiene la proporción original de las imágenes */
-    margin: 0 5px; /* Ajusta el margen entre las imágenes según tus necesidades */
+    width: 30px;
+    height: auto;
+    margin: 0 5px;
 }
 
 .text-container p {
     color: #333;
     line-height: 1.6;
-    font-size: 18px; /* Ajusta el tamaño de la letra según tus necesidades */
-    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    font-size: 18px;
+    margin: 0;
 }
 
 .text-container {
@@ -69,5 +72,5 @@ p {
     margin-top: 20px;
     color: #333;
     line-height: 1.6;
-    font-size: 18px; /* Ajusta el tamaño de la letra según tus necesidades */
+    font-size: 18px;
 }
