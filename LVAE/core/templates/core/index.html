@@ -10,22 +10,26 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo de La Vía al Éxito" style="width: 50px; height: auto;">
-            La Vía al Éxito
-        </a>
+        <div class="logo">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo de La Vía al Éxito" style="width: 50px; height: auto;">
+                La Vía al Éxito
+            </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="/becas/">Becas</a>
-                <a class="nav-item nav-link" href="/donaciones/">Donaciones</a>
-                <a class="nav-item nav-link" href="/rs/">Redes Sociales</a>
-                <div class="right-section">
-                    <a class="nav-item nav-link btn" href="/registroap/">Registrarse</a>
-                    <a class="nav-item nav-link btn" href="/iniciosesion/">Iniciar Sesión</a>
-                    <a class="nav-item nav-link btn" href="/gestionperfil/">Perfil</a>
+            <div class="options">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="/becas/">Becas</a>
+                    <a class="nav-item nav-link" href="/donaciones/">Donaciones</a>
+                    <a class="nav-item nav-link" href="/rs/">Redes Sociales</a>
+                    <div class="right-section">
+                        <a class="nav-item nav-link btn" href="/registroap/">Registrarse</a>
+                        <a class="nav-item nav-link btn" href="/iniciosesion/">Iniciar Sesión</a>
+                        <a class="nav-item nav-link" href="/gestionperfil/">Perfil</a>
+                    </div>
                 </div>
             </div>
         </div>
