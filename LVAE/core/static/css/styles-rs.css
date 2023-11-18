@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    width: 100%;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -14,7 +14,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    height: 700px;
+    max-width: 500px; /* Ajusta el ancho máximo según tus necesidades */
 }
 
 .container:hover {
@@ -24,14 +24,13 @@ body {
 /* Ajuste el valor de scale según sea necesario para hacer que el contenido se vea más grande */
 iframe {
     width: 100%;
-    height: 500px;
+    height: 500px; /* Ajusta la altura según tus necesidades */
     border: none;
     border-radius: 12px;
     overflow: hidden;
     transform: scale(1.5); /* Ajusta el valor según sea necesario */
-    transform-origin: 0 0px; /* Esto ajusta el origen de la transformación para evitar desplazamiento */
+    transform-origin: 0 0; /* Mueve el origen de la transformación al contenedor iframe */
 }
-
 
 h1 {
     text-align: center;
