@@ -64,7 +64,7 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
     margin-top: 100px; /* Añadido para separar el botón de los campos de entrada */
-    width: calc(100% - 30px); /* Ajusta el ancho según tus necesidades */
+    width: calc(100% - 250px); /* Ajusta el ancho según tus necesidades */
     border-radius: 8px;
     transition: background-color 0.3s;
 }
