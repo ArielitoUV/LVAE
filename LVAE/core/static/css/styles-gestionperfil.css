@@ -57,7 +57,6 @@ form {
     box-sizing: border-box;
 }
 
-
 input[type="submit"] {
     background-color: #904caf;
     color: white;
@@ -65,13 +64,10 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
     margin-top: 15px; /* Añadido para separar el botón de los campos de entrada */
-    width: 100%; /* Ajusta el ancho según tus necesidades */
+    width: calc(100% - 30px); /* Ajusta el ancho según tus necesidades */
     border-radius: 8px;
     transition: background-color 0.3s;
-    margin-left: 170px; /* Centra el botón alineándolo al margen derecho */
-    margin-right: 100px; /* Centra el botón alineándolo al margen izquierdo */
 }
-
 
 input[type="submit"]:hover {
     background-color: #9251b1;
@@ -79,4 +75,13 @@ input[type="submit"]:hover {
 
 input::placeholder {
     color: #6e5959;
+}
+
+.btn-enviar {
+    font-size: 18px; /* Ajusta el tamaño de fuente según tus necesidades */
+    padding: 15px 20px; /* Ajusta el relleno del botón según tus necesidades */
+}
+
+.btn-enviar:hover {
+    background-color: #9251b1;
 }
