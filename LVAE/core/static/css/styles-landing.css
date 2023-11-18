@@ -7,9 +7,6 @@ body {
 .navbar {
     background-color: #333;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px;
 }
 
@@ -34,12 +31,12 @@ body {
 .main-content {
     max-width: 1200px;
     margin: 20px auto;
+    
 }
 
 .left-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .text-content {
@@ -54,7 +51,7 @@ body {
 
 .connect-with-us {
     margin-top: 40px;
-    text-align: center; /* Alinea el contenido al centro */
+    text-align: center;
 }
 
 .social-icons {
@@ -86,11 +83,13 @@ body {
 .center-image {
     display: block;
     margin: 40px auto;
+    max-width: 50%; /* Ajusta el tamaño máximo según tus necesidades */
+    height: auto;
 }
 
 .contact-section {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no haya suficiente espacio */
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 40px;
     text-align: left;
@@ -98,9 +97,9 @@ body {
 
 .contact-box,
 .visit-us-box {
-    flex-basis: 48%; /* Establece el ancho base para evitar que se superpongan */
+    flex-basis: 48%;
     text-align: center;
-    margin-bottom: 20px; /* Agrega un margen inferior para separar los bloques */
+    margin-bottom: 20px;
 }
 
 .footer {
@@ -136,9 +135,9 @@ body {
 }
 
 .icon {
-    width: 30px; /* Establece el ancho deseado */
-    height: 30px; /* Establece la altura deseada */
-    margin: 0 10px; /* Ajusta el espacio entre los íconos */
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
 }
 
 /* Nueva sección agregada */
@@ -158,13 +157,6 @@ body {
     text-align: center;
 }
 
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
 .footer-images {
     display: flex;
     flex-wrap: wrap;
@@ -174,7 +166,7 @@ body {
 
 .footer-images img {
     width: 48%;
-    max-width: 200px; /* Ajusta el tamaño máximo según tus necesidades */
+    max-width: 200px;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -183,8 +175,29 @@ body {
     margin-top: 20px;
 }
 
-.right-section {
+/* Nuevos estilos para la barra de navegación */
+.navbar-nav {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
 }
+
+.navbar-nav li {
+    list-style: none;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.right-section {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+
