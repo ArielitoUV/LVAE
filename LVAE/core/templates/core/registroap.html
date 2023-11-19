@@ -27,10 +27,11 @@
         <img src="{% static 'assets/img/logo.png' %}" alt="Imagen de La Vía al Éxito" class="top-image">
 
         <h1>Registro</h1>
-        <form action="" method="POST">
+        <form action="" method="POST" onsubmit="return validateForm()">
 
             <label for="role">Selecciona tu ocupación:</label>
-            <select name="role" id="role">
+            <select name="role" id="role" required>
+                <option value="">Seleccione una opción</option>
                 <option value="apoderado">Apoderado</option>
                 <option value="estudiante">Estudiante</option>
             </select>
@@ -48,9 +49,7 @@
             <input type="text" id="estado" name="estado" placeholder="Ingrese su estado" required>
 
             <label for="telefono">Número de teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required>
-
-
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required pattern="[0-9]{10}">
 
             <div class="g-recaptcha" data-sitekey="6LcdFg8pAAAAAHH2KUwzva58LENLlDLAG0foR_uF" data-action="LOGIN"></div>
 
@@ -58,7 +57,6 @@
                 <input type="checkbox" id="notificaciones" name="notificaciones">
                 <label for="notificaciones">Recibir notificaciones en su correo</label>
             </div>
-
 
             <div class="checkbox-group">
                 <input type="checkbox" id="terminos" name="terminos" required>
@@ -90,6 +88,28 @@
                 }
             }
         });
+
+        function validateForm() {
+            // Validación del formulario
+            var role = document.getElementById('role').value;
+            var telefono = document.getElementById('telefono').value;
+
+            // Validar que se haya seleccionado un rol
+            if (role === "") {
+                alert("Por favor, seleccione su ocupación.");
+                return false;
+            }
+
+            // Validar el número de teléfono
+            if (!/^\d{10}$/.test(telefono)) {
+                alert("Por favor, ingrese un número de teléfono válido (10 dígitos).");
+                return false;
+            }
+
+            // Devuelve true si el formulario es válido
+            return true;
+        }
+
     </script>
 </body>
 </html>
