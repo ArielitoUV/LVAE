@@ -44,34 +44,3 @@ h1 {
     color: #555;
     margin-top: 20px;
 }
-
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-.footer-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.footer-images img {
-    width: 48%;
-    max-width: 200px; /* Ajusta el tamaño máximo según tus necesidades */
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.footer-message {
-    margin-top: 20px;
-}
-
-.icon {
-    width: 30px; /* Establece el ancho deseado */
-    height: 30px; /* Establece la altura deseada */
-    margin: 0 10px; /* Ajusta el espacio entre los íconos */
-}
