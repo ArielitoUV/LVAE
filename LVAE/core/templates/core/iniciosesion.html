@@ -10,8 +10,7 @@
 <body>
     <div class="login-container">
         <img src="{% static 'assets/img/logo.png' %}" alt="Imagen de La Vía al Éxito" class="top-image">
-        <div class="icon">
-        </div>
+        <div class="icon"></div>
         <h1>La Vía al Éxito</h1>
         <h2>Inicia Sesión</h2>
         <p>¡Hola! Encantado de verte de nuevo.</p>
@@ -22,9 +21,9 @@
 
             <label for="password">Contraseña</label>
             <div class="password-container">
-                <input type="password" id="password" name="password" required>
-                <span class="toggle-password" onclick="togglePasswordVisibility()">
-                    <img src="{% static 'assets/img/eye_closed.png' %}" alt="Mostrar/Ocultar contraseña" id="eyeIcon">
+                <input type="password" id="password" name="password" oninput="togglePasswordVisibility()" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()" id="eyeIcon">
+                    <img src="{% static 'assets/img/closed_eye.png' %}" alt="Mostrar/Ocultar contraseña">
                 </span>
             </div>
 
@@ -58,43 +57,40 @@
             <span>Español</span>
             <img src="{% static 'assets/img/idioma_español.png' %}" alt="Español">
         </div>
-                <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
+        <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
         <div class="custom-options" id="customOptions">
             <div class="custom-option" onclick="selectOption('es', 'Español', '{% static 'assets/img/idioma_español.png' %}')">Español</div>
             <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
         </div>
     </div>
-    <!-- el script gestiona el select personalizado, junto con la imagen del ojito -->
+
     <script>
-        function selectOption(value, text, imagePath) {
-            document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
-            document.getElementById('customOptions').classList.remove('show');
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('password');
+            var eyeIcon = document.getElementById('eyeIcon');
+
+            if (passwordInput.value.trim() !== '') {
+                eyeIcon.style.display = 'inline-block';
+            } else {
+                eyeIcon.style.display = 'none';
+            }
         }
 
-        function togglePasswordVisibility() {
+        document.getElementById('eyeIcon').addEventListener('click', function () {
             var passwordInput = document.getElementById('password');
             var eyeIcon = document.getElementById('eyeIcon');
 
             if (passwordInput.type === 'password') {
                 passwordInput.type = 'text';
-                eyeIcon.src = "{% static 'assets/img/open_eye.png' %}";
+                eyeIcon.querySelector('img').src = "{% static 'assets/img/open_eye.png' %}";
             } else {
                 passwordInput.type = 'password';
-                eyeIcon.src = "{% static 'assets/img/closed_eye.png' %}";
+                eyeIcon.querySelector('img').src = "{% static 'assets/img/closed_eye.png' %}";
             }
-        }
-
-        document.getElementById('customSelect').addEventListener('click', function () {
-            document.getElementById('customOptions').classList.toggle('show');
         });
 
-        document.addEventListener('click', function (event) {
-            if (!event.target.matches('.custom-select')) {
-                var options = document.getElementById('customOptions');
-                if (options.classList.contains('show')) {
-                    options.classList.remove('show');
-                }
-            }
+        document.addEventListener("DOMContentLoaded", function() {
+            togglePasswordVisibility(); //
         });
     </script>
 </body>
