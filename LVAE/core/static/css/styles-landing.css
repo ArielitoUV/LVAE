@@ -10,7 +10,7 @@ body {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 20px;
     border: 3px solid #ccc; /* Add a 1px solid border at the bottom */
 
 }
@@ -187,8 +187,9 @@ body {
 }
 
 .response-block {
-    margin-top: 20px;
+    margin-top: 9px;
     text-align: center;
+    margin-right: 261px;
 }
 
 .footer-images {
@@ -373,7 +374,7 @@ border: 2px solid #ccc; /* Add borders if desired */
 margin: 7px; /* Add margin as desired */
 padding: 10px 70px; /* Adjust padding for the button */
 font-size: 18px; /* Adjust font size if needed */
-border-radius: 0px; /* Set border-radius to zero */
+border-radius: 20px;
 }
 
 .navbar {
