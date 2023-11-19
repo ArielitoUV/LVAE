@@ -7,8 +7,7 @@ body {
     background: linear-gradient(to left, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.container {
-    width: 100%;
+.container-rs {
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff96;
@@ -16,10 +15,10 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    max-width: 700px; /* Ajusta el ancho máximo según tus necesidades */
+    max-width: 725px; /* Ajusta el ancho máximo según tus necesidades */
 }
 
-.container:hover {
+.container-rs:hover {
     transform: scale(1.02);
 }
 
@@ -40,7 +39,7 @@ h1 {
 }
 
 /* Estilo adicional para hacer que el contenedor sea más atractivo */
-.container p {
+.container-rs p {
     text-align: center;
     color: #555;
     margin-top: 20px;
