@@ -5,8 +5,8 @@ body {
 }
 
 .btn {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
