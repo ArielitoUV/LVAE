@@ -10,12 +10,12 @@ body {
 .container-rs {
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff96;
+    background-color: #ffffff42;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    max-width: 725px; /* Ajusta el ancho máximo según tus necesidades */
+    max-width: 1050px; /* Ajusta el ancho máximo según tus necesidades */
 }
 
 .container-rs:hover {
