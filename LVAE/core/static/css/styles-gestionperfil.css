@@ -21,6 +21,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     max-height: 80vh; /* Ajustado para reducir la altura del contenedor */
+    margin-bottom: -63px; /* Agregado margen inferior */
     overflow-y: auto;
 }
 
@@ -136,3 +137,14 @@ input::placeholder {
     cursor: pointer;
 }
 /* IDIOMA */
+
+
+
+
+.navbarini {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+}
