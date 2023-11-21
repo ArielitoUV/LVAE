@@ -186,3 +186,25 @@ button:hover {
     position: relative;
 }
 
+/* CHECKBOX */
+
+#langCheckbox {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+/* Estilo del checkbox */
+#langCheckbox:checked::before {
+    content: '✔';
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+#langCheckbox::before {
+    content: '✖';
+    font-size: 20px;
+    color: #ccc;
+}

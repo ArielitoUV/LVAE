@@ -53,11 +53,11 @@
 
     <!-- Contenedor de idioma y las img -->
     <div class="idioma-container">
-        <div class="custom-select" id="customSelect">
+        <div class="custom-select" id="customSelect" onclick="toggleOptions()">
             <span>Español</span>
             <img src="{% static 'assets/img/idioma_español.png' %}" alt="Español">
         </div>
-        <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
+        <!-- Botón de idiomas -->
         <div class="custom-options" id="customOptions">
             <div class="custom-option" onclick="selectOption('es', 'Español', '{% static 'assets/img/idioma_español.png' %}')">Español</div>
             <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
@@ -65,6 +65,15 @@
     </div>
 
     <script>
+        function toggleOptions() {
+            document.getElementById('customOptions').classList.toggle('show');
+        }
+
+        function selectOption(value, text, imagePath) {
+            document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+            document.getElementById('customOptions').classList.remove('show');
+        }
+
         function togglePasswordVisibility() {
             var passwordInput = document.getElementById('password');
             var eyeIcon = document.getElementById('eyeIcon');
