@@ -186,30 +186,6 @@ button:hover {
     position: relative;
 }
 
-<<<<<<< HEAD
-/* CHECKBOX */
-
-#langCheckbox {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-    cursor: pointer;
-}
-
-/* Estilo del checkbox */
-#langCheckbox:checked::before {
-    content: '✔';
-    font-size: 20px;
-    color: #4CAF50;
-}
-
-#langCheckbox::before {
-    content: '✖';
-    font-size: 20px;
-    color: #ccc;
-}
-=======
 .navbarini {
     position: fixed;
     top: 0;
@@ -221,4 +197,3 @@ button:hover {
 .container {
     margin-top: 80px; 
 }
->>>>>>> efc77d0c1a7e0b5307d695c56fe3359831e82c11

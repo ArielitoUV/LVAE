@@ -29,21 +29,6 @@
 
     <h1 class="titulo">Becas Disponibles</h1>
     <div class="container">
-        <div class="idioma-container">
-            <div class="idioma-select-container">
-                <div class="custom-select" id="customSelect" onclick="toggleOptions()">
-                    <span>Español</span>
-                    <img src="{% static 'assets/img/idioma_español.png' %}" alt="Español">
-                </div>
-
-                <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
-                <div class="custom-options" id="customOptions">
-                    <div class="custom-option" onclick="selectOption('es', 'Español', '{% static 'assets/img/idioma_español.png' %}')">Español</div>
-                    <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
-                </div>
-            </div>
-        </div>
-
         <div class="beca">
             <h2>Beca 1</h2>
             <p>Descripción de la Beca 1.</p>
@@ -89,22 +74,6 @@
             <p>Descripción de la Beca 9.</p>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-    <script>
-        function toggleOptions() {
-            var options = document.getElementById('customOptions');
-            options.classList.toggle('show');
-        }
-
-        function selectOption(value, text, imagePath) {
-            var customSelect = document.getElementById('customSelect');
-            customSelect.innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
-
-            var options = document.getElementById('customOptions');
-            options.classList.remove('show');
-        }
-    </script>
 </body>
 </html>
