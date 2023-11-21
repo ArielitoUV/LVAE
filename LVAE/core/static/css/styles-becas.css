@@ -43,6 +43,7 @@ p {
     color: #666;
 }
 
+<<<<<<< HEAD
 /* IDIOMA */
 #labelIdioma {
     position: fixed;
@@ -95,3 +96,9 @@ p {
     cursor: pointer;
 }
 /* IDIOMA */
+=======
+.titulo{
+    text-align: center;
+    margin-top: 10px;
+}
+>>>>>>> efc77d0c1a7e0b5307d695c56fe3359831e82c11

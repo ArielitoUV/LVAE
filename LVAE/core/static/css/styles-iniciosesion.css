@@ -17,9 +17,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 450px;
-    width: 125%;
+    width: 100%;
     box-sizing: border-boxs;
-    margin-top: 400px;
+    margin-top: 557px;
     margin-bottom: 120px;
 }
 
@@ -186,6 +186,7 @@ button:hover {
     position: relative;
 }
 
+<<<<<<< HEAD
 /* CHECKBOX */
 
 #langCheckbox {
@@ -208,3 +209,16 @@ button:hover {
     font-size: 20px;
     color: #ccc;
 }
+=======
+.navbarini {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+}
+
+.container {
+    margin-top: 80px; 
+}
+>>>>>>> efc77d0c1a7e0b5307d695c56fe3359831e82c11

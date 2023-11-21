@@ -24,7 +24,7 @@ body {
     box-sizing: border-box;
     max-height: 80vh; 
     overflow-y: auto;
-    margin-bottom: 20px; /* Agregado margen inferior */
+    margin-bottom: -63px; /* Agregado margen inferior */
 }
 
 .icon {
@@ -184,4 +184,16 @@ a:hover {
     width: 30px; /* Establece el ancho deseado */
     height: 30px; /* Establece la altura deseada */
     margin: 0 10px; /* Ajusta el espacio entre los íconos */
+}
+
+.navbarini {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+}
+
+.container {
+    margin-top: 80px; 
 }
