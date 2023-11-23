@@ -1,0 +1,199 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #355C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-direction: column; /* Cambiado a column para que los elementos se apilen verticalmente */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.registration-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    max-width: 600px; 
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 80vh; 
+    overflow-y: auto;
+    margin-bottom: -63px; /* Agregado margen inferior */
+}
+
+.icon {
+    font-size: 1.5em; 
+    margin-bottom: 15px; 
+}
+
+.top-image {
+    display: block;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px; 
+    font-weight: bold;
+    font-size: 14px; 
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px; 
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.checkbox-group input {
+    margin: 0;
+}
+
+.checkbox-group label {
+    margin-left: 6px; 
+    cursor: pointer;
+    font-size: 14px; 
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px; 
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px; 
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px; /* Nueva regla de tamaño de fuente para enlaces */
+}
+
+a:hover {
+    text-decoration: underline;
+    font-size: 14px; /* Nueva regla de tamaño de fuente para enlaces al pasar el mouse */
+}
+
+/* IDIOMA */
+#labelIdioma {
+    position: fixed;
+    top: 0px;
+    right: 30px;
+    z-index: 9999;
+}
+
+.idioma-container {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    z-index: 9998;
+}
+
+.idioma-container .custom-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.idioma-container .custom-select img {
+    margin-left: 10px;
+    max-width: 20px; /* tamaño imagen */
+}
+
+.idioma-container .custom-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.idioma-container .custom-options.show {
+    display: block;
+}
+
+.idioma-container .custom-option {
+    padding: 10px;
+    cursor: pointer;
+}
+/* IDIOMA */
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Mueve el pie de página hacia abajo */
+}
+
+.footer-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.footer-images img {
+    width: 48%;
+    max-width: 200px; /* Ajusta el tamaño máximo según tus necesidades */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.footer-message {
+    margin-top: 20px;
+}
+
+.icon {
+    width: 30px; /* Establece el ancho deseado */
+    height: 30px; /* Establece la altura deseada */
+    margin: 0 10px; /* Ajusta el espacio entre los íconos */
+}
+
+.navbarini {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+}
+
+.container {
+    margin-top: 80px; 
+}

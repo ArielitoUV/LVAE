@@ -1,0 +1,49 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ef32d9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #89fffd, #ef32d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto; /* Ajusta el margen para centrar en la página */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.beca {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.beca:hover {
+    transform: scale(1.05);
+}
+
+h2, p {
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    margin-top: 10px;
+    color: #666;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 10px;
+}

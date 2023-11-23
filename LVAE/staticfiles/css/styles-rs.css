@@ -1,0 +1,46 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #4568DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container-rs {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff42;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    max-width: 1050px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+.container-rs:hover {
+    transform: scale(1.02);
+}
+
+iframe {
+    width: 100%; /* Modifica el ancho para que ocupe todo el contenedor */
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: scale(2.0); /* Ajusta el valor según sea necesario */
+    transform-origin: 0 0; /* Mueve el origen de la transformación al contenedor iframe */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo adicional para hacer que el contenedor sea más atractivo */
+.container-rs p {
+    text-align: center;
+    color: #555;
+    margin-top: 20px;
+}
