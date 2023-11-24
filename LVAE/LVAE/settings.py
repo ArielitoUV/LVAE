@@ -84,12 +84,13 @@ WSGI_APPLICATION = 'LVAE.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME':'arielito99$viaexito',
-        'USER':'arielito99',
-        'PASSWORD':'Root1234554321',
-        'HOST':'arielito99.mysql.pythonanywhere-services.com',
-        'PORT':'3306',
+        'ENGINE' : 'django.db.backends.mysql',
+        'NAME' : 'arielito99$viaexito',
+        'USER' : 'arielito99',
+        'PASSWORD' : 'Root1234554321',
+        'HOST' : 'arielito99.mysql.pythonanywhere-services.com',
+        'PORT' : '3306',
+
     }
 }
 
