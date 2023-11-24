@@ -1,15 +1,13 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #355C7D;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #A770EF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
-    flex-direction: column; /* Cambiado a column para que los elementos se apilen verticalmente */
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
 }
 
 
@@ -18,18 +16,18 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; 
-    max-width: 600px; 
+    text-align: center;
+    max-width: 600px;
     width: 100%;
     box-sizing: border-box;
-    max-height: 80vh; 
+    max-height: 80vh;
     overflow-y: auto;
-    margin-bottom: -63px; /* Agregado margen inferior */
+    margin-bottom: -63px;
 }
 
 .icon {
-    font-size: 1.5em; 
-    margin-bottom: 15px; 
+    font-size: 1.5em;
+    margin-bottom: 15px;
 }
 
 .top-image {
@@ -44,27 +42,28 @@ form {
 
 label {
     display: block;
-    margin-bottom: 4px; 
+    margin-bottom: 4px;
     font-weight: bold;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 input[type="text"],
 input[type="tel"],
-select {
+select,
+input[type="password"] {
     width: 100%;
-    padding: 8px; 
-    margin-bottom: 10px; 
+    padding: 8px;
+    margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 .checkbox-group {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .checkbox-group input {
@@ -72,35 +71,33 @@ select {
 }
 
 .checkbox-group label {
-    margin-left: 6px; 
+    margin-left: 6px;
     cursor: pointer;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 input[type="submit"] {
     background-color: #4CAF50;
     color: white;
-    padding: 10px; 
+    padding: 10px;
     border: none;
     cursor: pointer;
     width: 100%;
     border-radius: 4px;
     box-sizing: border-box;
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 a {
     text-decoration: none;
     color: #333;
-    font-size: 14px; /* Nueva regla de tamaño de fuente para enlaces */
+    font-size: 14px;
 }
 
 a:hover {
     text-decoration: underline;
-    font-size: 14px; /* Nueva regla de tamaño de fuente para enlaces al pasar el mouse */
 }
 
-/* IDIOMA */
 #labelIdioma {
     position: fixed;
     top: 0px;
@@ -127,7 +124,7 @@ a:hover {
 
 .idioma-container .custom-select img {
     margin-left: 10px;
-    max-width: 20px; /* tamaño imagen */
+    max-width: 20px;
 }
 
 .idioma-container .custom-options {
@@ -151,15 +148,13 @@ a:hover {
     padding: 10px;
     cursor: pointer;
 }
-/* IDIOMA */
-
 
 .footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: auto; /* Mueve el pie de página hacia abajo */
+    margin-top: auto;
 }
 
 .footer-images {
@@ -171,7 +166,7 @@ a:hover {
 
 .footer-images img {
     width: 48%;
-    max-width: 200px; /* Ajusta el tamaño máximo según tus necesidades */
+    max-width: 200px;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -181,9 +176,35 @@ a:hover {
 }
 
 .icon {
-    width: 30px; /* Establece el ancho deseado */
-    height: 30px; /* Establece la altura deseada */
-    margin: 0 10px; /* Ajusta el espacio entre los íconos */
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.navbarini {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.container {
+    margin-top: 80px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 33%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.toggle-password img {
+    width: 20px; 
+}
+.password-container {
+    position: relative;
 }
 
 .navbarini {
@@ -196,4 +217,24 @@ a:hover {
 
 .container {
     margin-top: 80px; 
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password img {
+    width: 20px;
+}
+
+.password-container input[type="password"] {
+    padding-right: 30px;
 }

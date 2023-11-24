@@ -1,12 +1,42 @@
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
+class UsuarioManager(BaseUserManager):
+    def create_user(self, email, password=None, user_type=None, **extra_fields):
+        if not email:
+            raise ValueError('El email debe ser ingresado.')
+        email = self.normalize_email(email)
+        user = self.model(email=email, user_type=user_type, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
 
-class Registro(models.Model):
+    def create_superuser(self, email, password=None, user_type=None, **extra_fields):
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
+
+        return self.create_user(email, password, user_type, **extra_fields)
+
+class Usuario(AbstractBaseUser):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
-    estado = models.CharField(max_length=100)
-    ciudad = models.CharField(max_length=100)
-    telefono = models.CharField(max_length=15)
+    telefono = models.CharField(max_length=15, blank=True, null=True)
+    estado = models.CharField(max_length=100, blank=True, null=True)
+    ciudad = models.CharField(max_length=100, blank=True, null=True)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=100)  # En un entorno de producción, deberías usar campos seguros de contraseñas
+    user_type = models.CharField(max_length=10, choices=[
+        ('apoderado', 'Apoderado'),
+        ('alumno', 'Alumno'),
+    ])
+    
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+
+    objects = UsuarioManager()
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['nombre', 'apellido', 'user_type']
 
     def __str__(self):
-        return f"{self.nombre} {self.apellido}"
+        return self.email
