@@ -1,12 +1,11 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
 from .models import Usuario
 
-class RegistroUsuarioForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput)
-
+class RegistroUsuarioForm(UserCreationForm):
     class Meta:
         model = Usuario
-        fields = ['nombre', 'apellido', 'telefono', 'estado', 'ciudad', 'email', 'password', 'user_type']
+        fields = ['nombre', 'apellido', 'telefono', 'estado', 'ciudad', 'email', 'user_type']
 
     def clean_email(self):
         email = self.cleaned_data.get('email')

@@ -37,10 +37,11 @@
         <img src="{% static 'assets/img/logo.png' %}" alt="Imagen de La Vía al Éxito" class="top-image">
 
         <h1>Registro</h1>
-        <form action="" method="POST" onsubmit="return validateForm()">
+        <form action="{% url 'registrar_usuario' %}" method="post" onsubmit="return validateForm()">
+            {% csrf_token %}
 
             <label for="role">Selecciona tu ocupación:</label>
-            <select name="role" id="role" required>
+            <select name="user_type" id="role" required>
                 <option value="">Seleccione una opción</option>
                 <option value="apoderado">Apoderado</option>
                 <option value="estudiante">Estudiante</option>
@@ -52,7 +53,6 @@
             <label for="apellido">Apellido:</label>
             <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
 
-            
             <label for="telefono">Número de teléfono:</label>
             <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required pattern="[0-9]{10}">
 
@@ -81,6 +81,7 @@
                 </span>
             </div>
 
+            <!-- ... (otros campos del formulario) ... -->
 
             <div class="g-recaptcha" data-sitekey="6Lc8KxopAAAAALsOzslZnlmE6l2xUefKlVquXyVl" data-action="LOGIN"></div>
 
@@ -100,62 +101,65 @@
         <p>¿Ya tienes una cuenta? - <a href="{% url 'iniciosesion' %}">Inicia Sesión</a></p>
     </div>
 
-        <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
+    <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
     <script>
 
-function togglePasswordVisibility(inputId) {
-  var input = document.getElementById(inputId);
-  var eyeIcon = document.getElementById("eyeIcon-" + inputId);
-
-  if (input.type === "password") {
-    input.type = "text";
-    eyeIcon.innerHTML = '<img src="{% static "assets/img/open_eye.png" %}" alt="Mostrar contraseña">';
-  } else {
-    input.type = "password";
-    eyeIcon.innerHTML = '<img src="{% static "assets/img/closed_eye.png" %}" alt="Ocultar contraseña">';
-  }
-}
-
-
-        function selectOption(value, text, imagePath) {
-            document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
-            document.getElementById('customOptions').classList.remove('show');
+        function togglePasswordVisibility(inputId) {
+          var input = document.getElementById(inputId);
+          var eyeIcon = document.getElementById("eyeIcon-" + inputId);
+        
+          if (input.type === "password") {
+            input.type = "text";
+            eyeIcon.innerHTML = '<img src="{% static "assets/img/open_eye.png" %}" alt="Mostrar contraseña">';
+          } else {
+            input.type = "password";
+            eyeIcon.innerHTML = '<img src="{% static "assets/img/closed_eye.png" %}" alt="Ocultar contraseña">';
+          }
         }
-
-        document.getElementById('customSelect').addEventListener('click', function () {
-            document.getElementById('customOptions').classList.toggle('show');
-        });
-
-        document.addEventListener('click', function (event) {
-            if (!event.target.matches('.custom-select')) {
-                var options = document.getElementById('customOptions');
-                if (options.classList.contains('show')) {
-                    options.classList.remove('show');
+        
+        
+                function selectOption(value, text, imagePath) {
+                    document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+                    document.getElementById('customOptions').classList.remove('show');
                 }
-            }
-        });
+        
+                document.getElementById('customSelect').addEventListener('click', function () {
+                    document.getElementById('customOptions').classList.toggle('show');
+                });
+        
+                document.addEventListener('click', function (event) {
+                    if (!event.target.matches('.custom-select')) {
+                        var options = document.getElementById('customOptions');
+                        if (options.classList.contains('show')) {
+                            options.classList.remove('show');
+                        }
+                    }
+                });
+        
+                function validateForm() {
+                    // Validación del formulario
+                    var role = document.getElementById('role').value;
+                    var telefono = document.getElementById('telefono').value;
+        
+                    // Validar que se haya seleccionado un rol
+                    if (role === "") {
+                        alert("Por favor, seleccione su ocupación.");
+                        return false;
+                    }
+        
+                    // Validar el número de teléfono
+                    if (!/^\d{10}$/.test(telefono)) {
+                        alert("Por favor, ingrese un número de teléfono válido (10 dígitos).");
+                        return false;
+                    }
+        
+                    // Devuelve true si el formulario es válido
+                    return true;
+                }
+        
+            </script>
+        </body>
+        </html>
 
-        function validateForm() {
-            // Validación del formulario
-            var role = document.getElementById('role').value;
-            var telefono = document.getElementById('telefono').value;
-
-            // Validar que se haya seleccionado un rol
-            if (role === "") {
-                alert("Por favor, seleccione su ocupación.");
-                return false;
-            }
-
-            // Validar el número de teléfono
-            if (!/^\d{10}$/.test(telefono)) {
-                alert("Por favor, ingrese un número de teléfono válido (10 dígitos).");
-                return false;
-            }
-
-            // Devuelve true si el formulario es válido
-            return true;
-        }
-
-    </script>
-</body>
-</html>
+        <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
+    

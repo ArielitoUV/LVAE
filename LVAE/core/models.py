@@ -24,7 +24,7 @@ class Usuario(AbstractBaseUser):
     estado = models.CharField(max_length=100, blank=True, null=True)
     ciudad = models.CharField(max_length=100, blank=True, null=True)
     email = models.EmailField(unique=True)
-    password = models.CharField(max_length=100)  # En un entorno de producción, deberías usar campos seguros de contraseñas
+    password = models.PasswordField()  # Usa el campo PasswordField para almacenar contraseñas de manera segura
     user_type = models.CharField(max_length=10, choices=[
         ('apoderado', 'Apoderado'),
         ('alumno', 'Alumno'),
