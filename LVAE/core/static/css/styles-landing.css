@@ -235,7 +235,7 @@ body {
 }
 
 /* Estilos del Navbar del HTML */
-.nav-item a[href="/registroap/"] {
+.navbar-nav .nav-item .btn[href="/registroap/"] {
     background-color: #808080;
     color: #ffffff;
     width: 130px;
@@ -276,7 +276,7 @@ body {
     margin: 0 20px;
 }
 
-.nav-item a[href="/registroap/"] {
+.navbar-nav [href="/registroap/"] {
     background-color: #808080;
     color: #ffffff;
     width: 130px;
@@ -298,24 +298,6 @@ body {
     border-radius: 0px;
 }
 
-.navbar {
-    border-bottom: 5px solid #ccc;
-}
-
-.navbar-brand {
-    color: #000000;
-    font-size: 20px;
-}
-
-.navbar-nav {
-    text-align: center;
-}
-
-.navbar-nav .nav-link {
-    color: #000000;
-    font-size: 19px;
-    margin: 0 20px;
-}
 
 .values {
     display: flex;
@@ -325,7 +307,7 @@ body {
 
 .value {
     margin: 20px;
-    border: 2px solid #ccc;
+    border: 2px solid #ffffff;
     border-radius: 15px;
     padding: 20px;
     text-align: center;
@@ -342,7 +324,7 @@ body {
 .about-us,
 .our-work {
     margin: 20px;
-    border: 2px solid #ccc;
+    border: 2px solid #ffffff;
     border-radius: 15px;
     padding: 20px;
     text-align: center;
