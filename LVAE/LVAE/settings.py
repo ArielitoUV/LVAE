@@ -55,7 +55,7 @@ ROOT_URLCONF = 'LVAE.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'LVAE.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME':'arielito99$DBlvae',
+        'NAME':'arielito99$viaexito',
         'USER':'arielito99',
-        'PASSWORD':'Root987654321',
+        'PASSWORD':'Root1234554321',
         'HOST':'arielito99.mysql.pythonanywhere-services.com',
         'PORT':'3306',
     }

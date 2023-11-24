@@ -16,16 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views
+from core.views import registrar_usuario
 
 urlpatterns = [
     path('',views.index,name="index"),
     path('iniciosesion/',views.iniciosesion,name="iniciosesion"),
     path('iniciosesion_en/',views.iniciosesion,name="iniciosesion"),
-    path('registroap/',views.registroap,name="registroap"),
+    path('registroap/', registrar_usuario, name='registrar_usuario'),
     path('rs/',views.rs,name="rs"),
     path('gestionperfil/',views.gestionperfil,name="gestionperfil"),
     path('donaciones/',views.donaciones,name="donaciones"),
     path('becas/',views.becas,name="becas"),
     path('admin/', admin.site.urls),
-    
+
 ]

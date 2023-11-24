@@ -44,3 +44,15 @@ h1 {
     color: #555;
     margin-top: 20px;
 }
+
+.navbar-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+color: #000000; /* black text color for navbar items */
+font-size: 19px; /* Adjust the font size as needed */
+margin: 0 20px; /* Adjust the margin to add separation between items */
+}
