@@ -218,3 +218,23 @@ a:hover {
 .container {
     margin-top: 80px; 
 }
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password img {
+    width: 20px;
+}
+
+.password-container input[type="password"] {
+    padding-right: 30px;
+}
