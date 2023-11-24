@@ -49,25 +49,38 @@
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
 
-            <label for="contraseña">Contraseña:</label>
-            <div class="password-container">
-                <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
-                <span class="toggle-password" onclick="togglePasswordVisibility()" id="eyeIcon">
-                    <img src="{% static 'assets/img/closed_eye.png' %}" alt="Mostrar/Ocultar contraseña">
-                </span>
-            </div>
-
             <label for="apellido">Apellido:</label>
             <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
 
-            <label for="ciudad">Ciudad:</label>
-            <input type="text" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad" required>
+            
+            <label for="telefono">Número de teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required pattern="[0-9]{10}">
 
             <label for="estado">Estado:</label>
             <input type="text" id="estado" name="estado" placeholder="Ingrese su estado" required>
 
-            <label for="telefono">Número de teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required pattern="[0-9]{10}">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad" required>
+
+            <label for="correo">Correo Electronico:</label>
+            <input type="text" id="correo" name="correo" placeholder="Ingrese su Correo Electronico" required>
+
+            <label for="contraseña">Contraseña:</label>
+            <div class="password-container">
+                <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility('contraseña')" id="eyeIcon-contraseña">
+                    <img src="{% static 'assets/img/closed_eye.png' %}" alt="Mostrar/Ocultar contraseña">
+                </span>
+            </div>
+            
+            <label for="contraseña2">Confirme su contraseña:</label>
+            <div class="password-container">
+                <input type="password" id="contraseña2" name="contraseña2" placeholder="Confirme su contraseña" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility('contraseña2')" id="eyeIcon-contraseña2">
+                    <img src="{% static 'assets/img/closed_eye.png' %}" alt="Mostrar/Ocultar contraseña">
+                </span>
+            </div>
+
 
             <div class="g-recaptcha" data-sitekey="6Lc8KxopAAAAALsOzslZnlmE6l2xUefKlVquXyVl" data-action="LOGIN"></div>
 
@@ -90,16 +103,18 @@
         <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
     <script>
 
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById('password');
-            var eyeIcon = document.getElementById('eyeIcon');
+function togglePasswordVisibility(inputId) {
+  var input = document.getElementById(inputId);
+  var eyeIcon = document.getElementById("eyeIcon-" + inputId);
 
-            if (passwordInput.value.trim() !== '') {
-                eyeIcon.style.display = 'inline-block';
-            } else {
-                eyeIcon.style.display = 'none';
-            }
-        }
+  if (input.type === "password") {
+    input.type = "text";
+    eyeIcon.innerHTML = '<img src="{% static "assets/img/open_eye.png" %}" alt="Mostrar contraseña">';
+  } else {
+    input.type = "password";
+    eyeIcon.innerHTML = '<img src="{% static "assets/img/closed_eye.png" %}" alt="Ocultar contraseña">';
+  }
+}
 
 
         function selectOption(value, text, imagePath) {
