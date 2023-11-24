@@ -49,6 +49,14 @@
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
 
+            <label for="contraseña">Contraseña:</label>
+            <div class="password-container">
+                <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()" id="eyeIcon">
+                    <img src="{% static 'assets/img/closed_eye.png' %}" alt="Mostrar/Ocultar contraseña">
+                </span>
+            </div>
+
             <label for="apellido">Apellido:</label>
             <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
 
@@ -81,6 +89,19 @@
 
         <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
     <script>
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('password');
+            var eyeIcon = document.getElementById('eyeIcon');
+
+            if (passwordInput.value.trim() !== '') {
+                eyeIcon.style.display = 'inline-block';
+            } else {
+                eyeIcon.style.display = 'none';
+            }
+        }
+
+
         function selectOption(value, text, imagePath) {
             document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
             document.getElementById('customOptions').classList.remove('show');
