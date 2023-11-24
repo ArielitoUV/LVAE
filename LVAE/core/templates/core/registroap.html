@@ -90,16 +90,20 @@
         <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
     <script>
 
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById('password');
-            var eyeIcon = document.getElementById('eyeIcon');
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById('contraseña');
+    var eyeIcon = document.getElementById('eyeIcon');
 
-            if (passwordInput.value.trim() !== '') {
-                eyeIcon.style.display = 'inline-block';
-            } else {
-                eyeIcon.style.display = 'none';
-            }
+    if (passwordInput.value.trim() !== '') {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeIcon.innerHTML = '<img src="{% static 'assets/img/open_eye.png' %}" alt="Mostrar contraseña">';
+        } else {
+            passwordInput.type = 'password';
+            eyeIcon.innerHTML = '<img src="{% static 'assets/img/closed_eye.png' %}" alt="Ocultar contraseña">';
         }
+    }
+}
 
 
         function selectOption(value, text, imagePath) {
