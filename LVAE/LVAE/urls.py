@@ -28,5 +28,4 @@ urlpatterns = [
     path('donaciones/',views.donaciones,name="donaciones"),
     path('becas/',views.becas,name="becas"),
     path('admin/', admin.site.urls),
-
 ]
