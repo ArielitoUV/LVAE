@@ -1,27 +1,41 @@
-# forms.py
-from django import forms
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
+from django.contrib.auth import authenticate
 from .models import Usuario
-from django.contrib.auth.forms import AuthenticationForm
-from django.utils.translation import gettext, gettext_lazy as _
+from django import forms
+
 
 class CustomAuthenticationForm(AuthenticationForm):
-    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
+    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': True}))
     password = forms.CharField(label=_('Contraseña'), strip=False, widget=forms.PasswordInput)
 
     error_messages = {
         'invalid_login': _(
-            "Por favor, ingrese un %(username)s válido y contraseña. Tenga en cuenta que ambos campos son sensibles a mayúsculas."
+            "Por favor, ingrese un %(username)s válido y contraseña"
         ),
         'inactive': _("Esta cuenta está inactiva."),
     }
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'] = self.fields['email']
+
+    def clean(self):
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+
+        if username is not None and password:
+            self.user_cache = authenticate(self.request, username=username, password=password)
+            if self.user_cache is None:
+                raise self.get_invalid_login_error()
+            else:
+                self.confirm_login_allowed(self.user_cache)
+
+        return self.cleaned_data
+
 class CustomUserCreationForm(UserCreationForm):
-    email = forms.EmailField(
-        label=_("Correo Electrónico"),
-        widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su correo electrónico', 'autofocus': False}),
-    )
+    email = forms.EmailField(label=_("Correo Electrónico"),widget=forms.EmailInput(attrs={'autofocus': False,'class': 'form-control', 'placeholder': 'Ingrese su correo electrónico'}))
     nombre = forms.CharField(
         label=_("Nombre"),
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su nombre'}),
