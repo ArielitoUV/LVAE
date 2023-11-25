@@ -70,7 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'LVAE.wsgi.application'
 
-
+# COMENTAR ESTO PA TIRAR LOCALHOST A LO BIEEN
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
