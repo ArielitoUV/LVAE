@@ -8,7 +8,7 @@ def registrar_usuario(request):
         if form.is_valid():
             form.save()
             # Redirige a la página de inicio de sesión después del registro exitoso
-            return redirect('iniciosesion')  
+            return redirect('iniciar_sesion')  
     else:
         # Si no es una solicitud POST, crea un nuevo formulario (limpio)
         form = CustomUserCreationForm()
