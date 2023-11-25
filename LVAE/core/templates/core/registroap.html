@@ -40,8 +40,8 @@
         <form action="{% url 'registrar_usuario' %}" method="post" onsubmit="return validateForm()">
             {% csrf_token %}
 
-            <label for="role">Selecciona tu ocupación:</label>
-            <select name="user_type" id="role" required>
+            <label for="user_type">Selecciona tu ocupación:</label>
+            <select name="user_type" id="user_type" required>
                 <option value="">Seleccione una opción</option>
                 <option value="apoderado">Apoderado</option>
                 <option value="estudiante">Estudiante</option>
@@ -54,7 +54,7 @@
             <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
 
             <label for="telefono">Número de teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required pattern="[0-9]{10}">
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required pattern="[0-9]{9}">
 
             <label for="estado">Estado:</label>
             <input type="text" id="estado" name="estado" placeholder="Ingrese su Estado" required>
@@ -63,20 +63,20 @@
             <input type="text" id="ciudad" name="ciudad" placeholder="Ingrese su Ciudad" required>
 
             <label for="correo">Correo Electronico:</label>
-            <input type="text" id="correo" name="correo" placeholder="Ingrese su Correo Electronico" required>
+            <input type="text" id="email" name="email" placeholder="Ingrese su Correo Electronico" required>
 
-            <label for="contraseña">Contraseña:</label>
+            <label for="password">Contraseña:</label>
             <div class="password-container">
-                <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
-                <span class="toggle-password" onclick="togglePasswordVisibility('contraseña')" id="eyeIcon-contraseña">
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility('password')" id="eyeIcon-password">
                     <img src="{% static 'assets/img/closed_eye.png' %}" alt="Mostrar/Ocultar contraseña">
                 </span>
             </div>
-            
-            <label for="contraseña2">Confirme su contraseña:</label>
+
+            <label for="password">Confirme su contraseña:</label>
             <div class="password-container">
-                <input type="password" id="contraseña2" name="contraseña2" placeholder="Confirme su contraseña" required>
-                <span class="toggle-password" onclick="togglePasswordVisibility('contraseña2')" id="eyeIcon-contraseña2">
+                <input type="password" id="password" name="password" placeholder="Confirme su contraseña" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility('password')" id="eyeIcon-password">
                     <img src="{% static 'assets/img/closed_eye.png' %}" alt="Mostrar/Ocultar contraseña">
                 </span>
             </div>
@@ -107,7 +107,7 @@
         function togglePasswordVisibility(inputId) {
           var input = document.getElementById(inputId);
           var eyeIcon = document.getElementById("eyeIcon-" + inputId);
-        
+
           if (input.type === "password") {
             input.type = "text";
             eyeIcon.innerHTML = '<img src="{% static "assets/img/open_eye.png" %}" alt="Mostrar contraseña">';
@@ -116,17 +116,17 @@
             eyeIcon.innerHTML = '<img src="{% static "assets/img/closed_eye.png" %}" alt="Ocultar contraseña">';
           }
         }
-        
-        
+
+
                 function selectOption(value, text, imagePath) {
                     document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
                     document.getElementById('customOptions').classList.remove('show');
                 }
-        
+
                 document.getElementById('customSelect').addEventListener('click', function () {
                     document.getElementById('customOptions').classList.toggle('show');
                 });
-        
+
                 document.addEventListener('click', function (event) {
                     if (!event.target.matches('.custom-select')) {
                         var options = document.getElementById('customOptions');
@@ -135,28 +135,28 @@
                         }
                     }
                 });
-        
+
                 function validateForm() {
                     // Validación del formulario
                     var role = document.getElementById('role').value;
                     var telefono = document.getElementById('telefono').value;
-        
+
                     // Validar que se haya seleccionado un rol
                     if (role === "") {
                         alert("Por favor, seleccione su ocupación.");
                         return false;
                     }
-        
+
                     // Validar el número de teléfono
                     if (!/^\d{9}$/.test(telefono)) {
                         alert("Por favor, ingrese un número de teléfono válido (9 dígitos).");
                         return false;
                     }
-        
+
                     // Devuelve true si el formulario es válido
                     return true;
                 }
-        
+
             </script>
         </body>
         </html>
