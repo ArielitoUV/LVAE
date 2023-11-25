@@ -21,7 +21,7 @@ from core.views import iniciar_sesion
 
 urlpatterns = [
     path('',views.index,name="index"),
-    path('iniciosesion/',iniciar_sesion, views.iniciar_sesion, name='iniciar_sesion'),
+    path('iniciosesion/', iniciar_sesion, name='iniciar_sesion'),
     path('registroap/', registrar_usuario, name='registrar_usuario'),
     path('rs/',views.rs,name="rs"),
     path('gestionperfil/',views.gestionperfil,name="gestionperfil"),
