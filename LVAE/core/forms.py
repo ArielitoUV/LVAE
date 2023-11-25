@@ -7,7 +7,7 @@ from django import forms
 
 
 class CustomAuthenticationForm(AuthenticationForm):
-    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': True}))
+    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
     password = forms.CharField(label=_('Contraseña'), strip=False, widget=forms.PasswordInput)
 
     error_messages = {
@@ -35,7 +35,7 @@ class CustomAuthenticationForm(AuthenticationForm):
         return self.cleaned_data
 
 class CustomUserCreationForm(UserCreationForm):
-    email = forms.EmailField(label=_("Correo Electrónico"),widget=forms.EmailInput(attrs={'autofocus': False,'class': 'form-control', 'placeholder': 'Ingrese su correo electrónico'}))
+    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
     nombre = forms.CharField(
         label=_("Nombre"),
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su nombre'}),
