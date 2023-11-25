@@ -1,5 +1,6 @@
+# views.py
 from django.shortcuts import render, redirect
-from core.forms import RegistroUsuarioForm
+from .forms import RegistroUsuarioForm
 
 def registrar_usuario(request):
     if request.method == 'POST':
@@ -7,7 +8,7 @@ def registrar_usuario(request):
         if form.is_valid():
             form.save()
             # Puedes realizar alguna acción adicional después del registro exitoso
-            return redirect('iniciosesion/')  # Reemplaza 'pagina_inicio' con la URL a la que deseas redirigir después del registro
+            return redirect('iniciosesion')  # Corregí el nombre de la URL
     else:
         form = RegistroUsuarioForm()
 

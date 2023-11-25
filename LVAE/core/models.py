@@ -1,3 +1,4 @@
+# models.py
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
@@ -24,7 +25,6 @@ class Usuario(AbstractBaseUser):
     estado = models.CharField(max_length=100, blank=True, null=True)
     ciudad = models.CharField(max_length=100, blank=True, null=True)
     email = models.EmailField(unique=True)
-    password = models.CharField(max_length=100)  # En un entorno de producción, deberías usar campos seguros de contraseñas
     user_type = models.CharField(max_length=10, choices=[
         ('apoderado', 'Apoderado'),
         ('alumno', 'Alumno'),
