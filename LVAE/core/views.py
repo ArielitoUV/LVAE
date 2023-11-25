@@ -19,7 +19,7 @@ def iniciar_sesion(request):
         form = CustomAuthenticationForm(request, data=request.POST)
         if form.is_valid():
             # Autenticar al usuario
-            user = authenticate(request, username=form.cleaned_data['username'], password=form.cleaned_data['password'])
+            user = authenticate(request, username=form.cleaned_data['email'], password=form.cleaned_data['password'])
             if user is not None:
                 # Iniciar sesión
                 login(request, user)

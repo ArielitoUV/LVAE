@@ -6,39 +6,32 @@ from .models import Usuario
 from django.contrib.auth.forms import AuthenticationForm
 
 class CustomAuthenticationForm(AuthenticationForm):
-    # Puedes agregar campos adicionales o personalizar según sea necesario
     pass
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(
         label=_("Correo Electrónico"),
         widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su correo electrónico', 'autofocus': False}),
     )
-
     nombre = forms.CharField(
         label=_("Nombre"),
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su nombre'}),
     )
-
     apellido = forms.CharField(
         label=_("Apellido"),
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su apellido'}),
     )
-
     telefono = forms.CharField(
         label=_("Teléfono"),
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su número de teléfono'}),
     )
-
     estado = forms.CharField(
         label=_("Estado"),
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese el Estado donde vive'}),
     )
-
     ciudad = forms.CharField(
         label=_("Ciudad"),
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su Ciudad'}),
     )
-
     user_type = forms.ChoiceField(
     label=_("Tipo de Usuario"),
     choices=[('', 'Seleccione una opción'), ('apoderado', 'Apoderado'), ('alumno', 'Alumno')],
