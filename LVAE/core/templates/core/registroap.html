@@ -83,7 +83,7 @@
 
             <!-- ... (otros campos del formulario) ... -->
 
-            <div class="g-recaptcha" data-sitekey="6Lc8KxopAAAAALsOzslZnlmE6l2xUefKlVquXyVl" data-action="LOGIN"></div>
+            <!-- <div class="g-recaptcha" data-sitekey="6Lc8KxopAAAAALsOzslZnlmE6l2xUefKlVquXyVl" data-action="LOGIN"></div>
 
             <div class="checkbox-group">
                 <input type="checkbox" id="notificaciones" name="notificaciones">
@@ -93,7 +93,7 @@
             <div class="checkbox-group">
                 <input type="checkbox" id="terminos" name="terminos" required>
                 <label for="terminos">Acepto los Términos de Servicio y Política de Privacidad</label>
-            </div>
+            </div> -->
 
             <input type="submit" value="Enviar">
         </form>
@@ -148,8 +148,8 @@
                     }
         
                     // Validar el número de teléfono
-                    if (!/^\d{10}$/.test(telefono)) {
-                        alert("Por favor, ingrese un número de teléfono válido (10 dígitos).");
+                    if (!/^\d{9}$/.test(telefono)) {
+                        alert("Por favor, ingrese un número de teléfono válido (9 dígitos).");
                         return false;
                     }
         
@@ -160,6 +160,3 @@
             </script>
         </body>
         </html>
-
-        <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
-    
