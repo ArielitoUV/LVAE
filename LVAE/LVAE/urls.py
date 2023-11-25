@@ -16,8 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views
-from core.views import registrar_usuario
-from core.views import iniciar_sesion
+from core.views import registrar_usuario,iniciar_sesion
 
 urlpatterns = [
     path('',views.index,name="index"),
