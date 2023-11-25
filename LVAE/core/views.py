@@ -7,7 +7,7 @@ def registrar_usuario(request):
         if form.is_valid():
             form.save()
             # Puedes realizar alguna acción adicional después del registro exitoso
-            return redirect('core/iniciosesion.html')  # Reemplaza 'pagina_inicio' con la URL a la que deseas redirigir después del registro
+            return redirect('iniciosesion/')  # Reemplaza 'pagina_inicio' con la URL a la que deseas redirigir después del registro
     else:
         form = RegistroUsuarioForm()
 

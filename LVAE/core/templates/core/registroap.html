@@ -40,8 +40,8 @@
         <form action="{% url 'registrar_usuario' %}" method="post" onsubmit="return validateForm()">
             {% csrf_token %}
 
-            <label for="role">Selecciona tu ocupación:</label>
-            <select name="user_type" id="role" required>
+            <label for="user_type">Selecciona tu ocupación:</label>
+            <select name="user_type" id="user_type" required>
                 <option value="">Seleccione una opción</option>
                 <option value="apoderado">Apoderado</option>
                 <option value="estudiante">Estudiante</option>
@@ -54,7 +54,7 @@
             <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
 
             <label for="telefono">Número de teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required pattern="[0-9]{10}">
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required pattern="[0-9]">
 
             <label for="estado">Estado:</label>
             <input type="text" id="estado" name="estado" placeholder="Ingrese su Estado" required>
@@ -63,11 +63,11 @@
             <input type="text" id="ciudad" name="ciudad" placeholder="Ingrese su Ciudad" required>
 
             <label for="correo">Correo Electronico:</label>
-            <input type="text" id="correo" name="correo" placeholder="Ingrese su Correo Electronico" required>
+            <input type="text" id="email" name="email" placeholder="Ingrese su Correo Electronico" required>
 
             <label for="contraseña">Contraseña:</label>
             <div class="password-container">
-                <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
                 <span class="toggle-password" onclick="togglePasswordVisibility('contraseña')" id="eyeIcon-contraseña">
                     <img src="{% static 'assets/img/closed_eye.png' %}" alt="Mostrar/Ocultar contraseña">
                 </span>
