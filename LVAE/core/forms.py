@@ -4,9 +4,19 @@ from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
 from .models import Usuario
 from django.contrib.auth.forms import AuthenticationForm
+from django.utils.translation import gettext, gettext_lazy as _
 
 class CustomAuthenticationForm(AuthenticationForm):
-    pass
+    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': True}))
+    password = forms.CharField(label=_('Contraseña'), strip=False, widget=forms.PasswordInput)
+
+    error_messages = {
+        'invalid_login': _(
+            "Por favor, ingrese un %(username)s válido y contraseña. Tenga en cuenta que ambos campos son sensibles a mayúsculas."
+        ),
+        'inactive': _("Esta cuenta está inactiva."),
+    }
+
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(
         label=_("Correo Electrónico"),
