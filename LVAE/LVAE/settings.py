@@ -82,17 +82,17 @@ WSGI_APPLICATION = 'LVAE.wsgi.application'
 #    }
 #}
 
-DATABASES = {
-    'default': {
-        'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : 'arielito99$exito',
-        'USER' : 'arielito99',
-        'PASSWORD' : 'Root987654321',
-        'HOST' : 'arielito99.mysql.pythonanywhere-services.com',
-        'PORT' : '3306',
+# DATABASES = {
+#     'default': {
+#         'ENGINE' : 'django.db.backends.mysql',
+#         'NAME' : 'arielito99$exito',
+#         'USER' : 'arielito99',
+#         'PASSWORD' : 'Root987654321',
+#         'HOST' : 'arielito99.mysql.pythonanywhere-services.com',
+#         'PORT' : '3306',
 
-    }
-}
+#     }
+# }
 
 
 # Password validation
@@ -117,7 +117,20 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# settings.py
+
+LANGUAGE_CODE = 'es-ES'
+
+
+LANGUAGES = [
+    ('es', 'Spanish'),
+    # Otros idiomas aquí...
+]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
+
 
 TIME_ZONE = 'UTC'
 
