@@ -20,7 +20,7 @@ from core.views import registrar_usuario
 
 urlpatterns = [
     path('',views.index,name="index"),
-    path('iniciosesion/',views.iniciosesion,name="iniciosesion"),
+    path('iniciar_sesion/', views.iniciar_sesion, name='iniciar_sesion'),
     path('iniciosesion_en/',views.iniciosesion,name="iniciosesion"),
     path('registroap/', registrar_usuario, name='registrar_usuario'),
     path('rs/',views.rs,name="rs"),

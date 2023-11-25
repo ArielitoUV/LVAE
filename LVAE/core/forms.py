@@ -3,6 +3,11 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
 from .models import Usuario
+from django.contrib.auth.forms import AuthenticationForm
+
+class CustomAuthenticationForm(AuthenticationForm):
+    # Puedes agregar campos adicionales o personalizar según sea necesario
+    pass
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(
         label=_("Correo Electrónico"),

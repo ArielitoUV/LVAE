@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from core.forms import CustomUserCreationForm
-
+from django.contrib.auth import authenticate, login
+from core.forms import CustomAuthenticationForm
 def registrar_usuario(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
@@ -13,17 +14,29 @@ def registrar_usuario(request):
         form = CustomUserCreationForm()
 
     return render(request, 'core/registroap.html', {'form': form})
+def iniciar_sesion(request):
+    if request.method == 'POST':
+        form = CustomAuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            # Autenticar al usuario
+            user = authenticate(request, username=form.cleaned_data['username'], password=form.cleaned_data['password'])
+            if user is not None:
+                # Iniciar sesión
+                login(request, user)
+                # Redirigir a la página deseada después de iniciar sesión
+                return redirect('')
+    else:
+        form = CustomAuthenticationForm()
+
+    return render(request, 'core/iniciosesion.html', {'form': form})
+
+
+
+
+
 
 def index(request):
     return render(request, "core/index.html")
-
-def iniciosesion(request):
-    # Limpia los campos del formulario
-    form = CustomUserCreationForm()
-    
-    return render(request, "core/iniciosesion.html", {'form': form})
-
-
 
 
 
