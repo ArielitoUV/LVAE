@@ -8,7 +8,7 @@ def registrar_usuario(request):
         if form.is_valid():
             form.save()
             # Puedes realizar alguna acción adicional después del registro exitoso
-            return redirect('iniciosesion/')  
+            return redirect('iniciosesion')  
     else:
         form = CustomUserCreationForm()
 
