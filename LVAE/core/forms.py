@@ -7,7 +7,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import gettext, gettext_lazy as _
 
 class CustomAuthenticationForm(AuthenticationForm):
-    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': True}))
+    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
     password = forms.CharField(label=_('Contraseña'), strip=False, widget=forms.PasswordInput)
 
     error_messages = {

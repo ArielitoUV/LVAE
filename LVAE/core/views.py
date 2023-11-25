@@ -24,7 +24,7 @@ def iniciar_sesion(request):
                 # Iniciar sesión
                 login(request, user)
                 # Redirigir a la página deseada después de iniciar sesión
-                return redirect('')
+                return redirect('index')
     else:
         form = CustomAuthenticationForm()
 
