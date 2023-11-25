@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from core import views
 from core.views import registrar_usuario
+from core.views import iniciar_sesion
 
 urlpatterns = [
     path('',views.index,name="index"),
-    path('iniciar_sesion/', views.iniciar_sesion, name='iniciar_sesion'),
-    path('iniciosesion_en/',views.iniciosesion,name="iniciosesion"),
+    path('iniciosesion/',iniciar_sesion, views.iniciar_sesion, name='iniciar_sesion'),
     path('registroap/', registrar_usuario, name='registrar_usuario'),
     path('rs/',views.rs,name="rs"),
     path('gestionperfil/',views.gestionperfil,name="gestionperfil"),
