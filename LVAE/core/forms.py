@@ -6,33 +6,6 @@ from .models import Usuario
 from django import forms
 
 
-class CustomAuthenticationForm(AuthenticationForm):
-    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
-    password = forms.CharField(label=_('Contraseña'), strip=False, widget=forms.PasswordInput)
-
-    error_messages = {
-        'invalid_login': _(
-            "Por favor, ingrese un %(username)s válido y contraseña"
-        ),
-        'inactive': _("Esta cuenta está inactiva."),
-    }
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['username'] = self.fields['email']
-
-    def clean(self):
-        username = self.cleaned_data.get('username')
-        password = self.cleaned_data.get('password')
-
-        if username is not None and password:
-            self.user_cache = authenticate(self.request, username=username, password=password)
-            if self.user_cache is None:
-                raise self.get_invalid_login_error()
-            else:
-                self.confirm_login_allowed(self.user_cache)
-
-        return self.cleaned_data
 
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
@@ -64,7 +37,7 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
         model = Usuario
-        fields = ['user_type', 'nombre', 'apellido', 'telefono', 'estado', 'ciudad', 'email', 'password1', 'password2']
+        fields = ['user_type','email', 'nombre', 'apellido', 'telefono', 'estado', 'ciudad', 'password1', 'password2']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -74,3 +47,16 @@ class CustomUserCreationForm(UserCreationForm):
         self.error_messages['password_entirely_numeric'] = _("La contraseña no puede ser completamente numérica.")
         self.error_messages['email_in_use'] = _('Este email ya está en uso. Por favor, elige otro.')
         self.fields['user_type'].widget.attrs['readonly'] = True
+
+        
+class CustomAuthenticationForm(AuthenticationForm):
+    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
+    password = forms.CharField(label=_('Contraseña'), strip=False, widget=forms.PasswordInput)
+
+    error_messages = {
+        'invalid_login': _(
+            "Por favor, ingrese un %(username)s válido y contraseña"
+        ),
+        'inactive': _("Esta cuenta está inactiva."),
+    }
+

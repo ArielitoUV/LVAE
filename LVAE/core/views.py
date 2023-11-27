@@ -14,6 +14,8 @@ def registrar_usuario(request):
         form = CustomUserCreationForm()
 
     return render(request, 'core/registroap.html', {'form': form})
+
+
 def iniciar_sesion(request):
     if request.method == 'POST':
         form = CustomAuthenticationForm(request, data=request.POST)
@@ -24,12 +26,11 @@ def iniciar_sesion(request):
                 # Iniciar sesión
                 login(request, user)
                 # Redirigir a la página deseada después de iniciar sesión
-                return redirect('registrar_usuario')
+                return redirect('index')  # Cambia 'index' por la URL a la que quieres redirigir
     else:
         form = CustomAuthenticationForm()
 
     return render(request, 'core/iniciosesion.html', {'form': form})
-
 
 
 
