@@ -20,14 +20,12 @@ def iniciar_sesion(request):
     if request.method == 'POST':
         form = CustomAuthenticationForm(request, data=request.POST)
         if form.is_valid():
-            # Autenticar al usuario
-            user = authenticate(request, email=form.cleaned_data['email'], password=form.cleaned_data['password'])
-            if user is not None:
-                # Iniciar sesión
-                login(request, user)
-                # Redirigir a la página deseada después de iniciar sesión
-                return redirect('donaciones/')  # Cambia 'index' por la URL a la que quieres redirigir
+            user = form.get_user()
+            login(request, user)
+            # Redirige a la página de inicio después del inicio de sesión exitoso
+            return redirect('index')
     else:
+        # Si no es una solicitud POST, crea un nuevo formulario (limpio)
         form = CustomAuthenticationForm()
 
     return render(request, 'core/iniciosesion.html', {'form': form})

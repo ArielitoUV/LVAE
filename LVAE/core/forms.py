@@ -53,14 +53,10 @@ class CustomUserCreationForm(UserCreationForm):
 
 
 class CustomAuthenticationForm(AuthenticationForm):
-    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
-    password = forms.CharField(label=_('Contraseña'), strip=False, widget=forms.PasswordInput)
-
-    error_messages = {
-        'invalid_login': _(
-            "Por favor, ingrese un %(username)s válido y contraseña"
-        ),
-        'inactive': _("Esta cuenta está inactiva."),
-    }
-
+    username = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
+    password = forms.CharField(
+        label=_("Contraseña"),
+        strip=False,
+        widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'class': 'form-control', 'placeholder': 'Ingrese su contraseña'}),
+    )
 
