@@ -8,7 +8,10 @@ from django import forms
 
 
 class CustomUserCreationForm(UserCreationForm):
-    email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
+    email = forms.EmailField(
+        label=_('Correo electrónico'),
+        widget=forms.EmailInput(attrs={'autofocus': False,'class':'form-control', 'placeholder': 'Ingrese corrreo electronico'}),
+        )
     nombre = forms.CharField(
         label=_("Nombre"),
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su nombre'}),
@@ -37,7 +40,7 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
         model = Usuario
-        fields = ['user_type','email', 'nombre', 'apellido', 'telefono', 'estado', 'ciudad', 'password1', 'password2']
+        fields = ['email', 'nombre', 'apellido', 'telefono', 'estado', 'ciudad','user_type', 'password1', 'password2']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
