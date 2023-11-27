@@ -26,17 +26,18 @@
         <p>¡Hola! Encantado de verte de nuevo.</p>
 
         <!-- iniciosesion.html -->
-<form method="post" action="{% url 'iniciar_sesion' %}">
-    {% csrf_token %}
-    
-    <label for="email">Correo electrónico</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="password">Contraseña</label>
-    <input type="password" id="password" name="password" required>
-
-    <button type="submit">Iniciar Sesión</button>
-</form>
+        <form method="post" action="{% url 'iniciar_sesion' %}">
+            {% csrf_token %}
+            
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="username" required>
+        
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+        
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        
 
 
         <div class="social-buttons">
