@@ -66,36 +66,5 @@
             <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-    <script>
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById('password');
-            var eyeIcon = document.getElementById('eyeIcon');
-
-            if (passwordInput.value.trim() !== '') {
-                eyeIcon.style.display = 'inline-block';
-            } else {
-                eyeIcon.style.display = 'none';
-            }
-        }
-
-        document.getElementById('eyeIcon').addEventListener('click', function () {
-            var passwordInput = document.getElementById('password');
-            var eyeIcon = document.getElementById('eyeIcon');
-
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                eyeIcon.querySelector('img').src = "{% static 'assets/img/open_eye.png' %}";
-            } else {
-                passwordInput.type = 'password';
-                eyeIcon.querySelector('img').src = "{% static 'assets/img/closed_eye.png' %}";
-            }
-        });
-
-        document.addEventListener("DOMContentLoaded", function() {
-            togglePasswordVisibility();
-        });
-    </script>
 </body>
 </html>
