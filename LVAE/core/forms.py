@@ -48,7 +48,7 @@ class CustomUserCreationForm(UserCreationForm):
         self.error_messages['email_in_use'] = _('Este email ya está en uso. Por favor, elige otro.')
         self.fields['user_type'].widget.attrs['readonly'] = True
 
-        
+
 class CustomAuthenticationForm(AuthenticationForm):
     email = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False}))
     password = forms.CharField(label=_('Contraseña'), strip=False, widget=forms.PasswordInput)
@@ -59,4 +59,5 @@ class CustomAuthenticationForm(AuthenticationForm):
         ),
         'inactive': _("Esta cuenta está inactiva."),
     }
+
 
