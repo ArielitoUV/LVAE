@@ -26,7 +26,7 @@ def iniciar_sesion(request):
                 # Iniciar sesión
                 login(request, user)
                 # Redirigir a la página deseada después de iniciar sesión
-                return redirect('index')  # Cambia 'index' por la URL a la que quieres redirigir
+                return redirect('registroap')  # Cambia 'index' por la URL a la que quieres redirigir
     else:
         form = CustomAuthenticationForm()
 
