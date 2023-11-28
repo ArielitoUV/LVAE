@@ -65,5 +65,28 @@
             <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
         </div>
     </div>
+
+    <script>
+        function selectOption(value, text, imagePath) {
+            var customSelect = document.getElementById('customSelect');
+            customSelect.innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+            var customOptions = document.getElementById('customOptions');
+            customOptions.classList.remove('show');
+        }
+    
+        document.getElementById('customSelect').addEventListener('click', function (event) {
+            // Stop propagation to prevent the outer click event listener from closing the options list
+            event.stopPropagation();
+            var customOptions = document.getElementById('customOptions');
+            customOptions.classList.toggle('show');
+        });
+    
+        document.addEventListener('click', function () {
+            var customOptions = document.getElementById('customOptions');
+            if (customOptions.classList.contains('show')) {
+                customOptions.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>

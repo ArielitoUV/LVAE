@@ -24,7 +24,7 @@
                 <a class="nav-link" href="/becas/">Becas</a>
             </li>
             <li class="nav-item">
-                <a clas s="nav-link" href="/donaciones/">Donaciones</a>
+                <a class="nav-link" href="/donaciones/">Donaciones</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/rs/">Redes</a>
@@ -188,5 +188,27 @@
 
     <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function selectOption(value, text, imagePath) {
+            document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+            document.getElementById('customOptions').classList.remove('show');
+        }
+    
+        document.getElementById('customSelect').addEventListener('click', function (event) {
+            // Stop propagation to prevent the outer click event listener from closing the options list
+            event.stopPropagation();
+            document.getElementById('customOptions').classList.toggle('show');
+        });
+    
+        document.addEventListener('click', function () {
+            var options = document.getElementById('customOptions');
+            if (options.classList.contains('show')) {
+                options.classList.remove('show');
+            }
+        });
+    </script>
+    
+
     </body>
 </html>
