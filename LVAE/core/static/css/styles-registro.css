@@ -3,7 +3,6 @@ body {
     background: #A770EF;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -12,17 +11,20 @@ body {
 
 
 .registration-container {
+
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 32px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 600px;
+    max-width: 450px;
     width: 100%;
-    box-sizing: border-box;
-    max-height: 80vh;
-    overflow-y: auto;
-    margin-bottom: -63px;
+    box-sizing: border-boxs;
+    margin-top: 200px;
+    margin-bottom: 120px;
+    width: 500px; /* Ajusta el ancho según tus necesidades */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .icon {
@@ -200,14 +202,15 @@ a:hover {
     position: relative;
 }
 
+
 .navbarini {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: #ffffff;
-    border-bottom: 3px solid #000000;
+    background-color: #ffffff; /* Color de fondo del navbar */
+    border-bottom: 3px solid #000000; /* Agrega un borde inferior */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,14 +230,9 @@ a:hover {
     align-items: center;
 }
 
-.navbar-brand img {
-    margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
-}
-
 .navbar-nav .nav-item {
-    margin-left: 20px; /* Ajusta el margen izquierdo según sea necesario */
-    margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
-    margin-top: -30px; /* Elimina el margen superior */
+    margin-left: 50px;
+    margin-right: 80px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -246,7 +244,26 @@ a:hover {
     color: #000000;
 }
 
-.navbar-nav .special-link {
+.navbar-nav .nav-link {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: thin; /* Agrega negrita */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+}
+
+/* Estilos especiales para los enlaces "Registro" y "Iniciar sesión" */
+.navbar-nav .nav-item .special-link {
     background-color: #000000;
     color: #ffffff;
     padding: 5px 10px;
@@ -256,11 +273,21 @@ a:hover {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.navbar-nav .special-link:hover {
+.navbar-nav .nav-item .special-link:hover {
     background-color: rgb(212, 69, 0);
     color: #000000;
     border: solid #3a3737;
 }
+.navbar-nav .nav-item .special-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+    border:solid #3a3737;
+}
+
+.navbar {
+    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
+}
+    
 
 .container {
     margin-top: 80px; 
@@ -352,4 +379,5 @@ a:hover {
     background-color: #45a049; /* Color de fondo de los botones "Hoy" y "Done" (hover) */
     color: #ffffff; /* Color del texto de los botones "Hoy" y "Done" (hover) */
 }
+
 

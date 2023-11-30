@@ -17,34 +17,27 @@
   
   </head>
 <body>
-    <nav class="navbarini navbar-expand-lg navbar-white bg-white">
-        <a class="navbar-brand" href="/">
-            <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo de La Vía al Éxito" style="width: 90px; height: 80px;">
-            La Vía al Éxito
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-bottom">
-          <nav class="navbar navbar-expand-lg navbar-white bg-white">
-              <div class="container">
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                      <ul class="navbar-nav">
-                          <li class="nav-item">
-                              <a class="nav-link" href="/donaciones/">Donaciones</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="/acercade/">Acerca de</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="/rs/">Redes Sociales</a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </nav>
-      </div>
-    </nav>
+  <nav class="navbarini navbar-expand-lg navbar-white bg-white">
+    <a class="navbar-brand" href="/">
+        <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo de La Vía al Éxito" style="width: 90px; height: 80px;">
+        La Vía al Éxito
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/donaciones/">Donaciones</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/acercade/">Acerca de</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/rs/">Redes</a>
+        </li>
+    </ul>
+</nav>
+</nav>
 
     <div class="idioma-container">
         <div class="custom-select" id="customSelect">
@@ -69,24 +62,30 @@
   
 
 <form method="post" action="{% url 'registrar_usuario' %}">
-    {% csrf_token %}
-    {% for field in form %}
-    <div class="form-group {% if field.errors %}has-error{% endif %}">
-        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-        {{ field }}
-        {% if field.errors %}
-          <span class="help-block">
-            {% for error in field.errors %}
-              {{ error }}
-            {% endfor %}
-          </span>
-        {% endif %}
-      </div>
-    {% endfor %}
-    <button type="submit">Registrar</button>
-  </form>
+  {% csrf_token %}
+  {% for field in form %}
+  <div class="form-group {% if field.errors %}has-error{% endif %}">
+    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+    {% if field.name == 'fecha_nacimiento' %}
+    <div class="datepicker">
+      {{ field }}
+    </div>
+    {% else %}
+    {{ field }}
+    {% endif %}
+    {% if field.errors %}
+      <span class="help-block">
+        {% for error in field.errors %}
+          {{ error }}
+        {% endfor %}
+      </span>
+    {% endif %}
+  </div>
+  {% endfor %}
+  <button type="submit">Registrar</button>
+</form>
 
-  <!-- <script>
+  <script>
     $(function() {
       $("#id_fecha_nacimiento").datepicker({
         dateFormat: 'dd-mm-yy',
@@ -95,7 +94,7 @@
         // Otros ajustes y opciones que desees agregar
       });
     });
-  </script> -->
+  </script>
 
 </body>
 </html>
