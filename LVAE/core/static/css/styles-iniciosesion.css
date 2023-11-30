@@ -191,23 +191,40 @@ button:hover {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; 
-}
-
-.container {
-    margin-top: 80px; 
-}
-
-/* Estilos para el menú de navegación */
-.navbar-nav {
+    z-index: 1000;
+    background-color: #ffffff; /* Color de fondo del navbar */
+    border-bottom: 3px solid #000000; /* Agrega un borde inferior */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 100px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
 .navbar-nav .nav-item {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 50px;
+    margin-right: 80px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgb(212, 69, 0);
+    color: #000000;
 }
 
 .navbar-nav .nav-link {
@@ -216,16 +233,16 @@ button:hover {
     padding: 5px 10px;
     transition: 0.3s;
     font-size: 20px;
+    font-weight: thin; /* Agrega negrita */
 }
+
 .navbar-light .navbar-nav .nav-link {
     color: rgb(0, 0, 0);
-  }
+}
 
 .navbar-nav .nav-link:hover {
-    background-color: hwb(212 69% 0%);
+    background-color: rgb(212, 69, 0);
     color: #000000;
-    
-
 }
 
 /* Estilos especiales para los enlaces "Registro" y "Iniciar sesión" */
@@ -239,6 +256,11 @@ button:hover {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.navbar-nav .nav-item .special-link:hover {
+    background-color: rgb(212, 69, 0);
+    color: #000000;
+    border: solid #3a3737;
+}
 .navbar-nav .nav-item .special-link:hover {
     background-color: hwb(212 69% 0%);
     color: #000000;
