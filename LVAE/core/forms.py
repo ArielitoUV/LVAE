@@ -3,6 +3,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
 from .models import Usuario
 from django import forms
+
+
+
+
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(
         label=_('Correo electrónico'),
