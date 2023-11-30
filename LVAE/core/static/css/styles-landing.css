@@ -405,3 +405,30 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
   .footer h2 {
     margin-top: 10px;
   }
+
+
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.values,
+.additional-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.value-container {
+    text-align: center;
+    flex: 1;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.value {
+    border: 2px solid #000000;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
+}
