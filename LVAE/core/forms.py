@@ -50,9 +50,8 @@ class CustomUserCreationForm(UserCreationForm):
         self.error_messages['password_entirely_numeric'] = _("La contraseña no puede ser completamente numérica.")
         self.error_messages['email_in_use'] = _('Este email ya está en uso. Por favor, elige otro.')
 
-        # # Aplica clases de Bootstrap a los campos con errores
-        # for field_name, field in self.fields.items():
-        #     field.widget.attrs.update({'class': 'form-control'})
+        for field_name, field in self.fields.items():
+            field.widget.attrs.update({'class': 'form-control'})
 
 
 class CustomAuthenticationForm(AuthenticationForm):
