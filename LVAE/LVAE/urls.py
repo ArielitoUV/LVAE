@@ -11,5 +11,6 @@ urlpatterns = [
     path('gestionperfil/',views.gestionperfil,name="gestionperfil"),
     path('donaciones/',views.donaciones,name="donaciones"),
     path('becas/',views.becas,name="becas"),
+    path('acercade/',views.acercade,name="acercade"),
     path('admin/', admin.site.urls),
 ]
