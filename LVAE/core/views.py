@@ -52,4 +52,7 @@ def donaciones(request):
 def becas(request):
     return render(request, "core/becas.html")
 
+def acercade(request):
+    return render(request, "core/acercade.html")
+
 
