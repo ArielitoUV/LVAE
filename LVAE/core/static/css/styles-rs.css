@@ -56,3 +56,56 @@ color: #000000; /* black text color for navbar items */
 font-size: 19px; /* Adjust the font size as needed */
 margin: 0 20px; /* Adjust the margin to add separation between items */
 }
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.navbar-nav .nav-link {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.3s;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+}
+
+/* Estilos especiales para los enlaces "Registro" y "Iniciar sesión" */
+.navbar-nav .nav-item .special-link {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-item .special-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+    border: solid #3a3737;
+}
+
+.image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}       
