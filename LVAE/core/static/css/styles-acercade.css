@@ -1,0 +1,171 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #ffffff, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #ffffff, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto; /* Ajusta el margen para centrar en la página */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.beca {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.beca:hover {
+    transform: scale(1.05);
+}
+
+h2, p {
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    margin-top: 10px;
+    color: #666;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.navbar {
+    border-bottom: 3px solid #ccc; /* Add a 1px solid border at the bottom */
+}
+
+
+
+/* Modificaciones para el navbar */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Ajusta el margen derecho de la imagen según sea necesario */
+}
+
+.navbar-brand span {
+    margin-left: 10px; /* Ajusta el margen izquierdo del texto según sea necesario */
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: #000000; /* black text color for navbar items */
+    font-size: 19px; /* Adjust the font size as needed */
+    margin: 0 20px; /* Adjust the margin to add separation between items */
+}
+
+.rounded-box {
+    background-color: #ffffff; /* Color de fondo del cuadro */
+    padding: 20px; /* Espaciado interno del cuadro */
+    margin-bottom: 20px; /* Margen inferior del cuadro */
+    border-radius: 15px; /* Radio de los bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del cuadro */
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rounded-box:hover {
+    transform: scale(1.05);
+}
+
+.value {
+    margin: 20px !important;
+    border: 10px solid #000000 !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    text-align: center !important;
+    width: 300px !important;
+}
+
+.about-us,
+.our-work {
+    margin: 20px !important;
+    border: 10px solid #000000 !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    text-align: center !important;
+    width: 400px !important;
+}   
+
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.value {
+    margin: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: calc(50% - 40px); /* Calcula el 50% del ancho del contenedor y resta el margen */
+}
+
+.additional-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.about-us,
+.our-work {
+    margin: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: calc(50% - 40px); /* Calcula el 50% del ancho del contenedor y resta el margen */
+}
+
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.value-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.value {
+    margin: 20px;
+    border: 30px solid #000000; /* Agrega el estilo del borde (solid) */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+}
