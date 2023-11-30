@@ -1,13 +1,13 @@
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
-from .models import Usuarios
+from .models import Usuario
 from django import forms
-
-
-
-
 class CustomUserCreationForm(UserCreationForm):
+    fecha_nacimiento = forms.DateField(
+        label=_("Fecha de nacimiento"),
+        widget=forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su fecha de nacimiento'}),
+    )
     email = forms.EmailField(
         label=_('Correo electrónico'),
         widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese correo electrónico'}),
@@ -26,7 +26,7 @@ class CustomUserCreationForm(UserCreationForm):
     )
     estado = forms.CharField(
         label=_("Estado"),
-        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese el Estado donde vive'}),
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese el Estado donde reside'}),
     )
     ciudad = forms.CharField(
         label=_("Ciudad"),
@@ -39,8 +39,8 @@ class CustomUserCreationForm(UserCreationForm):
     )
     
     class Meta:
-        model = Usuarios
-        fields = ['email', 'nombre', 'apellido', 'telefono', 'estado', 'ciudad','user_type', 'password1', 'password2']
+        model = Usuario
+        fields = ['email', 'nombre', 'apellido', 'telefono', 'estado', 'ciudad','fecha_nacimiento','user_type', 'password1', 'password2']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -50,9 +50,9 @@ class CustomUserCreationForm(UserCreationForm):
         self.error_messages['password_entirely_numeric'] = _("La contraseña no puede ser completamente numérica.")
         self.error_messages['email_in_use'] = _('Este email ya está en uso. Por favor, elige otro.')
 
-        # Aplica clases de Bootstrap a los campos con errores
-        for field_name, field in self.fields.items():
-            field.widget.attrs.update({'class': 'form-control'})
+        # # Aplica clases de Bootstrap a los campos con errores
+        # for field_name, field in self.fields.items():
+        #     field.widget.attrs.update({'class': 'form-control'})
 
 
 class CustomAuthenticationForm(AuthenticationForm):

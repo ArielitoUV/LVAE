@@ -69,24 +69,30 @@
   
 
 <form method="post" action="{% url 'registrar_usuario' %}">
-    {% csrf_token %}
-    {% for field in form %}
-    <div class="form-group {% if field.errors %}has-error{% endif %}">
-        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-        {{ field }}
-        {% if field.errors %}
-          <span class="help-block">
-            {% for error in field.errors %}
-              {{ error }}
-            {% endfor %}
-          </span>
-        {% endif %}
-      </div>
-    {% endfor %}
-    <button type="submit">Registrar</button>
-  </form>
+  {% csrf_token %}
+  {% for field in form %}
+  <div class="form-group {% if field.errors %}has-error{% endif %}">
+    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+    {% if field.name == 'fecha_nacimiento' %}
+    <div class="datepicker">
+      {{ field }}
+    </div>
+    {% else %}
+    {{ field }}
+    {% endif %}
+    {% if field.errors %}
+      <span class="help-block">
+        {% for error in field.errors %}
+          {{ error }}
+        {% endfor %}
+      </span>
+    {% endif %}
+  </div>
+  {% endfor %}
+  <button type="submit">Registrar</button>
+</form>
 
-  <!-- <script>
+  <script>
     $(function() {
       $("#id_fecha_nacimiento").datepicker({
         dateFormat: 'dd-mm-yy',
@@ -95,7 +101,7 @@
         // Otros ajustes y opciones que desees agregar
       });
     });
-  </script> -->
+  </script>
 
 </body>
 </html>

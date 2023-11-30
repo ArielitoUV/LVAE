@@ -18,7 +18,7 @@ class UsuarioManager(BaseUserManager):
 
         return self.create_user(email, password, user_type, **extra_fields)
 
-class Usuarios(AbstractBaseUser):
+class Usuario(AbstractBaseUser):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     fecha_nacimiento = models.DateField(null=True)
