@@ -15,6 +15,18 @@ body {
     justify-content: space-between;
 }
 
+.background-container {
+    padding-top: 60px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+.center-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
 .beca {
     width: 30%;
     background-color: white;
@@ -36,49 +48,65 @@ h2, p {
 
 h2 {
     color: #333;
+    font-weight: bold; /* Agrega negrita */
 }
 
-p {
-    margin-top: 10px;
-    color: #666;
-}
-
-.titulo{
-    text-align: center;
-    margin-top: 10px;
+/* Estilo para el texto en negrita */
+.value h3,
+.about-us h2,
+.our-work h2 {
+    font-weight: bold; /* Agrega negrita */
 }
 
 .navbar {
-    border-bottom: 3px solid #ccc; /* Add a 1px solid border at the bottom */
+    margin-top: px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-
-
-/* Modificaciones para el navbar */
 .navbar-brand {
     display: flex;
     align-items: center;
 }
 
 .navbar-brand img {
-    margin-right: 10px; /* Ajusta el margen derecho de la imagen según sea necesario */
-}
-
-.navbar-brand span {
-    margin-left: 10px; /* Ajusta el margen izquierdo del texto según sea necesario */
+    margin-right: 160px;
 }
 
 .navbar-nav {
     display: flex;
-    gap: 30px;
     align-items: center;
 }
 
-.navbar-nav .nav-link {
-    color: #000000; /* black text color for navbar items */
-    font-size: 19px; /* Adjust the font size as needed */
-    margin: 0 20px; /* Adjust the margin to add separation between items */
+.navbar-nav .nav-item {
+    margin-left: 160px;
+    margin-right: 160px;
 }
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+}
+
+.navbar-nav .nav-link {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: thin; /* Agrega negrita */
+}
+
+
+
 
 .rounded-box {
     background-color: #ffffff; /* Color de fondo del cuadro */
@@ -96,7 +124,7 @@ p {
 
 .value {
     margin: 20px !important;
-    border: 10px solid #000000 !important;
+    border: 2px solid #000000 !important;
     border-radius: 15px !important;
     padding: 20px !important;
     text-align: center !important;
@@ -106,7 +134,7 @@ p {
 .about-us,
 .our-work {
     margin: 20px !important;
-    border: 10px solid #000000 !important;
+    border: 2px solid #000000 !important;
     border-radius: 15px !important;
     padding: 20px !important;
     text-align: center !important;
