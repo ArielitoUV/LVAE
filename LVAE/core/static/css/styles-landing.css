@@ -397,3 +397,11 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
     color: #000000;
     border:solid #3a3737;
 }
+
+.footer {
+    text-align: center;
+  }
+  
+  .footer h2 {
+    margin-top: 10px;
+  }
