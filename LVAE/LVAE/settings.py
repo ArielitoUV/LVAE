@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*qsvhnae(ao&mo=wempm#_()*u)#ti!62d#vz4=w)gw8a_ll3-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['arielito99.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['laviaalexito.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'LVAE.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : 'arielito99$lvae',
-        'USER' : 'arielito99',
-        'PASSWORD' : 'rooT987654321',
-        'HOST' : 'arielito99.mysql.pythonanywhere-services.com',
+        'NAME' : 'laviaalexito$lvae',
+        'USER' : 'laviaalexito',
+        'PASSWORD' : 'Root9876543210',
+        'HOST' : 'laviaalexito.mysql.pythonanywhere-services.com',
         'PORT' : '3306',
 
     }
