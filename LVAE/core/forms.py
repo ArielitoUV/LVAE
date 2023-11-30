@@ -1,7 +1,6 @@
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
-from django.contrib.auth import authenticate
 from .models import Usuario
 from django import forms
 

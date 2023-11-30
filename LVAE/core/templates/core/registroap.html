@@ -37,6 +37,9 @@
     <div class="registration-container">
         <img src="{% static 'assets/img/logo.png' %}" alt="Imagen de La Vía al Éxito" class="top-image">
   <h2>Registro de Usuario</h2>
+  <p class="join-now">
+    ¿Ya tienes una cuenta? <a href="{% url 'iniciar_sesion' %}">Inicia sesión aquí</a>
+</p>
 
   
 
@@ -55,7 +58,7 @@
         {% endif %}
       </div>
     {% endfor %}
-    <button type="submit" class="btn btn-primary">Registrar</button>
+    <button type="submit">Registrar</button>
   </form>
 
 </body>
