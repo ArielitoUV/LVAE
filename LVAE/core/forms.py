@@ -37,13 +37,10 @@ class CustomUserCreationForm(UserCreationForm):
         choices=[('', 'Seleccione una opción'), ('apoderado', 'Apoderado'), ('alumno', 'Alumno')],
         widget=forms.Select(attrs={'class': 'form-control'}),
     )
-    fecha_nacimiento = forms.DateField(
-        label=_('Fecha de Nacimiento'),
-        widget=forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su fecha de nacimiento'}),)
-
+    
     class Meta:
         model = Usuario
-        fields = ['email', 'nombre', 'apellido','fecha_nacimiento', 'telefono', 'estado', 'ciudad','user_type', 'password1', 'password2']
+        fields = ['email', 'nombre', 'apellido', 'telefono', 'estado', 'ciudad','user_type', 'password1', 'password2']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
