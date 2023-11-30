@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: #ef32d9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom, #ef32d9, #e9e9e9);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #89fffd, #ef32d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -12,25 +12,33 @@ body {
     }
     
 
-.container {
-    max-width: 800px;
-    margin: 50px auto; /* Ajusta el margen para centrar en la página */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.beca {
-    width: 30%;
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    transition: transform 0.3s ease-in-out;
-}
-
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        background: #ef32d9;
+        background: -webkit-linear-gradient(to bottom, #89fffd, #9c9c9c);
+        background: linear-gradient(to bottom, #89fffd,     #cecece);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+    }
+    
+    .becas-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px; /* Ajusta el valor según tus necesidades */
+    }
+    
+    .beca {
+        background-color: rgba(119, 239, 50, 0); /* Fondo inicialmente transparente */
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+        box-sizing: border-box;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        margin-bottom: 20px;
+    }
 .beca:hover {
     transform: scale(1.05);
 }
