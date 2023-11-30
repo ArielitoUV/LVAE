@@ -11,6 +11,12 @@ body {
     margin-top: 50px;
 }
 
+.navbar {
+    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
+    }
+    
+
+
 .login-container {
     background-color: #ffffff69;
     padding: 40px;

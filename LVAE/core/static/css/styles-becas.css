@@ -7,6 +7,11 @@ body {
     background: linear-gradient(to bottom, #89fffd, #ef32d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.navbar {
+    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
+    }
+    
+
 .container {
     max-width: 800px;
     margin: 50px auto; /* Ajusta el margen para centrar en la página */
@@ -69,3 +74,4 @@ margin: 0 20px; /* Adjust the margin to add separation between items */
     width: 48%; /* Ajusta el ancho según tus necesidades */
     margin-bottom: 20px;
 }
+

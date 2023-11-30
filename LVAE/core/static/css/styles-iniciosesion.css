@@ -266,3 +266,8 @@ button:hover {
     color: #000000;
     border:solid #3a3737;
 }
+
+.navbar {
+    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
+    }
+    

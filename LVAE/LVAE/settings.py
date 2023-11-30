@@ -82,17 +82,17 @@ WSGI_APPLICATION = 'LVAE.wsgi.application'
 #    }
 #}
 
-DATABASES = {
-    'default': {
-        'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : 'arielito99$ve',
-        'USER' : 'arielito99',
-        'PASSWORD' : 'Root987654321',
-        'HOST' : 'arielito99.mysql.pythonanywhere-services.com',
-        'PORT' : '3306',
+# DATABASES = {
+#     'default': {
+#         'ENGINE' : 'django.db.backends.mysql',
+#         'NAME' : 'arielito99$ve',
+#         'USER' : 'arielito99',
+#         'PASSWORD' : 'Root987654321',
+#         'HOST' : 'arielito99.mysql.pythonanywhere-services.com',
+#         'PORT' : '3306',
 
-    }
-}
+#     }
+# }
 
 
 # Password validation
@@ -155,6 +155,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # settings.py
-AUTH_USER_MODEL = 'core.Usuario'
-AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
+# AUTH_USER_MODEL = 'core.Usuario'
+# AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
 
