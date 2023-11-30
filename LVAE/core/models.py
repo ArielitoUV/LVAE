@@ -21,6 +21,7 @@ class UsuarioManager(BaseUserManager):
 class Usuarios(AbstractBaseUser):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
+    fecha_nacimiento = models.DateField(null=True)
     telefono = models.CharField(max_length=15, blank=True, null=True)
     estado = models.CharField(max_length=100, blank=True, null=True)
     ciudad = models.CharField(max_length=100, blank=True, null=True)
