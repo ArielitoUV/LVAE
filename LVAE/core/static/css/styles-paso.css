@@ -27,7 +27,7 @@ header {
 /*linea de separacion*/
 .hr-separator {
   border: none;
-  height: 2px;
-  background-color: #333;
-  margin: 20px 0;
+  height: 10px;
+  background-color: #bb7171;
+  margin: 70px 70px;
 }
