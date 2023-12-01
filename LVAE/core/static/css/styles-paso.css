@@ -25,13 +25,26 @@ body {
   margin-right: 10px; /* Espaciado entre elementos de navegación */
 }
 
+.col-md-6 {
+  /* Ajusta el texto de la lista a la derecha dentro del contenedor */
+  text-align: right;
+}
+
 .text-list {
-  padding-left: 1em; /* Elimina el relleno predeterminado de la lista */
+  padding-left: -10em; /* Ajusta el relleno izquierdo de la lista si es necesario */
+  list-style-type: none; /* Elimina los estilos de lista predeterminados */
 }
 
 .text-list li {
-  margin-left: -1.5em; /* Ajusta el margen izquierdo negativo de cada ítem de la lista */
+  margin-left: 90px; /* Ajusta el margen izquierdo de cada ítem de la lista si es necesario */
 }
+
+
+/* Ajusta el margen derecho de la imagen para separarla de la lista */
+.img {
+  margin-right: 50px; /* Ajusta el margen derecho de la imagen */
+}
+
 
 
 
