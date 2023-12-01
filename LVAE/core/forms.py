@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
-from .models import Usuarios
+from .models import Usuario
 from django import forms
 
 
@@ -39,7 +39,7 @@ class CustomUserCreationForm(UserCreationForm):
     )
     
     class Meta:
-        model = Usuarios
+        model = Usuario
         fields = ['email', 'nombre', 'apellido', 'telefono', 'estado', 'ciudad','user_type', 'password1', 'password2']
 
     def __init__(self, *args, **kwargs):
