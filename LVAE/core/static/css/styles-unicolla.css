@@ -1,0 +1,26 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+.container {
+    margin-top: 100px; /* Ajusta el valor según sea necesario para la separación */
+    padding: 90px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.1);
+}
+
+.info-box {
+    text-align: justify;
+}
+
+.hr-separator {
+    margin-top: 80px; /* Ajusta el valor según sea necesario para la separación */
+    margin-bottom: 50px; /* Ajusta el valor según sea necesario para la separación */
+}
