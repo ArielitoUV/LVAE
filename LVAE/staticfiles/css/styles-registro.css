@@ -3,7 +3,6 @@ body {
     background: #A770EF;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -12,17 +11,20 @@ body {
 
 
 .registration-container {
+
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 32px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 600px;
+    max-width: 450px;
     width: 100%;
-    box-sizing: border-box;
-    max-height: 80vh;
-    overflow-y: auto;
-    margin-bottom: -63px;
+    box-sizing: border-boxs;
+    margin-top: 200px;
+    margin-bottom: 120px;
+    width: 500px; /* Ajusta el ancho según tus necesidades */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .icon {
@@ -181,13 +183,6 @@ a:hover {
     margin: 0 10px;
 }
 
-.navbarini {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
 
 .container {
     margin-top: 80px;
@@ -207,13 +202,92 @@ a:hover {
     position: relative;
 }
 
+
 .navbarini {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; 
+    z-index: 1000;
+    background-color: #ffffff; /* Color de fondo del navbar */
+    border-bottom: 3px solid #000000; /* Agrega un borde inferior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 100px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 50px;
+    margin-right: 80px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+}
+
+.navbar-nav .nav-link {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: thin; /* Agrega negrita */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+}
+
+/* Estilos especiales para los enlaces "Registro" y "Iniciar sesión" */
+.navbar-nav .nav-item .special-link {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-item .special-link:hover {
+    background-color: rgb(212, 69, 0);
+    color: #000000;
+    border: solid #3a3737;
+}
+.navbar-nav .nav-item .special-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+    border:solid #3a3737;
+}
+
+.navbar {
+    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
+}
+    
 
 .container {
     margin-top: 80px; 
@@ -238,3 +312,72 @@ a:hover {
 .password-container input[type="password"] {
     padding-right: 30px;
 }
+
+.join-now a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+
+  /* Estilos personalizados para el datepicker */
+.ui-datepicker {
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+.ui-datepicker-header {
+    background-color: #4CAF50; /* Color de fondo del encabezado */
+    color: #ffffff; /* Color del texto del encabezado */
+}
+
+.ui-datepicker-title {
+    margin: 0; /* Margen del título */
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+    background-color: #4CAF50; /* Color de fondo de los botones de navegación */
+    color: #ffffff; /* Color del texto de los botones de navegación */
+}
+
+.ui-datepicker-calendar {
+    border: 1px solid #4CAF50; /* Borde del calendario */
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+    background-color: #ffffff; /* Color de fondo de los días */
+    color: #4CAF50; /* Color del texto de los días */
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {
+    background-color: #4CAF50; /* Color de fondo del día seleccionado */
+    color: #ffffff; /* Color del texto del día seleccionado */
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active {
+    background-color: #45a049; /* Color de fondo del día activo (hover) */
+    color: #ffffff; /* Color del texto del día activo (hover) */
+}
+
+/* Estilo para el contenedor de los botones "Hoy" y "Done" */
+.ui-datepicker-buttonpane {
+    background-color: #4CAF50; /* Color de fondo del contenedor de botones */
+    color: #ffffff; /* Color del texto de los botones */
+}
+
+.ui-datepicker-current, .ui-datepicker-close {
+    background-color: #45a049; /* Color de fondo de los botones "Hoy" y "Done" (hover) */
+    color: #ffffff; /* Color del texto de los botones "Hoy" y "Done" (hover) */
+}
+
+

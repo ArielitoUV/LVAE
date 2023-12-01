@@ -15,6 +15,12 @@
     text-align: center;
 }
 
+.navbar {
+    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
+    }
+    
+
+
 .donation-container {
     padding: 100px;
     background-color: rgba(255, 255, 255, 0.568); /* Fondo blanco con opacidad */
@@ -93,11 +99,14 @@ p {
     font-size: 18px;
 }
 
+
 .navbar-nav {
     display: flex;
     gap: 30px;
     align-items: center;
 }
+
+   
 
 .navbar-nav .nav-link {
 color: #000000; /* black text color for navbar items */
