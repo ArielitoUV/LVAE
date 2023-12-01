@@ -24,11 +24,14 @@ def iniciar_sesion(request):
             login(request, user)
             # Redirige a la página de inicio después del inicio de sesión exitoso
             return redirect('index')
+        else:
+            print(form.errors)
     else:
         # Si no es una solicitud POST, crea un nuevo formulario (limpio)
         form = CustomAuthenticationForm()
 
     return render(request, 'core/iniciosesion.html', {'form': form})
+
 
 
 def index(request):
