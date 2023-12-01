@@ -82,17 +82,17 @@ WSGI_APPLICATION = 'LVAE.wsgi.application'
 #    }
 #}
 
-DATABASES = {
-     'default': {
-         'ENGINE' : 'django.db.backends.mysql',
-         'NAME' : 'viaalexito$exito',
-         'USER' : 'viaalexito',
-         'PASSWORD' : 'rooT9876543210',
-         'HOST' : 'viaalexito.mysql.pythonanywhere-services.com',
-         'PORT' : '3306',
+# DATABASES = {
+#      'default': {
+#          'ENGINE' : 'django.db.backends.mysql',
+#          'NAME' : 'viaalexito$exito',
+#          'USER' : 'viaalexito',
+#          'PASSWORD' : 'rooT9876543210',
+#          'HOST' : 'viaalexito.mysql.pythonanywhere-services.com',
+#          'PORT' : '3306',
 
-     }
- }
+#      }
+#  }
 
 
 # Password validation

@@ -192,7 +192,7 @@
             }
         });
 
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded'), function () {
         // Add a click event listener to all "Ver Más" buttons
         document.querySelectorAll('.ver-mas').forEach(function (button) {
             button.addEventListener('click', function (event) {
@@ -203,8 +203,7 @@
                 }
             });
         });
-
-
+      };
         function userIsLoggedIn() {
             // Implement your authentication logic here
             // For example, you might check if a user session exists
