@@ -10,7 +10,9 @@ urlpatterns = [
     path('rs/',views.rs,name="rs"),
     path('gestionperfil/',views.gestionperfil,name="gestionperfil"),
     path('donaciones/',views.donaciones,name="donaciones"),
-    path('becas/',views.becas,name="becas"),
+    path('pasoapaso/',views.pasoapaso,name="pasoapaso"),
+    path('unicolla/',views.unicolla,name="unicolla"),
+    path('secundaria/',views.secundaria,name="secundaria"),
     path('acercade/',views.acercade,name="acercade"),
     path('admin/', admin.site.urls),
 ]

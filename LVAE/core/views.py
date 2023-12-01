@@ -47,9 +47,15 @@ def donaciones(request):
     return render(request, "core/donaciones.html")
 
 
-def becas(request):
-    return render(request, "core/becas.html")
+def pasoapaso(request):
+    return render(request, "core/pasoapaso.html")
 
 
 def acercade(request):
     return render(request, "core/acercade.html")
+
+def unicolla(request):
+    return render(request, "core/unicolla.html")
+
+def secundaria(request):
+    return render(request, "core/secundaria.html")
