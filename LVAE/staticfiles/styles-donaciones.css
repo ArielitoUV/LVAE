@@ -1,0 +1,115 @@
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #59C173;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.center-container {
+    text-align: center;
+}
+
+.navbar {
+    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
+    }
+    
+
+
+.donation-container {
+    padding: 100px;
+    background-color: rgba(255, 255, 255, 0.568); /* Fondo blanco con opacidad */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    display: inline-block;
+}
+
+.boton-donacion {
+    font-size: 1.5em;
+    padding: 30px 30px;
+    background-color: white; /* o el color que prefieras */
+    color: #5D26C1; /* Ajusta el color del texto según la visibilidad */
+    border: none;
+    border-radius: 50px; /* Hace que los bordes sean circulares */
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Sobrescribe los estilos de Bootstrap para el botón */
+button:active,
+button:focus {
+    outline: none; /* Elimina el contorno al hacer clic o enfocar */
+    box-shadow: none; /* Elimina la sombra al hacer clic o enfocar */
+}
+
+/* Añade un estilo de transición suave para una apariencia más pulida */
+button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cambia el color al hacer hover */
+button:hover {
+    background-color: #4c7aaf;
+    color: white;
+}
+
+
+button img {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 30px;
+    height: auto;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.image-container img {
+    width: 30px;
+    height: auto;
+    margin: 0 5px;
+}
+
+.text-container p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+    margin: 0;
+}
+
+.text-container {
+    margin-top: 20px;
+}
+
+p {
+    margin-top: 20px;
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+
+.navbar-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+   
+
+.navbar-nav .nav-link {
+color: #000000; /* black text color for navbar items */
+font-size: 19px; /* Adjust the font size as needed */
+margin: 0 20px; /* Adjust the margin to add separation between items */
+}

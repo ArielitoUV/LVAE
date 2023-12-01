@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*qsvhnae(ao&mo=wempm#_()*u)#ti!62d#vz4=w)gw8a_ll3-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['laviaalexito.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['viaalexito.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -82,17 +82,17 @@ WSGI_APPLICATION = 'LVAE.wsgi.application'
 #    }
 #}
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE' : 'django.db.backends.mysql',
-#         'NAME' : 'laviaalexito$ve',
-#         'USER' : 'laviaalexito',
-#         'PASSWORD' : 'Root9876543210',
-#         'HOST' : 'laviaalexito.mysql.pythonanywhere-services.com',
-#         'PORT' : '3306',
+DATABASES = {
+     'default': {
+         'ENGINE' : 'django.db.backends.mysql',
+         'NAME' : 'viaalexito$exito',
+         'USER' : 'viaalexito',
+         'PASSWORD' : 'rooT9876543210',
+         'HOST' : 'viaalexito.mysql.pythonanywhere-services.com',
+         'PORT' : '3306',
 
-#     }
-# }
+     }
+ }
 
 
 # Password validation
@@ -145,7 +145,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"static"),
+    os.path.join(BASE_DIR, "core/static"),
+    os.path.join(BASE_DIR, "core/static/css"),
+    os.path.join(BASE_DIR, "core/static/assets"),
 ]
 
 # Default primary key field type
@@ -153,7 +155,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-AUTH_USER_MODEL = 'core.Usuario'
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
 
