@@ -350,38 +350,56 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
 
 }
 
+
+  /* ############################################ */
+
+
 /* Estilos para el menú de navegación */
-.navbar-nav {
+.navbarini {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 3.5px solid #000000;
+    display: flex; /* Agregado */
+    justify-content: center; /* Agregado */
+  }
+
+  .navbar-brand {
     display: flex;
-    justify-content: center;
     align-items: center;
-}
+  }
 
-.navbar-nav .nav-item {
-    margin-left: 70px;
-    margin-right: 70px;
-}
+  .navbar-brand img {
+    margin-right: 100px;
+  }
 
-.navbar-nav .nav-link {
-    background-color: #f8f9fa;
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Agregado */
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 50px;
+    margin-right: 50px; /* Modificado */
+  }
+
+  .navbar-nav .nav-link {
+    background-color: #ffffff;
     border-radius: 5px;
     padding: 5px 10px;
     transition: 0.3s;
-    font-size: 20px;
-}
-.navbar-light .navbar-nav .nav-link {
-    color: rgb(0, 0, 0);
+    font-size: 18.74px;
+    font-weight: thin;
   }
 
-.navbar-nav .nav-link:hover {
-    background-color: hwb(212 69% 0%);
+  .navbar-nav .nav-link:hover {
+    background-color: rgb(171, 194, 228);
     color: #000000;
-    
+  }
 
-}
-
-/* Estilos especiales para los enlaces "Registro" y "Iniciar sesión" */
-.navbar-nav .nav-item .special-link {
+  .navbar-nav .nav-link.special-link {
     background-color: #000000;
     color: #ffffff;
     padding: 5px 10px;
@@ -389,13 +407,32 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-}
+  }
 
-.navbar-nav .nav-item .special-link:hover {
-    background-color: hwb(212 69% 0%);
+  .navbar-nav .nav-link.special-link:hover {
+    background-color: rgb(171, 194, 228);
     color: #000000;
-    border:solid #3a3737;
-}
+    border: solid #3a3737;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+    }
+
+    .navbar-nav .nav-item {
+      margin: 10px 0;
+    }
+  }
+
+  
+  /* ############################################ */
+
+
+
+
+
+
 
 .footer {
     text-align: center;

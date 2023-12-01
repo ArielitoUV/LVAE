@@ -16,9 +16,9 @@
     <link rel="icon" href="{% static 'assets/img/favico.ico' %}" type="image/x-icon">
 </head>
 <body>
-  <nav class="navbarini navbar-expand-lg navbar-white bg-white">
+  <!-- <nav class="navbarini navbar-expand-lg navbar-white bg-white">
     <a class="navbar-brand" href="/">
-        <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo de La Vía al Éxito" style="width: 90px; height: 80px;">
+        <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo de La Vía al Éxito" style="width: 110px; height: 90px;">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -35,6 +35,33 @@
         </li>
     </ul>
 </nav>
+</nav> -->
+
+<nav class="navbarini navbar navbar-expand-lg navbar-light">
+  <div class="container">
+  <a class="navbar-brand" href="/">
+      <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo" style="width: 110px; height: 90px; margin-right: 50px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+          <a class="nav-link" style="color: black;" href="/donaciones/">Donaciones</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" style="color: black;" href="/acercade/">Acerca de</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" style="color: black;" href="/rs/">Redes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link special-link" href="/iniciosesion/">Inicio sesión</a>
+      </li>
+      </ul>
+  </div>
+  </div>
 </nav>
 
     <div class="idioma-container">
