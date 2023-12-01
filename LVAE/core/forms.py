@@ -26,6 +26,7 @@ class CustomUserCreationForm(UserCreationForm):
     )
     fecha_nacimiento = forms.DateField(
     label=_("Fecha de Nacimiento"),
+    input_formats=['%d-%m-%Y'],
     widget=forms.TextInput(attrs={'class': 'form-control datepicker', 'placeholder': 'Ingrese su fecha de nacimiento'}),
     )
 
