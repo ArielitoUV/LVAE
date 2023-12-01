@@ -1,66 +1,62 @@
-
-
-.text-center {
-  margin-top: 100px;
-}
-
-.col-6 ul {
-  margin-left: -10px;
-}
-
-.col-6 ul li {
-  margin-bottom: 50px;
-}
-
-.text-list {
-  display: flex;
-  flex-direction: column;
-}
-/*separar los titulos del texto*/
-header {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-.container {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-/*linea de separacion*/
-.hr-separator {
-  border: none;
-  height: 10px;
-  background-color: #f70000;
-  margin: 70px 70px;
-}
-
-/* Agrega este código al final de tu archivo styles-paso.css */
-
-/* Estilo del título principal */
-.text-center {
+/* Estilos generales */
+body {
+  background: linear-gradient(to bottom right, #f1df73, #ee9585); /* Ajusta los colores según tu preferencia */
+  color: #000; /* Color del texto principal */
   font-family: 'TuFuentePersonalizada', sans-serif; /* Reemplaza 'TuFuentePersonalizada' con el nombre de la fuente que desees */
-  font-size: 2.5em; /* Tamaño del título */
-  color: #000000; /* Color del texto */
 }
 
-/* Estilo del subtítulo */
-.text-center {
-  font-family: 'TuFuentePersonalizada', sans-serif;
-  font-size: 1.8em;
-  color: #000000;
+/* Estilos de la barra de navegación */
+.navbar {
+  background-color: #fff; /* Fondo de la barra de navegación */
 }
 
-/* Estilo de la lista de texto */
+.navbar-brand {
+  color: #000; /* Color del texto del logo y enlaces de navegación */
+}
+
+.navbar-toggler-icon {
+  background-color: #000; /* Color del icono del botón de alternar navegación */
+}
+
+.nav-item {
+  margin-right: 10px; /* Espaciado entre elementos de navegación */
+}
+
+/* Estilos de los títulos */
+.text-center h1, .text-center h2 {
+  font-size: 3.5em; /* Tamaño del título */
+  color: #333; /* Color del texto de los títulos */
+}
+
+/* Estilos de la lista de texto */
 .text-list li {
-  font-family: 'TuFuentePersonalizada', sans-serif;
-  font-size: 1.2em;
-  color: #000000;
+  font-size: 2.2em; /* Tamaño del texto de la lista */
 }
 
-/* Estilo del separador HR */
+.custom-section {
+  font-size: 1.4em; /* Tamaño de letra más grande */
+  background-color: #f8f9fa; /* Fondo de color gris claro */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.custom-section img {
+  width: 100px; /* Ajusta el ancho de la imagen según sea necesario */
+  height: 100px; /* Ajusta la altura de la imagen según sea necesario */
+}
+
+.li{
+  font-size: 2.2em; /* Tamaño del texto de la lista */
+
+}
+/* Estilos del separador HR */
 .hr-separator {
   border: none;
   height: 10px;
-  background-color: #f70000;
-  margin: 70px 0; /* Ajusta el margen superior e inferior según sea necesario */
+  background-color: #ff5151; /* Color del separador */
+  margin: 90px 0; /* Ajusta el margen superior e inferior según sea necesario */
 }
+
+/* Otros estilos específicos que desees agregar */
+
