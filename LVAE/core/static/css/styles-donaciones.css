@@ -55,12 +55,41 @@ button {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Cambia el color al hacer hover */
-button:hover {
-    background-color: #4c7aaf;
-    color: white;
+.navbar-nav .nav-link {
+    color: #000000;
+    font-size: 19px;
+    margin: 0 20px;
+    border-radius: 5px; /* Añade bordes redondeados */
+    transition: background-color 0.3s, color 0.3s;
 }
 
+.navbar-nav .nav-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+    border-radius: 5px; /* Mantén bordes redondeados en hover */
+}
+
+/* Cambia el color al hacer hover */
+.boton-donacion {
+    font-size: 1.5em;
+    padding: 30px 30px;
+    background-color: white;
+    color: #5D26C1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out; /* Agrega la transición al efecto hover */
+}
+
+.boton-donacion:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    transform: scale(1.05) !important; /* Escala el botón en el hover */
+}
 
 button img {
     vertical-align: middle;
@@ -108,8 +137,3 @@ p {
 
    
 
-.navbar-nav .nav-link {
-color: #000000; /* black text color for navbar items */
-font-size: 19px; /* Adjust the font size as needed */
-margin: 0 20px; /* Adjust the margin to add separation between items */
-}
