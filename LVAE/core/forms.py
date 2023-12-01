@@ -25,9 +25,10 @@ class CustomUserCreationForm(UserCreationForm):
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su número de teléfono'}),
     )
     fecha_nacimiento = forms.DateField(
-        label=_("Fecha de Nacimiento"),
-        widget=forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su fecha de nacimiento'}),
+    label=_("Fecha de Nacimiento"),
+    widget=forms.TextInput(attrs={'class': 'form-control datepicker', 'placeholder': 'Ingrese su fecha de nacimiento'}),
     )
+
     estado = forms.CharField(
         label=_("Estado"),
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese el Estado donde vive'}),
