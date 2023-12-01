@@ -36,3 +36,34 @@ header {
   background-color: #f70000;
   margin: 70px 70px;
 }
+
+/* Agrega este código al final de tu archivo styles-paso.css */
+
+/* Estilo del título principal */
+.text-center {
+  font-family: 'TuFuentePersonalizada', sans-serif; /* Reemplaza 'TuFuentePersonalizada' con el nombre de la fuente que desees */
+  font-size: 2.5em; /* Tamaño del título */
+  color: #000000; /* Color del texto */
+}
+
+/* Estilo del subtítulo */
+.text-center {
+  font-family: 'TuFuentePersonalizada', sans-serif;
+  font-size: 1.8em;
+  color: #000000;
+}
+
+/* Estilo de la lista de texto */
+.text-list li {
+  font-family: 'TuFuentePersonalizada', sans-serif;
+  font-size: 1.2em;
+  color: #000000;
+}
+
+/* Estilo del separador HR */
+.hr-separator {
+  border: none;
+  height: 10px;
+  background-color: #f70000;
+  margin: 70px 0; /* Ajusta el margen superior e inferior según sea necesario */
+}
