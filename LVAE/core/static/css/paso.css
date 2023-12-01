@@ -21,9 +21,6 @@ body {
     height: auto;
     border-radius: 50%;
     margin-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .info-container {
