@@ -4,7 +4,6 @@ from django.contrib.auth import login
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.core.mail import EmailMessage
-from django.utils.html import strip_tags
 
 
 def registrar_usuario(request):
@@ -14,16 +13,15 @@ def registrar_usuario(request):
             usuario = form.save()
 
             # Renderizar la plantilla con los datos del usuario
-            email_body = render_to_string('core/reporte_registro.html', {'usuario': usuario})
+            email_body = render_to_string('core/reporte_registro.txt', {'usuario': usuario})
 
             # Configurar el correo
             subject = 'Nuevo Registro de Usuario en La Via al Éxito'
             from_email = settings.EMAIL_HOST_USER
             to_email = ['reporteviaexito@gmail.com']
 
-            # Configurar el correo como mensaje HTML y de texto plano
-            message = EmailMessage(subject, strip_tags(email_body), from_email, to_email)
-            message.content_subtype = 'html'  # Indicar que el contenido es HTML
+            # Configurar el correo como mensaje de texto plano
+            message = EmailMessage(subject, email_body, from_email, to_email)
             message.send(fail_silently=False)
 
             # Redirige a la página de inicio de sesión después del registro exitoso
@@ -34,6 +32,7 @@ def registrar_usuario(request):
         form = CustomUserCreationForm()
 
     return render(request, 'core/registroap.html', {'form': form})
+
 
 
 

@@ -1,0 +1,14 @@
+Nuevo Registro de Usuario
+
+Se ha registrado un nuevo usuario en La Via al Éxito. A continuación se detallan los datos:
+
+Nombre: {{ usuario.nombre }}
+Apellido: {{ usuario.apellido }}
+Fecha de Nacimiento: {{ usuario.fecha_nacimiento }}
+Teléfono: {{ usuario.telefono }}
+Estado: {{ usuario.estado }}
+Ciudad: {{ usuario.ciudad }}
+Email: {{ usuario.email }}
+Tipo de Usuario: {{ usuario.user_type }}
+
+La Via al Éxito - Notificación Automática
