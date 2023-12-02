@@ -160,6 +160,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'laviaalexitopr@gmail.com' 
-EMAIL_HOST_PASSWORD = 'ViaExito_pr23'  
+EMAIL_HOST_PASSWORD = 'fsyi sapd ctvb bcte '  
 
 
