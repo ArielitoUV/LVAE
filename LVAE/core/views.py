@@ -1,19 +1,42 @@
 from django.shortcuts import render, redirect
 from core.forms import CustomUserCreationForm, CustomAuthenticationForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import login
+from django.template.loader import render_to_string
+from django.conf import settings
+from django.core.mail import EmailMessage
+from django.utils.html import strip_tags
+
 
 def registrar_usuario(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
+            usuario = form.save()
+
+            # Renderizar la plantilla con los datos del usuario
+            email_body = render_to_string('core/registro_email_admin.html', {'usuario': usuario})
+
+            # Configurar el correo
+            subject = 'Nuevo Registro de Usuario en La Via al Éxito'
+            from_email = settings.EMAIL_HOST_USER
+            to_email = ['reporteviaexito@gmail.com']
+
+            # Configurar el correo como mensaje HTML y de texto plano
+            message = EmailMessage(subject, strip_tags(email_body), from_email, to_email)
+            message.content_subtype = 'html'  # Indicar que el contenido es HTML
+            message.send(fail_silently=False)
+
             # Redirige a la página de inicio de sesión después del registro exitoso
             return redirect('iniciar_sesion')
+
     else:
         # Si no es una solicitud POST, crea un nuevo formulario (limpio)
         form = CustomUserCreationForm()
 
     return render(request, 'core/registroap.html', {'form': form})
+
+
+
 
 
 def iniciar_sesion(request):
