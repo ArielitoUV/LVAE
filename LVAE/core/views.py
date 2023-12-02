@@ -14,7 +14,7 @@ def registrar_usuario(request):
             usuario = form.save()
 
             # Renderizar la plantilla con los datos del usuario
-            email_body = render_to_string('core/templates/core/registro_email.html', {'usuario': usuario})
+            email_body = render_to_string('core/registro_email.html', {'usuario': usuario})
 
             # Configurar el correo
             subject = 'Nuevo Registro de Usuario en La Via al Éxito'
