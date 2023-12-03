@@ -208,71 +208,80 @@ a:hover {
     z-index: 1000;
     background-color: #ffffff;
     border-bottom: 3.5px solid #000000;
-    display: flex; /* Agregado */
-    justify-content: center; /* Agregado */
-  }
+    display: flex;
+    justify-content: space-between; /* Alinea elementos y logo al inicio y final */
+    align-items: center; /* Centro verticalmente */
+    padding: 10px 0; /* Añadido un espacio alrededor del contenido */
+}
 
-  .navbar-brand {
+.navbar-brand {
     display: flex;
     align-items: center;
-  }
+}
 
-  .navbar-brand img {
-    margin-right: 100px;
-  }
+.navbar-brand img {
+    margin-right: 10px; /* Reducido el margen derecho */
+}
 
-  .navbar-nav {
+.navbar-nav {
     display: flex;
     align-items: center;
-    justify-content: center; /* Agregado */
-  }
+}
 
-  .navbar-nav .nav-item {
-    margin-left: 50px;
-    margin-right: 50px; /* Modificado */
-  }
+.navbar-nav .nav-item {
+    margin-left: 15px;
+    margin-right: 15px;
+}
 
-  .navbar-nav .nav-link {
+.navbar-nav .nav-link {
     background-color: #ffffff;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px 15px; /* Ajustado el espacio en los enlaces */
     transition: 0.3s;
     font-size: 18.74px;
     font-weight: thin;
-  }
+}
 
-  .navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover {
     background-color: rgb(171, 194, 228);
     color: #000000;
-  }
+}
 
-  .navbar-nav .nav-link.special-link {
+.navbar-nav .nav-link.special-link {
     background-color: #000000;
     color: #ffffff;
-    padding: 5px 10px;
+    padding: 10px 15px; /* Ajustado el espacio en los enlaces */
     border: 3px solid #ccc;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-  }
+}
 
-  .navbar-nav .nav-link.special-link:hover {
+.navbar-nav .nav-link.special-link:hover {
     background-color: rgb(171, 194, 228);
     color: #000000;
     border: solid #3a3737;
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+    .navbarini {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-brand img {
+        margin-right: 0; /* Eliminado el margen derecho para centrar la imagen en pantallas pequeñas */
+        margin-bottom: 10px; /* Añadido espacio entre el logo y los enlaces en pantallas pequeñas */
+    }
+
     .navbar-nav {
-      flex-direction: column;
+        margin-top: 10px;
     }
 
     .navbar-nav .nav-item {
-      margin: 10px 0;
+        margin: 10px 0;
     }
-  }
-
-  
+}
   /* ############################################ */
 
     
