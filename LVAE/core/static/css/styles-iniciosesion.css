@@ -57,7 +57,7 @@ input {
 }
 
 input:focus {
-    border-color: #4CAF50;
+    border-color: #ffffff;
 }
 
 select {
@@ -69,7 +69,7 @@ select {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #ffffff;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -79,7 +79,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #ffffff;
 }
 
 .social-buttons {
@@ -88,7 +88,7 @@ button:hover {
 
 .twitter, .facebook {
     display: inline-block;
-    background-color: #4CAF50;
+    background-color: #ffffff;
     color: white;
     padding: 5px 5px;
     border: none;
@@ -100,7 +100,7 @@ button:hover {
 }
 
 .twitter:hover, .facebook:hover {
-    background-color: #45a049;
+    background-color: #ffffff;
 }
 
 .forgot-password, .join-now {
@@ -109,14 +109,14 @@ button:hover {
 }
 
 .forgot-password a, .join-now a {
-    color: #4CAF50;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .forgot-password a:hover, .join-now a:hover {
-    color: #45a049;
+    color: #fbfffb;
 }
 
 
