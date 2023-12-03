@@ -204,7 +204,7 @@ a:hover {
 
 .navbarini {
     position: sticky;
-    top: 0;
+    top: 10px;
     z-index: 1000;
     background-color: #ffffff;
     border-bottom: 3.5px solid #000000;
