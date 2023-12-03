@@ -12,7 +12,7 @@ body {
 .container-beca {
     max-width: 800px;
     margin: 50px auto;
-    background: #c2a0e7; /* Lila pastel */
+    background: #e7c09e;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -26,7 +26,7 @@ body {
 }
 
 .beca {
-    background-color: #aaffc3; /* Verde pastel */
+    background-color: #d8f390; /* Verde pastel ajustado */
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
@@ -81,10 +81,9 @@ p {
     font-weight: bold;
 }
 
-
-#fondo{
+#fondo {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: #FAEBD7
+    background: #FAEBD7;
 }
