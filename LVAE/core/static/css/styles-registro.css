@@ -261,6 +261,11 @@ a:hover {
     background-color: rgb(171, 194, 228);
     color: #000000;
     border: solid #3a3737;
+    
+}
+.navbar-nav .nav-link.active {
+    text-decoration: none;
+    border-bottom: none;
 }
 
 @media (max-width: 768px) {
