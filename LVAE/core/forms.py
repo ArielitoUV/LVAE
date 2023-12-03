@@ -69,3 +69,9 @@ class CustomAuthenticationForm(AuthenticationForm):
         widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'class': 'form-control', 'placeholder': 'Ingrese su contraseña'}),
     )
 
+
+# class PerfilForm(forms.ModelForm):
+#     class Meta:
+#         model = Usuario
+#         fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono', 'estado', 'ciudad']
+

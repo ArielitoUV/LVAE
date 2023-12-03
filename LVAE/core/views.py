@@ -4,6 +4,8 @@ from django.contrib.auth import login
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.core.mail import EmailMessage
+# from django.contrib.auth.decorators import login_required
+
 
 
 def registrar_usuario(request):
@@ -66,6 +68,26 @@ def rs(request):
 
 def gestionperfil(request):
     return render(request, "core/gestionperfil.html")
+
+# from django.shortcuts import render, redirect
+# from django.contrib import messages
+# from .forms import PerfilForm
+
+
+# @login_required
+# def gestionperfil(request):
+#     if request.method == 'POST':
+#         form = PerfilForm(request.POST, instance=request.user)
+#         if form.is_valid():
+#             form.save()
+#             messages.success(request, 'Perfil actualizado exitosamente.')
+#             return redirect('index')
+#         else:
+#             messages.error(request, 'Hubo un error al actualizar el perfil. Por favor, corrija los errores.')
+#     else:
+#         form = PerfilForm(instance=request.user)
+
+#     return render(request, 'gestionperfil.html', {'form': form})
 
 
 def donaciones(request):

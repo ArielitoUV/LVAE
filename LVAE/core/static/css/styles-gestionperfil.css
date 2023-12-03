@@ -3,7 +3,6 @@ body {
     background: #ee9ca7;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -29,6 +28,8 @@ body {
     max-height: 80vh; /* Ajustado para reducir la altura del contenedor */
     margin-bottom: -63px; /* Agregado margen inferior */
     overflow-y: auto;
+    align-items: center;
+
 }
 
 .center-image {
@@ -147,10 +148,73 @@ input::placeholder {
 
 
 
+/* Estilos para el menú de navegación */
 .navbarini {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; 
-}
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 3.5px solid #000000;
+    display: flex; /* Agregado */
+    justify-content: center; /* Agregado */
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    margin-right: 100px;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Agregado */
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 50px;
+    margin-right: 50px; /* Modificado */
+  }
+
+  .navbar-nav .nav-link {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.3s;
+    font-size: 18.74px;
+    font-weight: thin;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: rgb(171, 194, 228);
+    color: #000000;
+  }
+
+  .navbar-nav .nav-link.special-link {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .navbar-nav .nav-link.special-link:hover {
+    background-color: rgb(171, 194, 228);
+    color: #000000;
+    border: solid #3a3737;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+    }
+
+    .navbar-nav .nav-item {
+      margin: 10px 0;
+    }
+  }
