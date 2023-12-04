@@ -3,10 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
 from .models import Usuario
 from django import forms
-
-
-
-
+from django.contrib.auth.models import User
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(
         label=_('Correo electrónico'),
@@ -55,12 +52,9 @@ class CustomUserCreationForm(UserCreationForm):
         self.error_messages['password_common'] = _("La contraseña no puede ser una contraseña común.")
         self.error_messages['password_entirely_numeric'] = _("La contraseña no puede ser completamente numérica.")
         self.error_messages['email_in_use'] = _('Este email ya está en uso. Por favor, elige otro.')
-
         # Aplica clases de Bootstrap a los campos con errores
         for field_name, field in self.fields.items():
             field.widget.attrs.update({'class': 'form-control'})
-
-
 class CustomAuthenticationForm(AuthenticationForm):
     username = forms.EmailField(label=_('Correo electrónico'), widget=forms.EmailInput(attrs={'autofocus': False,'placeholder':'Ingrese correo electrónico'}))
     password = forms.CharField(
@@ -68,10 +62,30 @@ class CustomAuthenticationForm(AuthenticationForm):
         strip=False,
         widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'class': 'form-control', 'placeholder': 'Ingrese su contraseña'}),
     )
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name']
 
+class PasswordChangeForm(forms.Form):
+    current_password = forms.CharField(widget=forms.PasswordInput())
+    new_password1 = forms.CharField(label='Nueva contraseña', widget=forms.PasswordInput())
+    new_password2 = forms.CharField(label='Confirmar nueva contraseña', widget=forms.PasswordInput())
 
-# class PerfilForm(forms.ModelForm):
-#     class Meta:
-#         model = Usuario
-#         fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono', 'estado', 'ciudad']
+    def __init__(self, user, *args, **kwargs):
+        self.user = user
+        super(PasswordChangeForm, self).__init__(*args, **kwargs)
 
+    def clean_current_password(self):
+        current_password = self.cleaned_data.get('current_password')
+        if not self.user.check_password(current_password):
+            raise forms.ValidationError('La contraseña actual no es válida.')
+        return current_password
+
+    def clean(self):
+        cleaned_data = super(PasswordChangeForm, self).clean()
+        new_password1 = cleaned_data.get('new_password1')
+        new_password2 = cleaned_data.get('new_password2')
+        if new_password1 and new_password2 and new_password1 != new_password2:
+            raise forms.ValidationError('Las contraseñas no coinciden.')
+        return cleaned_data
