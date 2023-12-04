@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #4568DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container-rs {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff42;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    max-width: 1050px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+.container-rs:hover {
+    transform: scale(1.02);
+}
+
+iframe {
+    width: 100%; /* Modifica el ancho para que ocupe todo el contenedor */
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: scale(2.0); /* Ajusta el valor según sea necesario */
+    transform-origin: 0 0; /* Mueve el origen de la transformación al contenedor iframe */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo adicional para hacer que el contenedor sea más atractivo */
+.container-rs p {
+    text-align: center;
+    color: #555;
+    margin-top: 20px;
+}
+
+
+.navbar-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+color: #000000; /* black text color for navbar items */
+font-size: 19px; /* Adjust the font size as needed */
+margin: 0 20px; /* Adjust the margin to add separation between items */
+}
+.navbar {
+    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
+    }
+
+    /* .navbar-brand {
+        margin-right: -80px;  /* Esto empujará el logotipo hacia la izquierda */
+
+    
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.navbar-nav .nav-link {
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.3s;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+}
+
+/* Estilos especiales para los enlaces "Registro" y "Iniciar sesión" */
+.navbar-nav .nav-item .special-link {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-item .special-link:hover {
+    background-color: hwb(212 69% 0%);
+    color: #000000;
+    border: solid #3a3737;
+}
+
+.image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 70px;
+    margin-bottom: 90px; /* Ajusta el margen inferior según sea necesario */
+}       
+
+.navbar-brand {
+    margin-right: 70px;  /* Mueve el logotipo hacia la izquierda */
+}
+
+/* Ajusta el margen izquierdo del logotipo si es necesario */
+.navbar-brand {
+    margin-left: 110px;  /* Ajusta según sea necesario */
+}
