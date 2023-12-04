@@ -59,15 +59,23 @@ p {
 
 .navbar-nav {
     display: flex;
-    gap: 30px;
+    gap: 120px;
     align-items: center;
 }
 
 .navbar-nav .nav-link {
     color: #000000;
     font-size: 19px;
-    margin: 0 20px;
+    margin: 0 30px;
 }
+.navbar-brand {
+    margin-right: 30px;  /* Mueve el logotipo hacia la izquierda */
+  }
+  
+  /* Ajusta el margen izquierdo del logotipo si es necesario */
+  .navbar-brand {
+    margin-left: 90px;  /* Ajusta según sea necesario */
+  }
 
 #texto {
     font-size: 18px;
