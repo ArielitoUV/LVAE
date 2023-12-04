@@ -240,7 +240,6 @@ a:hover {
 }
 
 .navbar .navbar-nav .nav-link {
-    background-color: #f8f9fa;
     border-radius: 5px;
     padding: 5px 10px;
     transition: 0.3s;
