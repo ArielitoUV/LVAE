@@ -60,6 +60,10 @@ margin: 0 20px; /* Adjust the margin to add separation between items */
 .navbar {
     border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
     }
+
+    /* .navbar-brand {
+        margin-right: -80px;  /* Esto empujará el logotipo hacia la izquierda */
+
     
 
 .navbar-nav {
@@ -74,7 +78,6 @@ margin: 0 20px; /* Adjust the margin to add separation between items */
 }
 
 .navbar-nav .nav-link {
-    background-color: #f8f9fa;
     border-radius: 5px;
     padding: 5px 10px;
     transition: 0.3s;
@@ -111,6 +114,15 @@ margin: 0 20px; /* Adjust the margin to add separation between items */
 .image img {
     width: 100%;
     max-width: 400px;
-    border-radius: 8px;
-    margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+    border-radius: 70px;
+    margin-bottom: 90px; /* Ajusta el margen inferior según sea necesario */
 }       
+
+.navbar-brand {
+    margin-right: 70px;  /* Mueve el logotipo hacia la izquierda */
+}
+
+/* Ajusta el margen izquierdo del logotipo si es necesario */
+.navbar-brand {
+    margin-left: 110px;  /* Ajusta según sea necesario */
+}

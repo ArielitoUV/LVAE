@@ -18,11 +18,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 450px;
-    width: 100%;
+    width: 100vh;
     box-sizing: border-boxs;
-    margin-top: 200px;
-    margin-bottom: 120px;
-    width: 500px; /* Ajusta el ancho según tus necesidades */
+    margin-top: 100px;
+    width: 700px; /* Ajusta el ancho según tus necesidades */
     margin-left: auto;
     margin-right: auto;
 }
@@ -203,49 +202,44 @@ a:hover {
 }
 
 
-.navbarini {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: #ffffff; /* Color de fondo del navbar */
-    border-bottom: 3px solid #000000; /* Agrega un borde inferior */
+.navbar {
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #000000;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.navbar-brand {
+.navbar .navbar-brand {
     display: flex;
     align-items: center;
 }
 
-.navbar-brand img {
-    margin-right: 100px;
+.navbar .navbar-brand img {
+    margin-right: 100px; /* Puedes ajustar este valor según tus necesidades */
 }
 
-.navbar-nav {
+.navbar .navbar-nav {
     display: flex;
     align-items: center;
 }
 
-.navbar-nav .nav-item {
+.navbar .navbar-nav .nav-item {
     margin-left: 50px;
     margin-right: 80px;
 }
 
-.navbar-light .navbar-nav .nav-link {
+.navbar .navbar-light .navbar-nav .nav-link {
     color: rgb(0, 0, 0);
 }
 
-.navbar-nav .nav-link:hover {
+.navbar .navbar-nav .nav-link:hover {
     background-color: hwb(212 69% 0%);
     color: #000000;
 }
 
-.navbar-nav .nav-link {
-    background-color: #f8f9fa;
+.navbar .navbar-nav .nav-link {
     border-radius: 5px;
     padding: 5px 10px;
     transition: 0.3s;
@@ -253,44 +247,33 @@ a:hover {
     font-weight: thin; /* Agrega negrita */
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: rgb(0, 0, 0);
+/* Integración de estilos para pantallas pequeñas (media query) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .navbar-brand img {
+        margin-right: 0; /* Eliminado el margen derecho para centrar la imagen en pantallas pequeñas */
+        margin-bottom: 10px; /* Añadido espacio entre el logo y los enlaces en pantallas pequeñas */
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 10px;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
 }
 
-.navbar-nav .nav-link:hover {
-    background-color: hwb(212 69% 0%);
-    color: #000000;
-}
+  /* ############################################ */
 
-/* Estilos especiales para los enlaces "Registro" y "Iniciar sesión" */
-.navbar-nav .nav-item .special-link {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 5px 10px;
-    border: 3px solid #ccc;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.navbar-nav .nav-item .special-link:hover {
-    background-color: rgb(212, 69, 0);
-    color: #000000;
-    border: solid #3a3737;
-}
-.navbar-nav .nav-item .special-link:hover {
-    background-color: hwb(212 69% 0%);
-    color: #000000;
-    border:solid #3a3737;
-}
-
-.navbar {
-    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
-}
     
 
 .container {
-    margin-top: 80px; 
+    margin-top:15px; 
 }
 
 .password-container {
