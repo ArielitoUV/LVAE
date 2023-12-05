@@ -15,5 +15,6 @@ urlpatterns = [
     path('unicolla/',views.unicolla,name="unicolla"),
     path('secundaria/',views.secundaria,name="secundaria"),
     path('acercade/',views.acercade,name="acercade"),
+    path('index2/',views.index2,name="index2"),
     path('admin/', admin.site.urls),
 ]

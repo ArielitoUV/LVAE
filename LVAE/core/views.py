@@ -124,3 +124,6 @@ def unicolla(request):
 
 def secundaria(request):
     return render(request, "core/secundaria.html")
+
+def index2(request):
+    return render(request, "core/index2.html")
