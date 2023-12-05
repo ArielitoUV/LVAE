@@ -70,7 +70,9 @@ def gestion_perfil(request):
 
     else:
         form = UserProfileForm(instance=usuario)
-        password_form = PasswordChangeForm()
+        password_form = PasswordChangeForm(user=usuario)
+
+    
 
     context = {
         'form': form,
