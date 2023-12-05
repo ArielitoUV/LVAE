@@ -261,6 +261,12 @@ button:hover {
     }
   }
 
+.language-selector {
+    margin-top: 10px;
+}
 
+.language-selector label, .language-selector select {
+    margin-right: 10px;
+}
   
   /* ############################################ */
