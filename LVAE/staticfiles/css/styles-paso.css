@@ -8,22 +8,81 @@ body {
   font-family: 'TuFuentePersonalizada', sans-serif; /* Reemplaza 'TuFuentePersonalizada' con el nombre de la fuente que desees */
 }
 
-/* Estilos de la barra de navegación */
+
+.navbar-nav {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+color: #000000; /* black text color for navbar items */
+font-size: 19px; /* Adjust the font size as needed */
+margin: 0 20px; /* Adjust the margin to add separation between items */
+}
 .navbar {
-  background-color: #fff; /* Fondo de la barra de navegación */
+  border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
+  }
+
+  /* .navbar-brand {
+      margin-right: -80px;  /* Esto empujará el logotipo hacia la izquierda */
+
+  
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 80px;
+  margin-right: 70px;
+}
+
+.navbar-nav .nav-link {
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 0.3s;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0, 0, 0);
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: hwb(212 69% 0%);
+  color: #000000;
+}
+
+/* Estilos especiales para los enlaces "Registro" y "Iniciar sesión" */
+.navbar-nav .nav-item .special-link {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: 3px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-item .special-link:hover {
+  background-color: hwb(212 69% 0%);
+  color: #000000;
+  border: solid #3a3737;
 }
 
 .navbar-brand {
-  color: #000; /* Color del texto del logo y enlaces de navegación */
+  margin-right: 30px;  /* Mueve el logotipo hacia la izquierda */
 }
 
-.navbar-toggler-icon {
-  background-color: #000; /* Color del icono del botón de alternar navegación */
+/* Ajusta el margen izquierdo del logotipo si es necesario */
+.navbar-brand {
+  margin-left: 90px;  /* Ajusta según sea necesario */
 }
 
-.nav-item {
-  margin-right: 10px; /* Espaciado entre elementos de navegación */
-}
 
 .col-md-6 {
   /* Ajusta el texto de la lista a la derecha dentro del contenedor */

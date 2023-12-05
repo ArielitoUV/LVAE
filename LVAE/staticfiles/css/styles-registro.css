@@ -11,17 +11,16 @@ body {
 
 
 .registration-container {
-
+    
     background-color: white;
     padding: 20px;
     border-radius: 32px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 450px;
-    width: 100vh;
-    box-sizing: border-boxs;
-    margin-top: 100px;
-    width: 700px; /* Ajusta el ancho según tus necesidades */
+    width: 100%; /* Cambiado de 100vh a 100% para ocupar el ancho completo */
+    box-sizing: border-box; /* Corregido el error tipográfico */
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
