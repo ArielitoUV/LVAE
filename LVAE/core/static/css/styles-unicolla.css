@@ -75,77 +75,68 @@ body {
     height: 700px; /* Mantener la proporción de aspecto */
 }
 
+.navbarini {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 3.5px solid #000000;
+  display: flex; /* Agregado */
+  justify-content: center; /* Agregado */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  margin-right: 100px;
+}
+
 .navbar-nav {
-    display: flex;
-    gap: 80px;
-    align-items: center;
-  }
-  
-  .navbar-nav .nav-link {
-  color: #000000; /* black text color for navbar items */
-  font-size: 19px; /* Adjust the font size as needed */
-  margin: 0 20px; /* Adjust the margin to add separation between items */
-  }
-  .navbar {
-    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
-    }
-  
-    /* .navbar-brand {
-        margin-right: -80px;  /* Esto empujará el logotipo hacia la izquierda */
-  
-    
-  
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Agregado */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 50px;
+  margin-right: 50px; /* Modificado */
+}
+
+.navbar-nav .nav-link {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 0.3s;
+  font-size: 18.74px;
+  font-weight: thin;
+}
+
+
+.navbar-nav .nav-link.special-link {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: 3px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-link.special-link:hover {
+  background-color: rgb(171, 194, 228);
+  color: #000000;
+  border: solid #3a3737;
+}
+
+@media (max-width: 768px) {
   .navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
   }
-  
+
   .navbar-nav .nav-item {
-    margin-left: 80px;
-    margin-right: 70px;
+    margin: 10px 0;
   }
-  
-  .navbar-nav .nav-link {
-    border-radius: 5px;
-    padding: 5px 10px;
-    transition: 0.3s;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-  }
-  
-  .navbar-light .navbar-nav .nav-link {
-    color: rgb(0, 0, 0);
-  }
-  
-  .navbar-nav .nav-link:hover {
-    background-color: hwb(212 69% 0%);
-    color: #000000;
-  }
-  
-  /* Estilos especiales para los enlaces "Registro" y "Iniciar sesión" */
-  .navbar-nav .nav-item .special-link {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 5px 10px;
-    border: 3px solid #ccc;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .navbar-nav .nav-item .special-link:hover {
-    background-color: hwb(212 69% 0%);
-    color: #000000;
-    border: solid #3a3737;
-  }
-  
-  .navbar-brand {
-    margin-right: 30px;  /* Mueve el logotipo hacia la izquierda */
-  }
-  
-  /* Ajusta el margen izquierdo del logotipo si es necesario */
-  .navbar-brand {
-    margin-left: 90px;  /* Ajusta según sea necesario */
-  }
-  
+}

@@ -180,11 +180,12 @@ body {
 
 /*pie de la pagina*/
 .footer {
-    background-color: #333;
-    color: white;
+    background-color: #ffcc80; /* Cambia este color según tus preferencias */
+    color: #000000;
     text-align: center;
     padding: 10px;
 }
+
 
 .language {
     display: inline-block;
