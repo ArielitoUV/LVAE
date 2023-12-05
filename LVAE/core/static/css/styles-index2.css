@@ -364,6 +364,18 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
 
 }
 
+.button-container {
+            display: inline-block; /* Mantiene el contenedor del botón en línea con el texto */
+            background-color: #007bff; /* Cambia el color de fondo según tus preferencias */
+            padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+            border-radius: 5px; /* Agrega bordes redondeados al contenedor del botón */
+        }
+
+        .btn.ver-mas {
+            font-family: 'Teko', sans-serif;
+            background: linear-gradient(to right, #a1c5eb, #a0deee); /* Degradado de colores para el fondo del título */
+            text-decoration: none; /* Elimina la subrayado predeterminado en los enlaces */
+        }
 
   /* ############################################ */
 
