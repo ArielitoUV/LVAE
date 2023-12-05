@@ -1,9 +1,16 @@
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    height: 0vh;
+    background: linear-gradient(to bottom right, #e0fefe, #c7ceea);
 }
+
+/* Asegúrate de que el resto de tus estilos estén a continuación de esta regla */
+
+
+/* Resto de tu código CSS aquí */
+
 
 /* IDIOMA */
 #labelIdioma {
@@ -80,6 +87,7 @@ body {
 .connect-with-us {
     margin-top: 40px;
     text-align: center;
+    
 }
 
 .social-icons {
@@ -95,6 +103,7 @@ body {
 .value {
     text-align: center;
     flex: 1;
+    
 }
 
 .additional-section {
@@ -120,6 +129,7 @@ body {
     padding: 20px;
     margin: 20px 0; /* Aumenta el margen superior e inferior */
     border-radius: 10px; /* Añade redondeo a las esquinas */
+    
 }
 
 .contact-section h2 {
@@ -180,12 +190,11 @@ body {
 
 /*pie de la pagina*/
 .footer {
-    background-color: #ffcc80; /* Cambia este color según tus preferencias */
-    color: #000000;
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 10px;
 }
-
 
 .language {
     display: inline-block;
@@ -291,6 +300,7 @@ body {
 }
 .navbar {
 border-bottom: 3px solid #ccc; /* Add a 1px solid border at the bottom */
+font-family: 'Hedvig Letters Serif', serif;
 }
 
 /*abajo de la pagina*/
@@ -299,6 +309,7 @@ background-color: #ffffff; /* Set the background color to white */
 /* Additional styling if needed */
 padding: 20px; /* Example padding, adjust as needed */
 color: #000000; /* Example text color, adjust as needed */
+
 }
 
 
@@ -307,6 +318,7 @@ margin-top: 10px; /* Adjust the top margin as needed for separation */
 display: flex;
 flex-direction: column;
 align-items: center; /* Center horizontally */
+
 }
 
 .social-container {
@@ -361,7 +373,7 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #ffffff;
+    background-color:transparent;
     border-bottom: 3.5px solid #000000;
     display: flex; /* Agregado */
     justify-content: center; /* Agregado */
@@ -385,10 +397,11 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
   .navbar-nav .nav-item {
     margin-left: 50px;
     margin-right: 50px; /* Modificado */
+    
   }
-
+ /*boton navbar*/
   .navbar-nav .nav-link {
-    background-color: #ffffff;
+    background: linear-gradient(to right, #a1c5eb, #a0deee); /* Degradado de colores para el fondo del título */
     border-radius: 5px;
     padding: 5px 10px;
     transition: 0.3s;
@@ -397,10 +410,11 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
   }
 
   .navbar-nav .nav-link:hover {
-    background-color: rgb(171, 194, 228);
+    background: linear-gradient(to right, #a1c5eb, #a0deee); /* Degradado de colores para el fondo del título */
     color: #000000;
   }
 
+  /*Mi cuenta*/
   .navbar-nav .nav-link.special-link {
     background-color: #000000;
     color: #ffffff;
@@ -413,7 +427,9 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
 
   .navbar-nav .nav-link.special-link:hover {
     background-color: rgb(171, 194, 228);
-    color: #000000;
+    /* color: #000000; */
+    color: #ffffff;
+
     border: solid #3a3737;
   }
 
@@ -430,16 +446,19 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
 
 .footer {
     text-align: center;
+    font-family: 'Playfair Display', serif;
   }
   
   .footer h2 {
     margin-top: 10px;
+    
   }
 
 
   .container {
     max-width: 1200px;
     margin: 20px auto;
+    
 }
 
 .values,
@@ -461,4 +480,8 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
     border-radius: 15px;
     padding: 20px;
     width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
+}
+.p{
+    font-family: 'PT Serif', serif;
+
 }
