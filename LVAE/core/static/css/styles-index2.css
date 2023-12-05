@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -86,6 +87,7 @@ body {
 .connect-with-us {
     margin-top: 40px;
     text-align: center;
+    
 }
 
 .social-icons {
@@ -101,6 +103,7 @@ body {
 .value {
     text-align: center;
     flex: 1;
+    
 }
 
 .additional-section {
@@ -126,6 +129,7 @@ body {
     padding: 20px;
     margin: 20px 0; /* Aumenta el margen superior e inferior */
     border-radius: 10px; /* Añade redondeo a las esquinas */
+    
 }
 
 .contact-section h2 {
@@ -442,16 +446,19 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
 
 .footer {
     text-align: center;
+    font-family: 'Playfair Display', serif;
   }
   
   .footer h2 {
     margin-top: 10px;
+    
   }
 
 
   .container {
     max-width: 1200px;
     margin: 20px auto;
+    
 }
 
 .values,
@@ -473,4 +480,8 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
     border-radius: 15px;
     padding: 20px;
     width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
+}
+.p{
+    font-family: 'PT Serif', serif;
+
 }
