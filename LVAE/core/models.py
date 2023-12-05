@@ -1,6 +1,5 @@
-# models.py
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 class UsuarioManager(BaseUserManager):
     def create_user(self, email, password=None, user_type=None, **extra_fields):
@@ -18,7 +17,7 @@ class UsuarioManager(BaseUserManager):
 
         return self.create_user(email, password, user_type, **extra_fields)
 
-class Usuario(AbstractBaseUser):
+class Usuario(AbstractBaseUser, PermissionsMixin):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     fecha_nacimiento = models.DateField(null=True)
@@ -39,5 +38,14 @@ class Usuario(AbstractBaseUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['nombre', 'apellido', 'user_type']
 
-    def __str__(self):
+    def has_module_perms(self, app_label):
+        return self.is_staff
+
+    def has_perm(self, perm, obj=None):
+        return self.is_staff
+
+    def get_short_name(self):
         return self.email
+
+    def get_full_name(self):
+        return f'{self.nombre} {self.apellido}'
