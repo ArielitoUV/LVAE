@@ -40,7 +40,7 @@ def iniciar_sesion(request):
             user = form.get_user()
             login(request, user)
             # Redirige a la página de inicio después del inicio de sesión exitoso
-            return redirect('index')
+            return redirect('index2')
         else:
             print(form.errors)
     else:
