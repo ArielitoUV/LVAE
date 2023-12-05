@@ -469,3 +469,10 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
     padding: 20px;
     width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
 }
+
+.value-in {
+    border: 2px solid #000000;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
+}
