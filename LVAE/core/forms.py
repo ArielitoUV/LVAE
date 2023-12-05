@@ -64,28 +64,11 @@ class CustomAuthenticationForm(AuthenticationForm):
     )
 class UserProfileForm(forms.ModelForm):
     class Meta:
-        model = User
-        fields = ['first_name', 'last_name']
+        model = Usuario
+        fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono', 'estado', 'ciudad', 'email', 'user_type']
 
 class PasswordChangeForm(forms.Form):
-    current_password = forms.CharField(widget=forms.PasswordInput())
+    current_password = forms.CharField(label='Contraseña actual', widget=forms.PasswordInput())
     new_password1 = forms.CharField(label='Nueva contraseña', widget=forms.PasswordInput())
     new_password2 = forms.CharField(label='Confirmar nueva contraseña', widget=forms.PasswordInput())
 
-    def __init__(self, user, *args, **kwargs):
-        self.user = user
-        super(PasswordChangeForm, self).__init__(*args, **kwargs)
-
-    def clean_current_password(self):
-        current_password = self.cleaned_data.get('current_password')
-        if not self.user.check_password(current_password):
-            raise forms.ValidationError('La contraseña actual no es válida.')
-        return current_password
-
-    def clean(self):
-        cleaned_data = super(PasswordChangeForm, self).clean()
-        new_password1 = cleaned_data.get('new_password1')
-        new_password2 = cleaned_data.get('new_password2')
-        if new_password1 and new_password2 and new_password1 != new_password2:
-            raise forms.ValidationError('Las contraseñas no coinciden.')
-        return cleaned_data

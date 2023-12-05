@@ -57,8 +57,10 @@ body {
     cursor: pointer;
 }
 .main-content {
-    max-width: 1200px;
-    margin: 20px auto;
+    max-width: 1400px;
+    margin: 100px auto;
+    background: linear-gradient(to bottom right, #e0fefe, #c7ceea);
+
 }
 
 .left-section {
