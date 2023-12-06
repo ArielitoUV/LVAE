@@ -50,7 +50,7 @@
             </div>
         </div>
     </nav>
-    <h1>Gestión de Perfil</h1>
+    <h1 class="titulo">Gestión de Perfil</h1>
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
@@ -64,7 +64,7 @@
         <button type="submit">Actualizar datos</button>
     </form>
     <hr>
-    <h3>Cambiar contraseña</h3>
+    <h3 class="titulo">Cambiar contraseña</h3>
     <form method="post">
         {% csrf_token %}
         {{ password_form.as_p }}

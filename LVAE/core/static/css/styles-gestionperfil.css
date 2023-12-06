@@ -215,3 +215,7 @@ input::placeholder {
     margin: 10px 0;
   }
 }
+
+.titulo{
+  text-align: center;
+}
