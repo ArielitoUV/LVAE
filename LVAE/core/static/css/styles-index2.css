@@ -6,12 +6,6 @@ body {
     background: linear-gradient(to bottom right, #e0fefe, #c7ceea);
 }
 
-/* Asegúrate de que el resto de tus estilos estén a continuación de esta regla */
-
-
-/* Resto de tu código CSS aquí */
-
-
 /* IDIOMA */
 #labelIdioma {
     position: fixed;
