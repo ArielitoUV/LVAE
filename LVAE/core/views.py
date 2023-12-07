@@ -13,6 +13,7 @@ from .forms import PerfilForm, CambiarContraseñaForm
 
 
 
+
 def registrar_usuario(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
@@ -52,6 +53,9 @@ def iniciar_sesion(request):
 
 @login_required
 def gestionar_perfil(request):
+    perfil_form = PerfilForm(instance=request.user)
+    password_form = CambiarContraseñaForm(request.user)
+
     if request.method == 'POST':
         perfil_form = PerfilForm(request.POST, instance=request.user)
         password_form = CambiarContraseñaForm(request.user, request.POST)
@@ -61,15 +65,11 @@ def gestionar_perfil(request):
             user = password_form.save()
             update_session_auth_hash(request, user)  # Actualiza la sesión si la contraseña cambió
             messages.success(request, 'Perfil actualizado exitosamente.')
-            return redirect('index2')  # Reemplaza 'nombre_de_la_url_de_inicio' con la URL de inicio de tu aplicación
+            return redirect('gestionar_perfil')  # Redirecciona a la misma vista
         else:
             messages.error(request, 'Error al actualizar el perfil. Por favor, corrige los errores.')
-    else:
-        perfil_form = PerfilForm(instance=request.user)
-        password_form = CambiarContraseñaForm(request.user)
-    
-    return render(request, 'gestionperfil.html', {'perfil_form': perfil_form, 'password_form': password_form})
 
+    return render(request, 'core/gestionperfil.html', {'perfil_form': perfil_form, 'password_form': password_form})
 
 
 
