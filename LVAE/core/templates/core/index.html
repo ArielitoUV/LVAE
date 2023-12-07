@@ -58,20 +58,25 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" style="color: black;" href="/donaciones/">Donaciones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" style="color: black;" href="/acercade/">Acerca de</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" style="color: black;" href="/rs/">Redes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link special-link" href="/iniciosesion/">Inicio sesión</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link special-link" href="/registroap/">Registro</a>
-              </li>
+                <a class="nav-link translate-es" href="/donaciones/">Donaciones</a>
+                <a class="nav-link translate-en" style="display: none;" href="/donaciones/">Donations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link translate-es" href="/acercade/">Acerca de</a>
+                <a class="nav-link translate-en" style="display: none;" href="/acercade/">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link translate-es" href="/rs/">Redes</a>
+                <a class="nav-link translate-en" style="display: none;" href="/rs/">Social</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link special-link translate-es" href="/iniciosesion/">Iniciar Sesion</a>
+              <a class="nav-link special-link translate-en" style="display: none;" href="/iniciosesion/">Login</a>
+          </li>
+            <li class="nav-item">
+                <a class="nav-link special-link translate-es" href="/registroap/">Registro</a>
+                <a class="nav-link special-link translate-en" style="display: none;" href="/registroap/">Sign Up</a>
+            </li>
               <li class="nav-item">
                 <a class="nav-link special-link" href="/index2/">index2</a>
               </li>
@@ -83,18 +88,23 @@
 <div class="main-content">
     <div class="left-section">
         <div class="text-content">
-            <h3>TODO EMPIEZA CON UN SUEÑO</h3>
-            <h5>Ocho años conectado a la comunidad con recursos para ayudar a alcanzar sus metas educativas</h5>
-            <a href="/donaciones/" class="btn">Dona ahora</a>
+            <h3 class="translate-es">TODO EMPIEZA CON UN SUEÑO</h3>
+            <h3 class="translate-en" style="display: none;">EVERYTHING STARTS WITH A DREAM</h3>
+            
+            <h5 class="translate-es">Ocho años conectado a la comunidad con recursos para ayudar a alcanzar sus metas educativas</h5>
+            <h5 class="translate-en" style="display: none;">Eight years connected to the community with resources to help achieve educational goals</h5>
+            
+            <a href="/donaciones/" class="btn translate-es">Dona ahora</a>
+            <a href="/donations/" class="btn translate-en" style="display: none;">Donate now</a>
         </div>
         <div class="image">
             <!-- Puedes colocar tu imagen aquí -->
             <img src="{% static 'assets/img/lading.png' %}" alt="Imagen de la landing page">
         </div>
     </div>
-
     <div class="connect-with-us">
-        <h2>Conéctate con nosotros</h2>
+      <h2 class="translate-es">Conéctate con nosotros</h2>
+      <h2 class="translate-en" style="display: none;">Connect with us</h2>
         <div class="social-icons">
             <a href="https://www.facebook.com/laviaalexito" target="_blank" rel="noopener noreferrer">
                 <img src="{% static 'assets/img/facebook.png' %}" alt="Facebook" class="icon">
@@ -109,10 +119,16 @@
                 <img src="{% static 'assets/img/youtube.png' %}" alt="YouTube" class="icon">
             </a>
             <div class="value-tx bordered rounded-box">
-              <h3>Recursos Clave para la Comunidad Latina en Nueva Jersey</h3>
+              <h3 class="translate-es">Recursos Clave para la Comunidad Latina en Nueva Jersey</h3>
+              <h3 class="translate-en">Key Resources for the Latino Community in New Jersey</h3>
             </div>
-        </div>                     
-        <p id="textoTitulo">Si necesitas información sobre educación, becas, ideas para tu camino a la universidad, ayuda financiera y más. No dudes en contactarte con nosotros.</p>
+        </div>
+        <div class="informacionn">
+
+          <p class="translate-es" id="textoTitulo">Si necesitas información sobre educación, becas, ideas para tu camino a la universidad, ayuda financiera y más. No dudes en contactarte con nosotros.</p>
+          <p class="translate-en" id="textoTitulo">If you need information about education, scholarships, ideas for your path to college, financial aid and more. Do not hesitate to contact us.</p>
+
+        </div>
     </div>
 
 
@@ -120,82 +136,123 @@
       <div class="values">
           <div class="value-container">
               <div class="value bordered rounded-box">
-                  <h3>Universidad o College</h3>
-                  <a href="/iniciosesion/" class="btn ver-mas" id="verMas1">Ver Más</a>
+                  <h3 class="translate-es">Universidad o College</h3>
+                  <a href="/iniciosesion/" class="btn ver-mas translate-es" id="verMas1">Ver Más</a>
+                  <h3 class="translate-en">University and College</h3>
+                  <a href="/iniciosesion/" class="btn ver-mas translate-en" id="verMas1">See More</a>
               </div>
           </div>
           <div class="value-container">
               <div class="value bordered rounded-box">
-                  <h3>Preparate desde la Secundaria</h3>
-                  <a href="/iniciosesion/" class="btn ver-mas" id="verMas2">Ver Más</a>
+                  <h3 class="translate-es">Preparate desde la Secundaria</h3>
+                  <a href="/iniciosesion/" class="btn ver-mas translate-es" id="verMas1">Ver Más</a>
+                  <h3 class="translate-en">Prepare from High School</h3>
+                  <a href="/iniciosesion/" class="btn ver-mas translate-en" id="verMas1">See More</a>
               </div>
           </div>
       </div>
-
+  
       <div class="additional-section">
           <div class="value-container">
               <div class="value-in bordered rounded-box">
-                  <h3>Paso a Paso Para Los Padres</h3>
-                  <a href="/iniciosesion/" class="btn ver-mas" id="verMas3">Ver Más</a>
+
+                  <h3 class="translate-es">Paso a Paso Para Los Padres</h3>
+                  <a href="/iniciosesion/" class="btn ver-mas translate-es" id="verMas1">Ver Más</a>
+                  <h3 class="translate-en">Step by Step for Parents</h3>
+                  <a href="/iniciosesion/" class="btn ver-mas translate-en" id="verMas1">See More</a>
+
+                  
               </div>
           </div>
       </div>
-
+  </div>
 
     <!-- Sección de contacto -->
     <div class="contact-section-container">
-        <div class="contact-section bordered">
-          <h2 style="font-size: 35px;">Contacto</h2>
-      
-          <p><img src="{% static 'assets/img/mapa.png' %}" alt="icon" class="icon"> Dirección: 345 Somerset Street Suite 9, North Plainfield, New Jersey, 07060, US</p>
-          <p><img src="{% static 'assets/img/gmail.png' %}" alt="icon" class="icon"> Correo: <a href="mailto:contact@laviaalexito.com">contact@laviaalexito.com</a></p>
-          <p><img src="{% static 'assets/img/telefono.png' %}" alt="icon" class="icon"> Teléfono: <a href="tel:+17323197884">732-319-7884</a></p>
-        </div>
-        <div class="visit-us-box">
-          <h2 style="font-size: 35px;">Visítanos</h2>
+      <div class="contact-section bordered">
+          <h2 style="font-size: 35px;" class="translate-es">Contacto</h2>
+          <h2 style="font-size: 35px; display: none;" class="translate-en">Contact</h2>
+  
+          <p><img src="{% static 'assets/img/mapa.png' %}" alt="icon" class="icon">
+              <span class="translate-es">Dirección: 345 Somerset Street Suite 9, North Plainfield, New Jersey, 07060, US</span>
+              <span style="display: none;" class="translate-en">Address: 345 Somerset Street Suite 9, North Plainfield, New Jersey, 07060, US</span>
+          </p>
+  
+          <p><img src="{% static 'assets/img/gmail.png' %}" alt="icon" class="icon">
+              <span class="translate-es">Correo: <a href="mailto:contact@laviaalexito.com">contact@laviaalexito.com</a></span>
+              <span style="display: none;" class="translate-en">Email: <a href="mailto:contact@laviaalexito.com">contact@laviaalexito.com</a></span>
+          </p>
+  
+          <p><img src="{% static 'assets/img/telefono.png' %}" alt="icon" class="icon">
+              <span class="translate-es">Teléfono: <a href="tel:+17323197884">732-319-7884</a></span>
+              <span style="display: none;" class="translate-en">Phone: <a href="tel:+17323197884">732-319-7884</a></span>
+          </p>
+      </div>
+  
+      <div class="visit-us-box">
+          <h2 style="font-size: 35px;" class="translate-es">Visítanos</h2>
+          <h2 style="font-size: 35px; display: none;" class="translate-en">Visit Us</h2>
+  
           <div class="map-container">
-            <div class="map-box">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24226.804237068925!2d-74.430538!3d40.622151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ba20355aaaab%3A0x3c832829592a82f5!2s345%20Somerset%20St%20Suit%209%2C%20North%20Plainfield%2C%20NJ%2007060!5e0!3m2!1ses-419!2sus!4v1700139670560!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+              <div class="map-box">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24226.804237068925!2d-74.430538!3d40.622151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ba20355aaaab%3A0x3c832829592a82f5!2s345%20Somerset%20St%20Suit%209%2C%20North%20Plainfield%2C%20NJ%2007060!5e0!3m2!1ses-419!2sus!4v1700139670560!5m2!1ses-419!2sus"
+                      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
           </div>
-        </div>
       </div>
-
-    <!-- Sección de redes sociales y suscripción -->
-    <div class="social-subscribe-container d-flex justify-content-center align-items-center">
-        <div class="social-follow">
-          <h2 style="text-align: center;">Síguenos</h2>
+  </div>
+  
+  <!-- Sección de redes sociales y suscripción -->
+  <div class="social-subscribe-container d-flex justify-content-center align-items-center">
+      <div class="social-follow">
+          <h2 style="text-align: center;" class="translate-es">Síguenos</h2>
+          <h2 style="text-align: center; display: none;" class="translate-en">Follow Us</h2>
+  
           <div class="social-icons d-flex justify-content-center">
-            <a href="https://www.facebook.com/laviaalexito" target="_blank" rel="noopener noreferrer">
-              <img src="{% static 'assets/img/facebook.png' %}" alt="Facebook" class="icon">
-            </a>
-            <a href="https://twitter.com/laviaalexito" target="_blank" rel="noopener noreferrer">
-              <img src="{% static 'assets/img/Twitter.png' %}" alt="Twitter" class="icon">
-            </a>
-            <a href="https://www.instagram.com/laviaalexito/" target="_blank" rel="noopener noreferrer">
-              <img src="{% static 'assets/img/instagram.png' %}" alt="Instagram" class="icon">
-            </a>
-            <a href="https://www.youtube.com/channel/UCSazDGpDz-fg7utgdcogJmg/featured" target="_blank" rel="noopener noreferrer">
-              <img src="{% static 'assets/img/youtube.png' %}" alt="YouTube" class="icon">
-            </a>
+              <a href="https://www.facebook.com/laviaalexito" target="_blank" rel="noopener noreferrer">
+                  <img src="{% static 'assets/img/facebook.png' %}" alt="Facebook" class="icon">
+              </a>
+              <a href="https://twitter.com/laviaalexito" target="_blank" rel="noopener noreferrer">
+                  <img src="{% static 'assets/img/Twitter.png' %}" alt="Twitter" class="icon">
+              </a>
+              <a href="https://www.instagram.com/laviaalexito/" target="_blank" rel="noopener noreferrer">
+                  <img src="{% static 'assets/img/instagram.png' %}" alt="Instagram" class="icon">
+              </a>
+              <a href="https://www.youtube.com/channel/UCSazDGpDz-fg7utgdcogJmg/featured" target="_blank" rel="noopener noreferrer">
+                  <img src="{% static 'assets/img/youtube.png' %}" alt="YouTube" class="icon">
+              </a>
           </div>
-        </div>
       </div>
-</div>
+  </div>
+  </div>
 </body>
 </html>
 <footer class="footer">
-    <div class="footer-line"></div>
-    <div class="footer-images">
+  <div class="footer-line"></div>
+  <div class="footer-images">
       <img src="{% static 'assets/img/aliado3.png' %}" alt="Image 3" class="aliado">
       <img src="{% static 'assets/img/aliado4.png' %}" alt="Image 4" class="aliado">
-    </div>
-    <h2>Nuestros Aliados</h2>
-    <div class="footer-message">
-      <p>En La Vía al Éxito sabemos que la integración y la verdadera solidaridad entre la comunidad, las empresas y las instituciones hacen realidad los más grandes proyectos.</p>
-    </div>
-  </footer>
+  </div>
+  <h2 class="translate-es">Nuestros Aliados</h2>
+  <h2 class="translate-en">Our Allies</h2>
 
+  <div class="footer-message">
+      <p class="translate-es">En La Vía al Éxito sabemos que la integración y la verdadera solidaridad entre la comunidad, las empresas y las instituciones hacen realidad los más grandes proyectos.</p>
+      <p class="translate-en">At La Vía al Éxito, we know that integration and true solidarity among the community, businesses, and institutions make the biggest projects a reality.</p>
+  </div>
+</footer>
+
+<div class="idioma-container">
+    <div class="custom-select" id="customSelect">
+        <span>Español</span>
+        <img src="{% static 'assets/img/idioma_español.png' %}" alt="Español">
+    </div>
+    <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
+    <div class="custom-options" id="customOptions">
+        <div class="custom-option" onclick="selectOption('es', 'Español', '{% static 'assets/img/idioma_español.png' %}')">Español</div>
+        <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
+    </div>
+</div>
     <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 
@@ -239,6 +296,55 @@
 
 
 
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/google-translate-api-browser@0.1.12"></script>
+    <script>
+        var translateBtn; // Variable global para almacenar el botón de traducción
+    
+        function selectOption(value, text, imagePath) {
+            var customSelect = document.getElementById('customSelect');
+            customSelect.innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+    
+            // Cambiar el idioma de la página
+            document.documentElement.lang = value;
+    
+            // Mostrar/ocultar elementos según el idioma seleccionado
+            var navbarElementsEs = document.querySelectorAll('.translate-es');
+            var navbarElementsEn = document.querySelectorAll('.translate-en');
+    
+            if (value === 'es') {
+                navbarElementsEs.forEach(element => element.style.display = 'block');
+                navbarElementsEn.forEach(element => element.style.display = 'none');
+            } else {
+                navbarElementsEs.forEach(element => element.style.display = 'none');
+                navbarElementsEn.forEach(element => element.style.display = 'block');
+            }
+    
+    
+            // Activar evento de traducción
+            if (translateBtn) {
+                translateBtn.click();
+            }
+    
+            var customOptions = document.getElementById('customOptions');
+            customOptions.classList.remove('show');
+        }
+    
+        function changeLanguage(value) {
+            var customSelect = document.getElementById('customSelect');
+            var selectedText = value === 'es' ? 'Español' : 'English';
+            var imagePath = value === 'es' ? '{% static 'assets/img/idioma_español.png' %}' : '{% static 'assets/img/idioma_ingles.png' %}';
+            customSelect.innerHTML = `<span>${selectedText}</span><img src="${imagePath}" alt="${selectedText}">`;
+    
+            // Disparar el evento de cambio de idioma
+            selectOption(value, selectedText, imagePath);
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Al cargar la página, obtener el botón de traducción
+            translateBtn = document.querySelector('button');
+        });
     </script>
     
 

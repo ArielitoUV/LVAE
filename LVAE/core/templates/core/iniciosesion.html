@@ -75,13 +75,6 @@
     </p>
 </div>
 
-<div class="language-selector">
-    <label for="language-select">Language:</label>
-    <select id="language-select" onchange="changeLanguage(this.value)">
-        <option value="es">Español</option>
-        <option value="en">English</option>
-    </select>
-</div>
 
 <!-- Contenedor de idioma y las img -->
 <div class="idioma-container">
@@ -96,53 +89,96 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/google-translate-api-browser@0.1.12"></script>
-<script>
-    var translateBtn; // Variable global para almacenar el botón de traducción
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 
-    function selectOption(value, text, imagePath) {
-        var customSelect = document.getElementById('customSelect');
-        customSelect.innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+    <script>
+        function selectOption(value, text, imagePath) {
+            document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+            document.getElementById('customOptions').classList.remove('show');
+        }
+    
+        document.getElementById('customSelect').addEventListener('click', function (event) {
+            // Stop propagation to prevent the outer click event listener from closing the options list
+            event.stopPropagation();
+            document.getElementById('customOptions').classList.toggle('show');
+        });
+    
+        document.addEventListener('click', function () {
+            var options = document.getElementById('customOptions');
+            if (options.classList.contains('show')) {
+                options.classList.remove('show');
+            }
+        });
 
-        // Cambiar el idioma de la página
-        document.documentElement.lang = value;
-
-        // Mostrar/ocultar elementos según el idioma seleccionado
-        var navbarElementsEs = document.querySelectorAll('.translate-es');
-        var navbarElementsEn = document.querySelectorAll('.translate-en');
-
-        if (value === 'es') {
-            navbarElementsEs.forEach(element => element.style.display = 'block');
-            navbarElementsEn.forEach(element => element.style.display = 'none');
-        } else {
-            navbarElementsEs.forEach(element => element.style.display = 'none');
-            navbarElementsEn.forEach(element => element.style.display = 'block');
+        document.addEventListener('DOMContentLoaded'), function () {
+        // Add a click event listener to all "Ver Más" buttons
+        document.querySelectorAll('.ver-mas').forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                // Check if the user is not logged in (you need to adjust this condition based on your authentication logic)
+                if (!userIsLoggedIn()) {
+                    // Redirect the user to the login page
+                    window.location.href = '/iniciosesion/';
+                }
+            });
+        });
+      };
+        function userIsLoggedIn() {
+            // Implement your authentication logic here
+            // For example, you might check if a user session exists
+            // This is just a placeholder; replace it with your actual logic
+            return false; // Change this to return true if the user is logged in
         }
 
 
-        // Activar evento de traducción
-        if (translateBtn) {
-            translateBtn.click();
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/google-translate-api-browser@0.1.12"></script>
+    <script>
+        var translateBtn; // Variable global para almacenar el botón de traducción
+    
+        function selectOption(value, text, imagePath) {
+            var customSelect = document.getElementById('customSelect');
+            customSelect.innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+    
+            // Cambiar el idioma de la página
+            document.documentElement.lang = value;
+    
+            // Mostrar/ocultar elementos según el idioma seleccionado
+            var navbarElementsEs = document.querySelectorAll('.translate-es');
+            var navbarElementsEn = document.querySelectorAll('.translate-en');
+    
+            if (value === 'es') {
+                navbarElementsEs.forEach(element => element.style.display = 'block');
+                navbarElementsEn.forEach(element => element.style.display = 'none');
+            } else {
+                navbarElementsEs.forEach(element => element.style.display = 'none');
+                navbarElementsEn.forEach(element => element.style.display = 'block');
+            }
+    
+    
+            // Activar evento de traducción
+            if (translateBtn) {
+                translateBtn.click();
+            }
+    
+            var customOptions = document.getElementById('customOptions');
+            customOptions.classList.remove('show');
         }
-
-        var customOptions = document.getElementById('customOptions');
-        customOptions.classList.remove('show');
-    }
-
-    function changeLanguage(value) {
-        var customSelect = document.getElementById('customSelect');
-        var selectedText = value === 'es' ? 'Español' : 'English';
-        var imagePath = value === 'es' ? '{% static 'assets/img/idioma_español.png' %}' : '{% static 'assets/img/idioma_ingles.png' %}';
-        customSelect.innerHTML = `<span>${selectedText}</span><img src="${imagePath}" alt="${selectedText}">`;
-
-        // Disparar el evento de cambio de idioma
-        selectOption(value, selectedText, imagePath);
-    }
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Al cargar la página, obtener el botón de traducción
-        translateBtn = document.querySelector('button');
-    });
-</script>
+    
+        function changeLanguage(value) {
+            var customSelect = document.getElementById('customSelect');
+            var selectedText = value === 'es' ? 'Español' : 'English';
+            var imagePath = value === 'es' ? '{% static 'assets/img/idioma_español.png' %}' : '{% static 'assets/img/idioma_ingles.png' %}';
+            customSelect.innerHTML = `<span>${selectedText}</span><img src="${imagePath}" alt="${selectedText}">`;
+    
+            // Disparar el evento de cambio de idioma
+            selectOption(value, selectedText, imagePath);
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Al cargar la página, obtener el botón de traducción
+            translateBtn = document.querySelector('button');
+        });
+    </script>
 </html>
