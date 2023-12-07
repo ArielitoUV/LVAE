@@ -6,8 +6,10 @@ from django.conf import settings
 from django.core.mail import EmailMessage
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import EditarPerfilForm, CambiarContraseñaForm
 from django.contrib.auth import update_session_auth_hash
+from .forms import UserProfileForm
+from django.contrib.auth.forms import PasswordChangeForm
+
 
 
 def registrar_usuario(request):
@@ -47,51 +49,39 @@ def iniciar_sesion(request):
 
 
 
-from django.shortcuts import render, redirect
-from .forms import EditarPerfilForm, CambiarContraseñaForm
-from django.contrib import messages
-
+@login_required
 def gestion_perfil(request):
-    if not request.user.is_authenticated:
-        return redirect('iniciar_sesion')
-    
-    editar_form = EditarPerfilForm(initial={
-        'nombre': request.user.nombre,
-        'apellido': request.user.apellido,
-        'telefono': request.user.telefono,
-        'fecha_nacimiento': request.user.fecha_nacimiento,
-        'estado': request.user.estado,
-        'ciudad': request.user.ciudad,
-    })
-    cambiar_password_form = CambiarContraseñaForm(user=request.user)
-    
+    usuario = request.user
     if request.method == 'POST':
-        editar_form = EditarPerfilForm(request.POST)
-        cambiar_password_form = CambiarContraseñaForm(request.user, request.POST)
+        form = UserProfileForm(request.POST, instance=usuario)
+        password_form = PasswordChangeForm(request.POST)
         
-        if editar_form.is_valid():
-            request.user.nombre = editar_form.cleaned_data['nombre']
-            request.user.apellido = editar_form.cleaned_data['apellido']
-            request.user.telefono = editar_form.cleaned_data['telefono']
-            request.user.fecha_nacimiento = editar_form.cleaned_data['fecha_nacimiento']
-            request.user.estado = editar_form.cleaned_data['estado']
-            request.user.ciudad = editar_form.cleaned_data['ciudad']
-            request.user.save()
-            messages.success(request, 'Perfil actualizado exitosamente.')
-            return redirect('gestion_perfil')
-        
-        if cambiar_password_form.is_valid():
-            cambiar_password_form.save()
-            update_session_auth_hash(request, cambiar_password_form.user)
-            messages.success(request, 'Contraseña cambiada exitosamente.')
-            return redirect('gestion_perfil')
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Tus datos se han actualizado correctamente.')
+
+        if password_form.is_valid():
+            current_password = password_form.cleaned_data['current_password']
+            if not usuario.check_password(current_password):
+                messages.error(request, 'La contraseña actual no es válida.')
+            else:
+                new_password = password_form.cleaned_data['new_password1']
+                usuario.set_password(new_password)
+                usuario.save()
+                update_session_auth_hash(request, usuario)  # para evitar cerrar la sesión después de cambiar la contraseña
+                messages.success(request, 'Tu contraseña se ha cambiado correctamente.')
+
+    else:
+        form = UserProfileForm(instance=usuario)
+        password_form = PasswordChangeForm(user=usuario)
+
     
+
     context = {
-        'editar_form': editar_form,
-        'cambiar_password_form': cambiar_password_form,
+        'form': form,
+        'password_form': password_form,
     }
-    
-    return render(request, 'gestionperfil.html', context)
+    return render(request, 'core/gestionperfil.html', context)
 
 
 

@@ -64,23 +64,17 @@ class CustomAuthenticationForm(AuthenticationForm):
         strip=False,
         widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'class': 'form-control', 'placeholder': 'Ingrese su contraseña'}),
     )
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = Usuario
+        fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono','email', 'estado', 'ciudad', 'user_type']
+
+class PasswordChangeForm(forms.Form):
+    current_password = forms.CharField(label='Contraseña actual', widget=forms.PasswordInput())
+    new_password1 = forms.CharField(label='Nueva contraseña', widget=forms.PasswordInput())
+    new_password2 = forms.CharField(label='Confirmar nueva contraseña', widget=forms.PasswordInput())
 
 
-
-
-class EditarPerfilForm(forms.Form):
-    nombre = forms.CharField(label="Nombre", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su nombre'}))
-    apellido = forms.CharField(label="Apellido", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su apellido'}))
-    telefono = forms.CharField(label="Teléfono", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su número de teléfono'}))
-    fecha_nacimiento = forms.DateField(label="Fecha de Nacimiento", widget=forms.TextInput(attrs={'class': 'form-control datepicker', 'placeholder': 'Ingrese su fecha de nacimiento'}))
-    estado = forms.CharField(label="Estado", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese el Estado donde vive'}))
-    ciudad = forms.CharField(label="Ciudad", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese su Ciudad'}))
-
-class CambiarContraseñaForm(PasswordChangeForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        for field in self.fields.values():
-            field.widget.attrs['class'] = 'form-control'
 
 # class UserProfileForm(forms.ModelForm):
 #     class Meta:
