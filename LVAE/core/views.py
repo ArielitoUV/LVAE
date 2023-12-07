@@ -61,7 +61,7 @@ def gestionar_perfil(request):
             user = password_form.save()
             update_session_auth_hash(request, user)  # Actualiza la sesión si la contraseña cambió
             messages.success(request, 'Perfil actualizado exitosamente.')
-            return redirect('nombre_de_la_url_de_inicio')  # Reemplaza 'nombre_de_la_url_de_inicio' con la URL de inicio de tu aplicación
+            return redirect('gestionar_perfil')  # Reemplaza 'nombre_de_la_url_de_inicio' con la URL de inicio de tu aplicación
         else:
             messages.error(request, 'Error al actualizar el perfil. Por favor, corrige los errores.')
     else:
