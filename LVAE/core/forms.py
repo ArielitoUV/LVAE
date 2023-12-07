@@ -3,7 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
 from .models import Usuario
 from django import forms
-from django.contrib.auth.models import User
+from django.contrib.auth.forms import PasswordChangeForm
+
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(
         label=_('Correo electrónico'),
@@ -62,14 +63,13 @@ class CustomAuthenticationForm(AuthenticationForm):
         strip=False,
         widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'class': 'form-control', 'placeholder': 'Ingrese su contraseña'}),
     )
+
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = Usuario
         fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono', 'estado', 'ciudad', 'email', 'user_type']
 
-class PasswordChangeForm(forms.Form):
-    current_password = forms.CharField(label='Contraseña actual', widget=forms.PasswordInput())
-    new_password1 = forms.CharField(label='Nueva contraseña', widget=forms.PasswordInput())
-    new_password2 = forms.CharField(label='Confirmar nueva contraseña', widget=forms.PasswordInput())
-
-
+class CustomPasswordChangeForm(PasswordChangeForm):
+    current_password = forms.CharField(label='Contraseña actual', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    new_password1 = forms.CharField(label='Nueva contraseña', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    new_password2 = forms.CharField(label='Confirmar nueva contraseña', widget=forms.PasswordInput(attrs={'class': 'form-control'}))

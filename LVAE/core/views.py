@@ -7,8 +7,8 @@ from django.core.mail import EmailMessage
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
-from django.contrib.auth.forms import PasswordChangeForm
 from .forms import UserProfileForm
+
 
 def registrar_usuario(request):
     if request.method == 'POST':
@@ -46,37 +46,34 @@ def iniciar_sesion(request):
     return render(request, 'core/iniciosesion.html', {'form': form})
 
 
+
 @login_required
 def gestion_perfil(request):
     usuario = request.user
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=usuario)
-        password_form = PasswordChangeForm(request.POST)
-        
+        password_form = CustomPasswordChangeForm(request.user, request.POST)
+
         if form.is_valid():
             form.save()
             messages.success(request, 'Tus datos se han actualizado correctamente.')
 
         if password_form.is_valid():
-            current_password = password_form.cleaned_data['current_password']
-            if not usuario.check_password(current_password):
-                messages.error(request, 'La contraseña actual no es válida.')
-            else:
-                new_password = password_form.cleaned_data['new_password1']
-                usuario.set_password(new_password)
-                usuario.save()
-                update_session_auth_hash(request, usuario)  # para evitar cerrar la sesión después de cambiar la contraseña
-                messages.success(request, 'Tu contraseña se ha cambiado correctamente.')
+            user = password_form.save()
+            update_session_auth_hash(request, user)  # Evitar cerrar la sesión después de cambiar la contraseña
+            messages.success(request, 'Tu contraseña se ha cambiado correctamente.')
 
     else:
         form = UserProfileForm(instance=usuario)
-        password_form = PasswordChangeForm()
+        password_form = CustomPasswordChangeForm(user=usuario)
 
     context = {
         'form': form,
         'password_form': password_form,
     }
     return render(request, 'core/gestionperfil.html', context)
+
 
 
 
