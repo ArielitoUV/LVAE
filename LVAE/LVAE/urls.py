@@ -16,5 +16,6 @@ urlpatterns = [
     path('secundaria/',views.secundaria,name="secundaria"),
     path('acercade/',views.acercade,name="acercade"),
     path('index2/',views.index2,name="index2"),
+    path('infobecas/',views.infobecas,name="infobecas"),
     path('admin/', admin.site.urls),
 ]
