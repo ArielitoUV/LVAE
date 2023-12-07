@@ -67,8 +67,9 @@ def gestion_perfil(request):
     else:
         form = UserProfileForm(instance=usuario)
         password_form = CustomPasswordChangeForm(user=usuario)
-        print(form.errors)  
-        print(password_form.errors) 
+        print(form.errors)  # Imprime errores del formulario en la consola
+        print(password_form.errors)  # Imprime errores del formulario de cambio de contraseña
+
 
 
     context = {
