@@ -46,27 +46,29 @@
             </div>
         </div>
     </nav>
-    <h1 class="titulo">Gestión de Perfil</h1>
-    {% if messages %}
+    <h1>Gestionar Perfil</h1>
+  
+  {% if messages %}
     <ul class="messages">
-        {% for message in messages %}
+      {% for message in messages %}
         <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
+      {% endfor %}
     </ul>
-    {% endif %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">Actualizar datos</button>
-      </form>
-      
-      <hr>
-      
-      <form method="post">
-        {% csrf_token %}
-        {{ password_form }}
-        <button type="submit">Cambiar contraseña</button>
-      </form>
+  {% endif %}
+
+  <h2>Datos de Perfil</h2>
+  <form method="post" action="{% url 'gestionar_perfil' %}">
+    {% csrf_token %}
+    {{ perfil_form.as_p }}
+    <button type="submit">Guardar cambios de perfil</button>
+  </form>
+
+  <h2>Cambiar Contraseña</h2>
+  <form method="post" action="{% url 'gestionar_perfil' %}">
+    {% csrf_token %}
+    {{ password_form.as_p }}
+    <button type="submit">Cambiar contraseña</button>
+  </form>
       
 
 

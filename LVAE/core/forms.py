@@ -1,9 +1,10 @@
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
-from .models import Usuario
 from django import forms
-from django.contrib.auth.forms import PasswordChangeForm as DjangoPasswordChangeForm
+from django.contrib.auth.forms import PasswordChangeForm
+from .models import Usuario
+
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -64,25 +65,15 @@ class CustomAuthenticationForm(AuthenticationForm):
         strip=False,
         widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'class': 'form-control', 'placeholder': 'Ingrese su contraseña'}),
     )
-class UserProfileForm(forms.ModelForm):
+
+class PerfilForm(forms.ModelForm):
     class Meta:
         model = Usuario
-        fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono','email', 'estado', 'ciudad', 'user_type']
+        fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono', 'estado', 'ciudad']
 
-class PasswordChangeForm(DjangoPasswordChangeForm):
-    class Meta:
-        model = Usuario
-        fields = []
+class CambiarContraseñaForm(PasswordChangeForm):
+    pass
 
-    current_password = forms.CharField(label='Contraseña actual', widget=forms.PasswordInput())
-    new_password1 = forms.CharField(label='Nueva contraseña', widget=forms.PasswordInput())
-    new_password2 = forms.CharField(label='Confirmar nueva contraseña', widget=forms.PasswordInput())
-
-    def clean_current_password(self):
-        current_password = self.cleaned_data.get('current_password')
-        if not self.user.check_password(current_password):
-            raise forms.ValidationError('La contraseña actual no es válida.')
-        return current_password
 
 
 

@@ -7,8 +7,9 @@ from django.core.mail import EmailMessage
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
-from .forms import UserProfileForm
-from django.contrib.auth.forms import PasswordChangeForm
+from django.shortcuts import render, redirect
+from .forms import PerfilForm, CambiarContraseñaForm
+
 
 
 
@@ -50,37 +51,24 @@ def iniciar_sesion(request):
 
 
 @login_required
-def gestion_perfil(request):
-    usuario = request.user
+def gestionar_perfil(request):
     if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=usuario)
-        password_form = PasswordChangeForm(user=usuario, data=request.POST)
+        perfil_form = PerfilForm(request.POST, instance=request.user)
+        password_form = CambiarContraseñaForm(request.user, request.POST)
         
-        if form.is_valid():
-            print("Formulario de perfil válido")
-            form.save()
-            messages.success(request, 'Tus datos se han actualizado correctamente.')
-            return redirect('gestion_perfil')
-
-        if password_form.is_valid():
-            print("Formulario de cambio de contraseña válido")
-            password_form.save()
-            update_session_auth_hash(request, usuario)
-            messages.success(request, 'Tu contraseña se ha cambiado correctamente.')
-            return redirect('gestion_perfil') 
+        if perfil_form.is_valid() and password_form.is_valid():
+            perfil_form.save()
+            user = password_form.save()
+            update_session_auth_hash(request, user)  # Actualiza la sesión si la contraseña cambió
+            messages.success(request, 'Perfil actualizado exitosamente.')
+            return redirect('nombre_de_la_url_de_inicio')  # Reemplaza 'nombre_de_la_url_de_inicio' con la URL de inicio de tu aplicación
+        else:
+            messages.error(request, 'Error al actualizar el perfil. Por favor, corrige los errores.')
     else:
-        form = UserProfileForm(instance=usuario)
-        password_form = PasswordChangeForm(user=usuario)
-        print("Errores en el formulario de cambio de contraseña:", password_form.errors)
-
-    context = {
-    'form': form,
-    'password_form': password_form,
-}
-    print(form.errors)
-    print(password_form.errors)
-    return render(request, 'core/gestionperfil.html', context)
-
+        perfil_form = PerfilForm(instance=request.user)
+        password_form = CambiarContraseñaForm(request.user)
+    
+    return render(request, 'gestionperfil.html', {'perfil_form': perfil_form, 'password_form': password_form})
 
 
 
