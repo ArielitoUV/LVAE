@@ -26,22 +26,16 @@ body {
 .navbar-nav .nav-link {
   color: #000000;
   font-size: 19px;
-  margin: 0; /* Elimina el margen izquierdo */
+  margin: 0 100px;
 }
-
-.navbar-nav {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-left: auto; /* Alinea al final del navbar */
+.navbar-brand {
+  margin-right: 40px;  /* Mueve el logotipo hacia la izquierda */
 }
-
 
 /* Ajusta el margen izquierdo del logotipo si es necesario */
 .navbar-brand {
-  margin-right: 20px;  /* Ajusta según sea necesario */
+  margin-right: 30px;  /* Ajusta según sea necesario */
 }
-
 
 .navbar-nav .nav-item {
   margin-left: 10px; /* Ajusta el espacio entre los elementos del navbar */
