@@ -49,17 +49,10 @@ def iniciar_sesion(request):
 @login_required
 def gestionar_perfil(request):
     if request.method == 'POST':
-        perfil_form = EditarPerfilForm(request.POST)
-        contraseña_form = CambiarContraseñaForm(user=request.user, data=request.POST)
+        perfil_form = EditarPerfilForm(request.POST, instance=request.user)
+        contraseña_form = CambiarContraseñaForm(request.user, request.POST)
         if perfil_form.is_valid():
-            # Guardar cambios en el perfil del usuario
-            request.user.nombre = perfil_form.cleaned_data['nombre']
-            request.user.apellido = perfil_form.cleaned_data['apellido']
-            request.user.telefono = perfil_form.cleaned_data['telefono']
-            request.user.fecha_nacimiento = perfil_form.cleaned_data['fecha_nacimiento']
-            request.user.estado = perfil_form.cleaned_data['estado']
-            request.user.ciudad = perfil_form.cleaned_data['ciudad']
-            request.user.save()
+            perfil_form.save()
             messages.success(request, 'Los cambios en el perfil se han guardado correctamente.')
 
         if contraseña_form.is_valid():
@@ -68,21 +61,14 @@ def gestionar_perfil(request):
 
         return redirect('gestionar_perfil')
     else:
-        perfil_form = EditarPerfilForm(initial={
-            'nombre': request.user.nombre,
-            'apellido': request.user.apellido,
-            'telefono': request.user.telefono,
-            'fecha_nacimiento': request.user.fecha_nacimiento,
-            'estado': request.user.estado,
-            'ciudad': request.user.ciudad,
-        })
-        contraseña_form = CambiarContraseñaForm(user=request.user)
+        perfil_form = EditarPerfilForm(instance=request.user)
+        contraseña_form = CambiarContraseñaForm(request.user)
 
     context = {
         'perfil_form': perfil_form,
         'contraseña_form': contraseña_form,
     }
-    return render(request, 'gestionar_perfil.html', context)
+    return render(request, 'gestionperfil.html', context)
 
 
 

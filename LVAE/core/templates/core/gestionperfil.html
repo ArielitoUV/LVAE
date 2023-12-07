@@ -46,10 +46,17 @@
             </div>
         </div>
     </nav>
-    <!-- gestionar_perfil.html -->
-<form method="POST">
+    <h2>Gestionar perfil</h2>
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success" role="alert">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  <form method="POST">
     {% csrf_token %}
-    <h2>Editar perfil</h2>
     <div class="form-group">
       <label for="{{ perfil_form.nombre.id_for_label }}">Nombre</label>
       {{ perfil_form.nombre }}
@@ -74,7 +81,7 @@
       <label for="{{ perfil_form.ciudad.id_for_label }}">Ciudad</label>
       {{ perfil_form.ciudad }}
     </div>
-  
+
     <h2>Cambiar contraseña</h2>
     <div class="form-group">
       <label for="{{ contraseña_form.old_password.id_for_label }}">Contraseña actual</label>
@@ -88,7 +95,7 @@
       <label for="{{ contraseña_form.new_password2.id_for_label }}">Confirmar nueva contraseña</label>
       {{ contraseña_form.new_password2 }}
     </div>
-  
+
     <button class="btn btn-primary" type="submit">Guardar cambios</button>
   </form>
 
