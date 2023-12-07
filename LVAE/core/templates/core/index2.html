@@ -44,79 +44,115 @@
 </nav>
 
     <main>
-        <h1 class="titulo" style="text-align: center; font-family: 'Playfair Display', serif;
-        ">¡Bienvenido,{{ usuario.nombre }}!</h1>
-        <p style="text-align: center; font-family: 'PT Serif', serif;
+        <h1 class="translate-es" style="text-align: center; font-family: 'Playfair Display', serif;
+        ">¡Bienvenido!</h1>
+        <p class="translate-es" style="text-align: center; font-family: 'PT Serif', serif;
         ;
-        ">Agradecemos que hayas iniciado sesión en La Vía al Éxito. Ahora, como usuario registrado, tienes acceso a una variedad de recursos educativos para apoyarte en tu camino académico. Explora las siguientes secciones para obtener la información que necesitas</p>
+        ">Agradecemos  iniciado sesión en La Vía al Éxito. Ahora, como usuario registrado, tienes acceso a una variedad de recursos educativos para apoyarte en tu camino académico. Explora las siguientes secciones para obtener la información que necesitas</p>
+        <h1 style="display: none;" class="translate-en" style="text-align: center; font-family: 'Playfair Display', serif;
+        ">¡Welcome!</h1>
+        <p style="display: none;" class="translate-en" style="text-align: center; font-family: 'PT Serif', serif;
+        ;
+        ">We appreciate that you have logged in to La Vía al Éxito. Now, as a registered user, you have access to a variety of educational resources to support you on your academic path. Explore the following sections to get the information you need</p>
         
         <div class="main-content">
             <div class="left-section">
-                <div class="text-content">
-                    <h3 style="font-family: 'Playfair Display', serif;">Descubre Recursos Educativos</h3>
-                    
-                    <p style="font-family: 'PT Serif', serif;
-                    ">Explora nuestra amplia gama de recursos educativos diseñados para impulsar tu aprendizaje y ayudarte a alcanzar tus metas académicas. Desde materiales didácticos hasta tutoriales interactivos, estamos aquí para apoyarte en cada paso.</p>
-                </div>
+              <div class="text-content">
+                <h3 class="translate-es" style="font-family: 'Playfair Display', serif;">Descubre Recursos Educativos</h3>
+                <h3 class="translate-en" style="font-family: 'Playfair Display', serif; display: none;">Discover Educational Resources</h3>
+    
+                <p class="translate-es" style="font-family: 'PT Serif', serif;">
+                    Explora nuestra amplia gama de recursos educativos diseñados para impulsar tu aprendizaje y ayudarte a alcanzar tus metas académicas. Desde materiales didácticos hasta tutoriales interactivos, estamos aquí para apoyarte en cada paso.
+                </p>
+                <p class="translate-en" style="font-family: 'PT Serif', serif; display: none;">
+                    Explore our wide range of educational resources designed to enhance your learning and help you achieve your academic goals. From instructional materials to interactive tutorials, we are here to support you every step of the way.
+                </p>
+            </div>
                 <div class="image">
                     <img src="{% static 'assets/img/index2.jpg' %}" alt="Imagen de la landing page">
                 </div>
             </div>
         </div>
-        <div class=" connect-with-us">
-          <h3 style="font-family: 'Playfair Display', serif;">Recursos Educativos Esenciales para Alcanzar tus Metas Académicas.</h3>
+        <div class="connect-with-us">
+          <h3 class="translate-es" style="font-family: 'Playfair Display', serif;">Recursos Educativos Esenciales para Alcanzar tus Metas Académicas.</h3>
+          <h3 class="translate-en" style="font-family: 'Playfair Display', serif; display: none;">Essential Educational Resources to Achieve Your Academic Goals.</h3>
+      </div>
+      <div class="main-content">
+        <div class="values">
+            <div class="value-container">
+                <div class="value bordered rounded-box">
+                    <h3 class="translate-es" style="font-family: 'Anton', sans-serif;">Universidad o College</h3>
+                    <h3 class="translate-en" style="font-family: 'Anton', sans-serif; display: none;">University or College</h3>
+    
+                    <p class="translate-es" style="font-family: 'EB Garamond', serif;">
+                        En Estados Unidos, "school" abarca desde la primaria hasta la universidad. Después de la preparatoria, las opciones son "college" (colegio) o "university" (universidad). Aunque se usan de manera intercambiable, "college" suele ser más especializado y pequeño, mientras que "university" es más grande y ofrece una gama más amplia de programas académicos.
+                    </p>
+                    <p class="translate-en" style="font-family: 'EB Garamond', serif; display: none;">
+                        In the United States, "school" encompasses from elementary to university. After high school, the options are "college" or "university." Although used interchangeably, "college" is usually more specialized and smaller, while "university" is larger and offers a broader range of academic programs.
+                    </p>
+    
+                    <a href="/unicolla/" class="translate-es btn ver-mas" id="verMas1" style="font-family: 'Teko', sans-serif;">Ver Más</a>
+                    <a href="/unicolla/" class="translate-en btn ver-mas" id="verMas1" style="font-family: 'Teko', sans-serif;display: none;">See more</a>
+
+                </div>
+            </div>
+    
+            <div class="value-container">
+                <div class="value bordered rounded-box">
+                    <h3 class="translate-es" style="font-family: 'Anton', sans-serif;">Preparate desde la Secundaria</h3>
+                    <h3 class="translate-en" style="font-family: 'Anton', sans-serif; display: none;">Prepare from High School</h3>
+    
+                    <p class="translate-es" style="font-family: 'EB Garamond', serif;">
+                        En Estados Unidos, es posible prepararse para ingresar a la universidad desde la secundaria. Los encargados de evaluar las solicitudes de admisión valoran la formación temprana de los solicitantes. Participar en diversas actividades extracurriculares durante la secundaria puede mejorar tu perfil y hacer tu solicitud más atractiva.
+                    </p>
+                    <p class="translate-en" style="font-family: 'EB Garamond', serif; display: none;">
+                        In the United States, it is possible to prepare for university admission from high school. Admissions officers value early applicant education. Participating in various extracurricular activities during high school can enhance your profile and make your application more attractive.
+                    </p>
+    
+                    <a href="/secundaria/" class="translate-es btn ver-mas" id="verMas2" style="font-family: 'Teko', sans-serif;">Ver Más</a>
+                    <a href="/secundaria/" class="translate-en btn ver-mas" id="verMas2" style="font-family: 'Teko', sans-serif;display: none;">See more</a>
+                </div>
+            </div>
         </div>
-        <div class="main-content">
-            <div class="values">
-                <div class="value-container">
-                    <div class="value bordered rounded-box">
-                        <h3 style="font-family: 'Anton', sans-serif;
-                        ">Universidad o College</h3>
-                        <p style="font-family: 'EB Garamond', serif;
-                        ;
-                        ">En Estados Unidos, "school" abarca desde la primaria hasta la universidad. Después de la preparatoria, las opciones son "college" (colegio) o "university" (universidad). Aunque se usan de manera intercambiable, "college" suele ser más especializado y pequeño, mientras que "university" es más grande y ofrece una gama más amplia de programas académicos.</p>
-                        <a href="/unicolla/" class="btn ver-mas" id="verMas1" style="font-family: 'Teko', sans-serif;
-                        ">Ver Más</a>
-                    </div>
-                </div>
-                <div class="value-container">
-                    <div class="value bordered rounded-box">
-                        <h3 style="font-family: 'Anton', sans-serif">Preparate desde la Secundaria</h3>
-                        <p style="font-family: 'EB Garamond', serif;
-                        ">En Estados Unidos, es posible prepararse para ingresar a la universidad desde la secundaria. Los encargados de evaluar las solicitudes de admisión valoran la formación temprana de los solicitantes. Participar en diversas actividades extracurriculares durante la secundaria puede mejorar tu perfil y hacer tu solicitud más atractiva.</p>
-                        <a href="/secundaria/" class="btn ver-mas" id="verMas2" style="font-family: 'Teko', sans-serif;
-                        ">Ver Más</a>
-                    </div>
+    
+        <div class="additional-section">
+            <div class="value-container">
+                <div class="value bordered rounded-box">
+                    <h3 class="translate-es" style="font-family: 'Anton', sans-serif;">Paso a Paso Para Los Padres</h3>
+                    <h3 class="translate-en" style="font-family: 'Anton', sans-serif; display: none;">Step-by-Step for Parents</h3>
+    
+                    <p class="translate-es" style="font-family: 'EB Garamond', serif;">
+                        Accede a nuestra guía para padres, donde proporcionamos valiosa información detallada sobre la transición de tus hijos de la secundaria a la universidad. Prepárate junto a nosotros para esta etapa crucial en el camino hacia el éxito académico y profesional.
+                    </p>
+                    <p class="translate-en" style="font-family: 'EB Garamond', serif; display: none;">
+                        Access our guide for parents, where we provide valuable detailed information about your children's transition from high school to university. Prepare with us for this crucial stage on the path to academic and professional success.
+                    </p>
+    
+                    <a href="/pasoapaso/" class="translate-es btn ver-mas" id="verMas3" style="font-family: 'Teko', sans-serif;">Ver Más</a>
+                    <a href="/pasoapaso/" class="translate-en btn ver-mas" id="verMas3" style="font-family: 'Teko', sans-serif; display: none;">See more</a>
                 </div>
             </div>
-      
-            <div class="additional-section">
-                <div class="value-container">
-                    <div class="value bordered rounded-box">
-                        <h3 style="font-family: 'Anton', sans-serif">Paso a Paso Para Los Padres</h3>
-                        <p style="font-family: 'EB Garamond', serif;
-                        ">Accede a nuestra guía para padres, donde proporcionamos valiosa informacion satallada sobre la transición de tus hijos de la secundaria a la universidad. Prepárate junto a nosotros para esta etapa crucial en el camino hacia el éxito académico y profesional.</p>
-
-                        <a href="/pasoapaso/" class="btn ver-mas" id="verMas3" style="font-family: 'Teko', sans-serif;
-
-                        ">Ver Más</a>
-                    </div>
+        </div>
+    
+        <div class="additional-section">
+            <div class="value-container">
+                <div class="value bordered rounded-box">
+                    <h3 class="translate-es" style="font-family: 'Anton', sans-serif;">Informacion sobre Becas</h3>
+                    <h3 class="translate-en" style="font-family: 'Anton', sans-serif; display: none;">Information about Scholarships</h3>
+    
+                    <p class="translate-es" style="font-family: 'EB Garamond', serif;">
+                        Accede a nuestra información sobre becas.
+                    </p>
+                    <p class="translate-en" style="font-family: 'EB Garamond', serif; display: none;">
+                        Access our information about scholarships.
+                    </p>
+    
+                    <a href="/infobecas/" class="translate-es btn ver-mas" id="verMas3" style="font-family: 'Teko', sans-serif;">Ver Más</a>
+                    <a href="/infobecas/" class="translate-en btn ver-mas" id="verMas3" style="font-family: 'Teko', sans-serif; display: none;">See more</a>
                 </div>
             </div>
-
-            <div class="additional-section">
-              <div class="value-container">
-                  <div class="value bordered rounded-box">
-                      <h3 style="font-family: 'Anton', sans-serif">Informacion sobre Becas</h3>
-                      <p style="font-family: 'EB Garamond', serif;
-                      ">Accede a nuestra informacion sobre becas.</p>
-
-                      <a href="/infobecas/" class="btn ver-mas" id="verMas3" style="font-family: 'Teko', sans-serif;
-
-                      ">Ver Más</a>
-                  </div>
-              </div>
-          </div>
+        </div>
+    </div>
 
     </main>
     <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
