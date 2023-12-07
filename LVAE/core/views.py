@@ -7,7 +7,7 @@ from django.core.mail import EmailMessage
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
-from .forms import UserProfileForm
+from .forms import UserProfileForm, CustomPasswordChangeForm
 
 
 def registrar_usuario(request):
@@ -66,7 +66,10 @@ def gestion_perfil(request):
 
     else:
         form = UserProfileForm(instance=usuario)
-        password_form = CustomPasswordChangeForm(user=usuario)
+        password_form = PasswordChangeForm(user=usuario)
+        print(form.errors)  # Imprime errores del formulario en la consola
+        print(password_form.errors)  # Imprime errores del formulario de cambio de contraseña
+
 
     context = {
         'form': form,
