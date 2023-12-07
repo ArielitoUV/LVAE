@@ -70,15 +70,17 @@ def gestion_perfil(request):
 
     else:
         form = UserProfileForm(instance=usuario)
-        password_form = PasswordChangeForm(user=usuario)
-
-    
+        password_form = PasswordChangeForm()
 
     context = {
         'form': form,
         'password_form': password_form,
     }
     return render(request, 'core/gestionperfil.html', context)
+
+
+
+
 def index(request):
     return render(request, "core/index.html")
 def rs(request):

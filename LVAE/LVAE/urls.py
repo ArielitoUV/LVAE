@@ -8,7 +8,6 @@ urlpatterns = [
     path('iniciosesion/', iniciar_sesion, name='iniciar_sesion'),
     path('registroap/', registrar_usuario, name='registrar_usuario'),
     path('rs/',views.rs,name="rs"),
-    # path('gestionperfil/',views.gestionperfil,name="gestionperfil"),
     path('gestion_perfil/', gestion_perfil, name='gestion_perfil'),
     path('donaciones/',views.donaciones,name="donaciones"),
     path('pasoapaso/',views.pasoapaso,name="pasoapaso"),
