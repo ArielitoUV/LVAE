@@ -99,3 +99,5 @@ def secundaria(request):
     return render(request, "core/secundaria.html")
 def index2(request):
     return render(request, "core/index2.html")
+def infobecas(request):
+    return render(request, "core/infobecas.html")
