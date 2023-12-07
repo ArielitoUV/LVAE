@@ -1,11 +1,13 @@
-  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 /* Estilos generales */
 body {
   background: linear-gradient(to bottom right, #f1df73, #ee9585);
   color: #000;
   font-family: 'TuFuentePersonalizada', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Estilos del navbar */
@@ -24,19 +26,19 @@ body {
 .navbar-nav .nav-link {
   color: #000000;
   font-size: 19px;
-  margin: 0 30px;
+  margin: 0 100px;
 }
 .navbar-brand {
-  margin-right: 90px;  /* Mueve el logotipo hacia la izquierda */
+  margin-right: 40px;  /* Mueve el logotipo hacia la izquierda */
 }
 
 /* Ajusta el margen izquierdo del logotipo si es necesario */
 .navbar-brand {
-  margin-left: 80px;  /* Ajusta según sea necesario */
+  margin-right: 30px;  /* Ajusta según sea necesario */
 }
 
 .navbar-nav .nav-item {
-  margin-right: 160px; /* Ajusta el espacio entre los elementos del navbar */
+  margin-left: 10px; /* Ajusta el espacio entre los elementos del navbar */
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -65,78 +67,56 @@ body {
   border: solid #3a3737;
 }
 
-
-/* Estilos de las columnas */
-.col-md-6 {
-  text-align: right;
+/* Estilos de la sección de tarjetas */
+.container {
+  margin-top: 20px;
 }
 
-/* Estilos de la lista de texto */
-.text-list {
-  padding-left: -10em;
-  list-style-type: none;
+.card {
+  margin-bottom: 30px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.text-list li {
-  margin-left: 90px;
+.card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
 }
 
-/* Estilos de los títulos */
-.text-center h1,
-.text-center h2 {
+.card-title {
   font-size: 2.5em;
   color: #333;
   font-family: 'Dancing Script', cursive;
 }
 
-/* Estilos de la lista de texto */
+.card-body {
+  display: flex;
+  align-items: center;
+}
+
+.card-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
 .text-list {
-  font-size: 2.2em;
+  list-style-type: none;
+  font-size: 1.8em;
   font-family: 'Satisfy', cursive;
-  text-align: left;
 }
 
-/* Estilos del separador HR */
-.hr-separator {
-  border: none;
-  height: 10px;
-  background-color: #ff5151;
-  margin: 90px 0;
-}
-
-/* Estilos personalizados para otras secciones o elementos específicos */
-
-/* Por ejemplo: Estilos de la sección personalizada */
-.custom-section {
-  font-size: 1.4em;
-  background-color: #f8f9fa;
-  padding: 80px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.custom-section img {
-  width: 100px;
-  height: 100px;
-}
-
-/* Otros estilos específicos que desees agregar */
-
-#labelIdioma {
-  position: fixed;
-  top: 0px;
-  right: 30px;
-  z-index: 9999;
-}
-
+/* Estilos del idioma y selector */
 .idioma-container {
   position: fixed;
   top: 20px;
-  right: 10px;
+  right: 20px;
   z-index: 9998;
 }
 
-.idioma-container .custom-select {
+.custom-select {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -146,12 +126,12 @@ body {
   align-items: center;
 }
 
-.idioma-container .custom-select img {
+.custom-select img {
   margin-left: 10px;
-  max-width: 20px; /* tamaño imagen */
+  max-width: 20px;
 }
 
-.idioma-container .custom-options {
+.custom-options {
   display: none;
   position: absolute;
   top: 100%;
@@ -164,11 +144,13 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.idioma-container .custom-options.show {
+.custom-options.show {
   display: block;
 }
 
-.idioma-container .custom-option {
+.custom-option {
   padding: 10px;
   cursor: pointer;
 }
+
+/* Otros estilos específicos que desees agregar */

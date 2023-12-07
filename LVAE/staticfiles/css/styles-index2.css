@@ -371,6 +371,35 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
             text-decoration: none; /* Elimina la subrayado predeterminado en los enlaces */
         }
 
+
+
+.button-container-en {
+            display: inline-block; /* Mantiene el contenedor del botón en línea con el texto */
+            background-color: #007bff; /* Cambia el color de fondo según tus preferencias */
+            padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+            border-radius: 5px; /* Agrega bordes redondeados al contenedor del botón */
+        }
+
+        .btn.ver-mas-en {
+            font-family: 'Teko', sans-serif;
+            background: linear-gradient(to right, #a1c5eb, #a0deee); /* Degradado de colores para el fondo del título */
+            text-decoration: none; /* Elimina la subrayado predeterminado en los enlaces */
+        }
+
+.button-container-es {
+            display: inline-block; /* Mantiene el contenedor del botón en línea con el texto */
+            background-color: #007bff; /* Cambia el color de fondo según tus preferencias */
+            padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+            border-radius: 5px; /* Agrega bordes redondeados al contenedor del botón */
+        }
+
+        .btn.ver-mas-es {
+            font-family: 'Teko', sans-serif;
+            background: linear-gradient(to right, #a1c5eb, #a0deee); /* Degradado de colores para el fondo del título */
+            text-decoration: none; /* Elimina la subrayado predeterminado en los enlaces */
+        }
+
+
   /* ############################################ */
 
 
@@ -491,3 +520,54 @@ border-bottom: 5px solid #ccc; /* Add a 1px solid border at the bottom */
     font-family: 'PT Serif', serif;
 
 }
+
+#labelIdioma {
+    position: fixed;
+    top: 0px;
+    right: 30px;
+    z-index: 9999;
+  }
+  
+  .idioma-container {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    z-index: 9998;
+  }
+  
+  .idioma-container .custom-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .idioma-container .custom-select img {
+    margin-left: 10px;
+    max-width: 20px; /* tamaño imagen */
+  }
+  
+  .idioma-container .custom-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .idioma-container .custom-options.show {
+    display: block;
+  }
+  
+  .idioma-container .custom-option {
+    padding: 10px;
+    cursor: pointer;
+  }

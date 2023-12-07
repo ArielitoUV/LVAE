@@ -57,19 +57,15 @@ body {
     cursor: pointer;
 }
 .main-content {
-<<<<<<< HEAD
-    max-width: 1200px;
-    margin: 100px auto;
-=======
     max-width: 1400px;
     margin: 24px auto;
->>>>>>> 62c5abe6e43742bc4acf63080584f8960338a3e1
-
 }
 
 .left-section {
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .text-content {

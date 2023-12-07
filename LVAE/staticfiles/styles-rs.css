@@ -1,168 +1,114 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #4568DC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #4568DC;
+  background: -webkit-linear-gradient(to left, #B06AB3, #4568DC);
+  background: linear-gradient(to left, #B06AB3, #4568DC);
 }
 
 .container-rs {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff42;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    max-width: 1050px;
-    margin-top: 50px; /* Adjust the margin-top as needed */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff42;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  max-width: 1050px;
+  margin-top: 50px;
 }
 
+.container-tw {
+  text-align: center;
+  margin-top: 20px; /* Agrega un espacio superior */
+}
 
 .container-rs:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 iframe {
-    width: 100%; /* Modifica el ancho para que ocupe todo el contenedor */
-    height: 500px; /* Ajusta la altura según tus necesidades */
-    border: none;
-    border-radius: 12px;
-    overflow: hidden;
-    transform: scale(2.0); /* Ajusta el valor según sea necesario */
-    transform-origin: 0 0; /* Mueve el origen de la transformación al contenedor iframe */
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transform: scale(2.0);
+  transform-origin: 0 0;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Estilo adicional para hacer que el contenedor sea más atractivo */
 .container-rs p {
-    text-align: center;
-    color: #555;
-    margin-top: 20px;
+  text-align: center;
+  color: #555;
+  margin-top: 20px;
 }
 
-
 .navbar-nav {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 .navbar-nav .nav-link {
-color: #000000; /* black text color for navbar items */
-font-size: 19px; /* Adjust the font size as needed */
-margin: 0 70px; /* Adjust the margin to add separation between items */
+  color: #000000;
+  font-size: 19px;
+  margin: 0 20px;
 }
 
-
-    
 .navbar {
-    position: relative;
-    z-index: 10000;
-    border-bottom: 3px solid #000000; /* Add a 1px solid border at the bottom */
-
-    margin-bottom: 20px; /* Keep or adjust the margin-bottom as needed */
+  position: relative;
+  z-index: 10000;
+  border-bottom: 3px solid #000000;
+  margin-bottom: 20px;
 }
-
-
-    /* .navbar-brand {
-        margin-right: -80px;  /* Esto empujará el logotipo hacia la izquierda */
-
-    
 
 .navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
-
-.navbar-nav .nav-item {
-    margin-left: 70px;
-    margin-right: 79px;
-}
-
 
 .navbar-nav .nav-link {
-    color: #000000;
-    font-size: 19px;
-    margin: 0 20px;
-    border-radius: 5px; /* Añade bordes redondeados */
-    transition: background-color 0.3s, color 0.3s;
+  color: #000000;
+  font-size: 19px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
-navbarini {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #ffffff;
-    border-bottom: 3.9px solid #000000;
-    display: flex; /* Agregado */
-    justify-content: center; /* Agregado */
-  }
 
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-  }
+.navbar-nav .nav-link:hover {
+  background-color: rgb(171, 194, 228);
+  color: #000000;
+}
 
-  .navbar-brand img {
-    margin-right: 100px;
-  }
+.navbar-nav .nav-link.special-link {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: 3px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
 
+.navbar-nav .nav-link.special-link:hover {
+  background-color: rgb(171, 194, 228);
+  color: #000000;
+  border: solid #3a3737;
+}
+
+@media (max-width: 768px) {
   .navbar-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Agregado */
+      flex-direction: column;
   }
 
   .navbar-nav .nav-item {
-    margin-left: 50px;
-    margin-right: 50px; /* Modificado */
-  }
-
-  .navbar-nav .nav-link {
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 5px 10px;
-    transition: 0.3s;
-    font-size: 18.74px;
-    font-weight: thin;
-  }
-
-  .navbar-nav .nav-link:hover {
-    background-color: rgb(171, 194, 228);
-    color: #000000;
-  }
-
-  .navbar-nav .nav-link.special-link {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 5px 10px;
-    border: 3px solid #ccc;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .navbar-nav .nav-link.special-link:hover {
-    background-color: rgb(171, 194, 228);
-    color: #000000;
-    border: solid #3a3737;
-  }
-
-  @media (max-width: 768px) {
-    .navbar-nav {
-      flex-direction: column;
-    }
-
-    .navbar-nav .nav-item {
       margin: 10px 0;
-    }
   }
-  
-
+}
