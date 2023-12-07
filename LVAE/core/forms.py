@@ -3,8 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
 from .models import Usuario
 from django import forms
-from django.contrib.auth.forms import PasswordChangeForm
-from django import forms
+from django.contrib.auth.forms import PasswordChangeForm as DjangoPasswordChangeForm
+
 
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(
@@ -69,10 +69,20 @@ class UserProfileForm(forms.ModelForm):
         model = Usuario
         fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono','email', 'estado', 'ciudad', 'user_type']
 
-class PasswordChangeForm(forms.Form):
+class PasswordChangeForm(DjangoPasswordChangeForm):
+    class Meta:
+        model = Usuario
+        fields = []
+
     current_password = forms.CharField(label='Contraseña actual', widget=forms.PasswordInput())
     new_password1 = forms.CharField(label='Nueva contraseña', widget=forms.PasswordInput())
     new_password2 = forms.CharField(label='Confirmar nueva contraseña', widget=forms.PasswordInput())
+
+    def clean_current_password(self):
+        current_password = self.cleaned_data.get('current_password')
+        if not self.user.check_password(current_password):
+            raise forms.ValidationError('La contraseña actual no es válida.')
+        return current_password
 
 
 
