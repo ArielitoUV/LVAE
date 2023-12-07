@@ -56,16 +56,18 @@
     {% endif %}
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form }}
         <button type="submit">Actualizar datos</button>
-    </form>
-    <hr>
-    <h3 class="titulo">Cambiar contraseña</h3>
-    <form method="post">
+      </form>
+      
+      <hr>
+      
+      <form method="post">
         {% csrf_token %}
-        {{ password_form.as_p }}
+        {{ password_form }}
         <button type="submit">Cambiar contraseña</button>
-    </form>
+      </form>
+      
 
 
 </body>

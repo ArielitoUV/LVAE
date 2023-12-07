@@ -57,18 +57,21 @@ def gestion_perfil(request):
         password_form = PasswordChangeForm(user=usuario, data=request.POST)
         
         if form.is_valid():
+            print("Formulario de perfil válido")
             form.save()
             messages.success(request, 'Tus datos se han actualizado correctamente.')
-            return redirect('gestion_perfil')  # Redirige para evitar reenviar el formulario al actualizar la página
+            return redirect('gestion_perfil')
 
         if password_form.is_valid():
+            print("Formulario de cambio de contraseña válido")
             password_form.save()
-            update_session_auth_hash(request, usuario)  # Actualiza la sesión después de cambiar la contraseña
+            update_session_auth_hash(request, usuario)
             messages.success(request, 'Tu contraseña se ha cambiado correctamente.')
-            return redirect('gestion_perfil')  # Redirige para evitar reenviar el formulario al actualizar la página
+            return redirect('gestion_perfil') 
     else:
         form = UserProfileForm(instance=usuario)
         password_form = PasswordChangeForm(user=usuario)
+        print("Errores en el formulario de cambio de contraseña:", password_form.errors)
 
     context = {
     'form': form,
