@@ -36,19 +36,19 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link translate-es" style="color: black;" href="/donaciones/">Donaciones</a>
-                    <a class="nav-link translate-en" style="color: black; display: none;" href="/donations/">Donations</a>
+                    <a class="nav-link translate-en" style="color: black; display: none;" href="/donaciones/">Donations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link translate-es" style="color: black;" href="/rs/">Redes</a>
-                    <a class="nav-link translate-en" style="color: black; display: none;" href="/networks/">Socials</a>
+                    <a class="nav-link translate-en" style="color: black; display: none;" href="/rs/">Socials</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link translate-es" style="color: black;" href="/acercade/">Acerca de</a>
-                    <a class="nav-link translate-en" style="color: black; display: none;" href="/about/">About</a>
+                    <a class="nav-link translate-en" style="color: black; display: none;" href="/acercade/">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link translate-es" style="color: black;" href="/iniciosesion/">Inicio sesión</a>
-                    <a class="nav-link translate-en" style="color: black; display: none;" href="/login/">Login</a>
+                    <a class="nav-link translate-en" style="color: black; display: none;" href="/iniciosesion/">Login</a>
                 </li>
             </ul>
         </div>
@@ -77,7 +77,6 @@
     <p class="join-now">
         ¿Ya tienes una cuenta? <a href="{% url 'iniciar_sesion' %}">Inicia sesión aquí</a>
     </p>
-
     <form id="registrationForm" method="post" action="{% url 'registrar_usuario' %}">
         {% csrf_token %}
         {% for field in form %}
@@ -100,8 +99,44 @@
                 {% endif %}
             </div>
         {% endfor %}
-        <button type="submit">Registrar</button>
+        <button type="submit" class="translate-es">Registrar</button>
+        <button type="submit" class="translate-en" style="display: none;">Register</button>
     </form>
+</div>
+
+<div class="registration-container translate-en" style="display: none;">
+        <img src="{% static 'assets/img/logo.png' %}" alt="Imagen de La Vía al Éxito" class="top-image">
+        <h2>User register</h2>
+        <p class="join-now">
+            ¿Already have an account? <a href="{% url 'iniciar_sesion' %}">Login here</a>
+        </p>
+        <form id="registrationForm" method="post" action="{% url 'registrar_usuario' %}">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group {% if field.errors %}has-error{% endif %}">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {% if field.name == 'fecha_nacimiento' %}
+                        <div class="input-group">
+                            <input type="text" class="form-control datepicker" name="{{ field.name }}"
+                                   id="{{ field.id_for_label }}" placeholder="{{ field.label }}" readonly>
+                        </div>
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                    {% if field.errors %}
+                        <span class="help-block">
+                            {% for error in field.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </span>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button type="submit" class="translate-es">Registrar</button>
+            <button type="submit" class="translate-en" style="display: none;">Register</button>
+        </form>
+</div>
+
 
     <script>
         $(document).ready(function () {
