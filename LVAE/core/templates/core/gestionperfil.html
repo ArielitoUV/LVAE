@@ -47,50 +47,58 @@
         </div>
     </nav>
     <!-- gestionar_perfil.html -->
-<form method="POST">
-    {% csrf_token %}
-    <h2>Editar perfil</h2>
-    <div class="form-group">
-      <label for="{{ perfil_form.nombre.id_for_label }}">Nombre</label>
-      {{ perfil_form.nombre }}
-    </div>
-    <div class="form-group">
-      <label for="{{ perfil_form.apellido.id_for_label }}">Apellido</label>
-      {{ perfil_form.apellido }}
-    </div>
-    <div class="form-group">
-      <label for="{{ perfil_form.telefono.id_for_label }}">Teléfono</label>
-      {{ perfil_form.telefono }}
-    </div>
-    <div class="form-group">
-      <label for="{{ perfil_form.fecha_nacimiento.id_for_label }}">Fecha de Nacimiento</label>
-      {{ perfil_form.fecha_nacimiento }}
-    </div>
-    <div class="form-group">
-      <label for="{{ perfil_form.estado.id_for_label }}">Estado</label>
-      {{ perfil_form.estado }}
-    </div>
-    <div class="form-group">
-      <label for="{{ perfil_form.ciudad.id_for_label }}">Ciudad</label>
-      {{ perfil_form.ciudad }}
-    </div>
+    <h2>Gestionar perfil</h2>
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-success" role="alert">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
   
-    <h2>Cambiar contraseña</h2>
-    <div class="form-group">
-      <label for="{{ contraseña_form.old_password.id_for_label }}">Contraseña actual</label>
-      {{ contraseña_form.old_password }}
-    </div>
-    <div class="form-group">
-      <label for="{{ contraseña_form.new_password1.id_for_label }}">Nueva contraseña</label>
-      {{ contraseña_form.new_password1 }}
-    </div>
-    <div class="form-group">
-      <label for="{{ contraseña_form.new_password2.id_for_label }}">Confirmar nueva contraseña</label>
-      {{ contraseña_form.new_password2 }}
-    </div>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="{{ perfil_form.nombre.id_for_label }}">Nombre</label>
+        {{ perfil_form.nombre }}
+      </div>
+      <div class="form-group">
+        <label for="{{ perfil_form.apellido.id_for_label }}">Apellido</label>
+        {{ perfil_form.apellido }}
+      </div>
+      <div class="form-group">
+        <label for="{{ perfil_form.telefono.id_for_label }}">Teléfono</label>
+        {{ perfil_form.telefono }}
+      </div>
+      <div class="form-group">
+        <label for="{{ perfil_form.fecha_nacimiento.id_for_label }}">Fecha de Nacimiento</label>
+        {{ perfil_form.fecha_nacimiento }}
+      </div>
+      <div class="form-group">
+        <label for="{{ perfil_form.estado.id_for_label }}">Estado</label>
+        {{ perfil_form.estado }}
+      </div>
+      <div class="form-group">
+        <label for="{{ perfil_form.ciudad.id_for_label }}">Ciudad</label>
+        {{ perfil_form.ciudad }}
+      </div>
   
-    <button class="btn btn-primary" type="submit">Guardar cambios</button>
-  </form>
+      <h2>Cambiar contraseña</h2>
+      <div class="form-group">
+        <label for="{{ contraseña_form.old_password.id_for_label }}">Contraseña actual</label>
+        {{ contraseña_form.old_password }}
+      </div>
+      <div class="form-group">
+        <label for="{{ contraseña_form.new_password1.id_for_label }}">Nueva contraseña</label>
+        {{ contraseña_form.new_password1 }}
+      </div>
+      <div class="form-group">
+        <label for="{{ contraseña_form.new_password2.id_for_label }}">Confirmar nueva contraseña</label>
+        {{ contraseña_form.new_password2 }}
+      </div>
+  
+      <button class="btn btn-primary" type="submit">Guardar cambios</button>
+    </form>
 
 </body>
 

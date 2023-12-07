@@ -82,7 +82,7 @@ def gestionar_perfil(request):
         'perfil_form': perfil_form,
         'contraseña_form': contraseña_form,
     }
-    return render(request, 'gestionar_perfil.html', context)
+    return render(request, 'gestionperfil.html', context)
 
 
 
