@@ -8,7 +8,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from .forms import UserProfileForm, CustomPasswordChangeForm
-from django.contrib.auth.forms import PasswordChangeForm
 
 
 def registrar_usuario(request):
@@ -67,9 +66,9 @@ def gestion_perfil(request):
 
     else:
         form = UserProfileForm(instance=usuario)
-        password_form = PasswordChangeForm(user=usuario)
-        print(form.errors)  # Imprime errores del formulario en la consola
-        print(password_form.errors)  # Imprime errores del formulario de cambio de contraseña
+        password_form = CustomPasswordChangeForm(user=usuario)
+        print(form.errors)  
+        print(password_form.errors) 
 
 
     context = {
