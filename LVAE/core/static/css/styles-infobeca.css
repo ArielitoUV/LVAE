@@ -154,3 +154,54 @@ margin: 90px 0; /* Ajusta el margen superior e inferior según sea necesario */
 }
 
 /* Otros estilos específicos que desees agregar */
+
+#labelIdioma {
+    position: fixed;
+    top: 0px;
+    right: 30px;
+    z-index: 9999;
+  }
+  
+  .idioma-container {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    z-index: 9998;
+  }
+  
+  .idioma-container .custom-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .idioma-container .custom-select img {
+    margin-left: 10px;
+    max-width: 20px; /* tamaño imagen */
+  }
+  
+  .idioma-container .custom-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .idioma-container .custom-options.show {
+    display: block;
+  }
+  
+  .idioma-container .custom-option {
+    padding: 10px;
+    cursor: pointer;
+  }
