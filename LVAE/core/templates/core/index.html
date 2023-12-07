@@ -120,13 +120,13 @@
             </a>
             <div class="value-tx bordered rounded-box">
               <h3 class="translate-es">Recursos Clave para la Comunidad Latina en Nueva Jersey</h3>
-              <h3 class="translate-en">Key Resources for the Latino Community in New Jersey</h3>
+              <h3 class="translate-en" style="display: none;">Key Resources for the Latino Community in New Jersey</h3>
             </div>
         </div>
         <div class="informacionn">
 
           <p class="translate-es" id="textoTitulo">Si necesitas información sobre educación, becas, ideas para tu camino a la universidad, ayuda financiera y más. No dudes en contactarte con nosotros.</p>
-          <p class="translate-en" id="textoTitulo">If you need information about education, scholarships, ideas for your path to college, financial aid and more. Do not hesitate to contact us.</p>
+          <p class="translate-en" style="display: none;" id="textoTitulo">If you need information about education, scholarships, ideas for your path to college, financial aid and more. Do not hesitate to contact us.</p>
 
         </div>
     </div>
@@ -138,16 +138,16 @@
               <div class="value bordered rounded-box">
                   <h3 class="translate-es">Universidad o College</h3>
                   <a href="/iniciosesion/" class="btn ver-mas translate-es" id="verMas1">Ver Más</a>
-                  <h3 class="translate-en">University and College</h3>
-                  <a href="/iniciosesion/" class="btn ver-mas translate-en" id="verMas1">See More</a>
+                  <h3 class="translate-en" style="display: none;">University and College</h3>
+                  <a href="/iniciosesion/" class="btn ver-mas translate-en" id="verMas1" style="display: none;">See More</a>
               </div>
           </div>
           <div class="value-container">
               <div class="value bordered rounded-box">
                   <h3 class="translate-es">Preparate desde la Secundaria</h3>
                   <a href="/iniciosesion/" class="btn ver-mas translate-es" id="verMas1">Ver Más</a>
-                  <h3 class="translate-en">Prepare from High School</h3>
-                  <a href="/iniciosesion/" class="btn ver-mas translate-en" id="verMas1">See More</a>
+                  <h3 class="translate-en" style="display: none;">Prepare from High School</h3>
+                  <a href="/iniciosesion/" class="btn ver-mas translate-en" id="verMas1" style="display: none;">See More</a>
               </div>
           </div>
       </div>
@@ -158,8 +158,8 @@
 
                   <h3 class="translate-es">Paso a Paso Para Los Padres</h3>
                   <a href="/iniciosesion/" class="btn ver-mas translate-es" id="verMas1">Ver Más</a>
-                  <h3 class="translate-en">Step by Step for Parents</h3>
-                  <a href="/iniciosesion/" class="btn ver-mas translate-en" id="verMas1">See More</a>
+                  <h3 class="translate-en" style="display: none;">Step by Step for Parents</h3>
+                  <a href="/iniciosesion/" class="btn ver-mas translate-en" id="verMas1" style="display: none;">See More</a>
 
                   
               </div>
@@ -234,11 +234,12 @@
       <img src="{% static 'assets/img/aliado4.png' %}" alt="Image 4" class="aliado">
   </div>
   <h2 class="translate-es">Nuestros Aliados</h2>
-  <h2 class="translate-en">Our Allies</h2>
+  <h2 class="translate-en" style="display: none;">Our Allies</h2>
 
   <div class="footer-message">
       <p class="translate-es">En La Vía al Éxito sabemos que la integración y la verdadera solidaridad entre la comunidad, las empresas y las instituciones hacen realidad los más grandes proyectos.</p>
-      <p class="translate-en">At La Vía al Éxito, we know that integration and true solidarity among the community, businesses, and institutions make the biggest projects a reality.</p>
+
+      <p class="translate-en" style="display: none;">At La Vía al Éxito, we know that integration and true solidarity among the community, businesses, and institutions make the biggest projects a reality.</p>
   </div>
 </footer>
 
@@ -287,12 +288,7 @@
             });
         });
       };
-        function userIsLoggedIn() {
-            // Implement your authentication logic here
-            // For example, you might check if a user session exists
-            // This is just a placeholder; replace it with your actual logic
-            return false; // Change this to return true if the user is logged in
-        }
+
 
 
 

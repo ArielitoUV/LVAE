@@ -40,7 +40,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link translate-es" style="color: black;" href="/rs/">Redes</a>
-                    <a class="nav-link translate-en" style="color: black; display: none;" href="/networks/">Networks</a>
+                    <a class="nav-link translate-en" style="color: black; display: none;" href="/networks/">Socials</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link translate-es" style="color: black;" href="/acercade/">Acerca de</a>
@@ -116,71 +116,91 @@
         });
     </script>
     <script>
-        var translateBtn; // Variable global para almacenar el botón de traducción
+        function selectOption(value, text, imagePath) {
+            document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+            document.getElementById('customOptions').classList.remove('show');
+        }
+    
+        document.getElementById('customSelect').addEventListener('click', function (event) {
+            // Stop propagation to prevent the outer click event listener from closing the options list
+            event.stopPropagation();
+            document.getElementById('customOptions').classList.toggle('show');
+        });
+    
+        document.addEventListener('click', function () {
+            var options = document.getElementById('customOptions');
+            if (options.classList.contains('show')) {
+                options.classList.remove('show');
+            }
+        });
 
+        document.addEventListener('DOMContentLoaded'), function () {
+        // Add a click event listener to all "Ver Más" buttons
+        document.querySelectorAll('.ver-mas').forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                // Check if the user is not logged in (you need to adjust this condition based on your authentication logic)
+                if (!userIsLoggedIn()) {
+                    // Redirect the user to the login page
+                    window.location.href = '/iniciosesion/';
+                }
+            });
+        });
+      };
+
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/google-translate-api-browser@0.1.12"></script>
+    <script>
+        var translateBtn; // Variable global para almacenar el botón de traducción
+    
         function selectOption(value, text, imagePath) {
             var customSelect = document.getElementById('customSelect');
             customSelect.innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
-
+    
             // Cambiar el idioma de la página
             document.documentElement.lang = value;
-
+    
             // Mostrar/ocultar elementos según el idioma seleccionado
             var navbarElementsEs = document.querySelectorAll('.translate-es');
             var navbarElementsEn = document.querySelectorAll('.translate-en');
-            var registrationForm = document.getElementById('registrationForm');
-
+    
             if (value === 'es') {
                 navbarElementsEs.forEach(element => element.style.display = 'block');
                 navbarElementsEn.forEach(element => element.style.display = 'none');
-                registrationForm.querySelectorAll('.translate-es').forEach(element => element.style.display = 'block');
-                registrationForm.querySelectorAll('.translate-en').forEach(element => element.style.display = 'none');
             } else {
                 navbarElementsEs.forEach(element => element.style.display = 'none');
                 navbarElementsEn.forEach(element => element.style.display = 'block');
-                registrationForm.querySelectorAll('.translate-es').forEach(element => element.style.display = 'none');
-                registrationForm.querySelectorAll('.translate-en').forEach(element => element.style.display = 'block');
             }
-
+    
+    
             // Activar evento de traducción
             if (translateBtn) {
                 translateBtn.click();
             }
-
+    
             var customOptions = document.getElementById('customOptions');
             customOptions.classList.remove('show');
         }
-
+    
         function changeLanguage(value) {
             var customSelect = document.getElementById('customSelect');
             var selectedText = value === 'es' ? 'Español' : 'English';
             var imagePath = value === 'es' ? '{% static 'assets/img/idioma_español.png' %}' : '{% static 'assets/img/idioma_ingles.png' %}';
             customSelect.innerHTML = `<span>${selectedText}</span><img src="${imagePath}" alt="${selectedText}">`;
-
+    
             // Disparar el evento de cambio de idioma
             selectOption(value, selectedText, imagePath);
         }
-
+    </script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Al cargar la página, obtener el botón de traducción
-            translateBtn = document.getElementById('translateBtn');
-        });
-
-        // Evento de traducción al hacer clic en el botón
-        translateBtn.addEventListener('click', function () {
-            // Traducir el contenido del formulario
-            var form = document.getElementById('registrationForm');
-            var formContent = form.innerText;
-
-            translate(formContent, { to: document.documentElement.lang })
-                .then((translatedText) => {
-                    form.innerHTML = translatedText;
-                })
-                .catch((error) => {
-                    console.error('Error al traducir el formulario:', error);
-                });
+            translateBtn = document.querySelector('button');
         });
     </script>
+    
 </div>
 
 </body>

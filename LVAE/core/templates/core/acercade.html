@@ -23,54 +23,159 @@
             padding: 0;">
 
     
-    <nav class="navbar navbar-expand-lg navbar-white bg-white">
-        <a class="navbar-brand" href="/">
-            <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo de La Vía al Éxito" style="width: 120px; height: 120px;margin-left: 180px;">
-    
-        </a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" style="color: black;" href="/donaciones/">Donaciones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="color: black;" href="/rs/">Redes</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" style="color: black;" href="/registroap/">Registro</a>
-                </li>
-            </div>
-        </div>
-    </nav>
-
-    <div class="values">
-        <div class="value-container">
-            <div class="value bordered rounded-box">
-                <img src="{% static 'assets/img/mision.png' %}" alt="icon" class="icon">
-                <h3>Nuestra Misión</h3>
-                <p>Nuestra misión es conectar a la comunidad con recursos para ayudarlos a alcanzar sus metas educativas.</p>
-            </div>
-            <div class="value bordered rounded-box">
-                <img src="{% static 'assets/img/vision.png' %}" alt="icon" class="icon">
-                <h3>Nuestra Visión</h3>
-                <p>Nuestra visión es facilitar el acceso a recursos educativos.</p>
-            </div>
-            <!-- Agrega más pares de valores según sea necesario -->
+<nav class="navbar navbar-expand-lg navbar-white bg-white">
+    <a class="navbar-brand" href="/">
+        <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo de La Vía al Éxito" style="width: 120px; height: 120px;margin-left: 180px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link translate-es" style="color: black;" href="/donaciones/">Donaciones</a>
+                <a class="nav-link translate-en" style="color: black; display: none;" href="/donations/">Donations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link translate-es" style="color: black;" href="/rs/">Redes</a>
+                <a class="nav-link translate-en" style="color: black; display: none;" href="/rs/">Social</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link translate-es" style="color: black;" href="/registroap/">Registro</a>
+                <a class="nav-link translate-en" style="color: black; display: none;" href="/signup/">Sign Up</a>
+            </li>
         </div>
     </div>
-    <div class="additional-section">
-        <div class="about-us bordered rounded-box">
-            <h2>Acerca de nosotros</h2>
-            <p>Qué tipos de becas están disponibles y la diferencia entre ayuda Federal y Estatal, la importancia del servicio comunitario, los beneficios de tener calificaciones más altas, la diferencia entre clases de honor y avanzadas, entre otros. Sin embargo, los padres no tienen suficiente conocimiento sobre los temas muy importantes relacionados con los recursos disponibles para sus hijos. La Vía Al Éxito marca la diferencia en la vida de padres y estudiantes que buscan mejores oportunidades y vida para sus hijos. También queremos ayudar a los padres a tener la capacidad de obtener los recursos que están disponibles para que puedan alcanzar sus propias metas y cumplir los sueños de sus hijos.</p>
+</nav>
+<div class="values">
+    <div class="value-container">
+        <div class="value bordered rounded-box">
+            <img src="{% static 'assets/img/mision.png' %}" alt="icon" class="icon">
+            <h3 class="translate-es">Nuestra Misión</h3>
+            <h3 class="translate-en" style="display: none;">Our Mission</h3>
+            <p class="translate-es">Nuestra misión es conectar a la comunidad con recursos para ayudarlos a alcanzar sus metas educativas.</p>
+            <p class="translate-en" style="display: none;">Our mission is to connect the community with resources to help them achieve their educational goals.</p>
         </div>
-    
-        <div class="our-work bordered rounded-box">
-            <h2>Nuestro trabajo</h2>
-            <p>Nuestro objetivo es conectar a las comunidades con los recursos educativos necesarios y suficientes, brindar orientación, conocimiento y accesibilidad para lograr una educación exitosa para todos.</p>
+        <div class="value bordered rounded-box">
+            <img src="{% static 'assets/img/vision.png' %}" alt="icon" class="icon">
+            <h3 class="translate-es">Nuestra Visión</h3>
+            <h3 class="translate-en" style="display: none;">Our Vision</h3>
+            <p class="translate-es">Nuestra visión es facilitar el acceso a recursos educativos.</p>
+            <p class="translate-en" style="display: none;">Our vision is to facilitate access to educational resources.</p>
         </div>
         <!-- Agrega más pares de valores según sea necesario -->
     </div>
+</div>
+<div class="additional-section">
+    <div class="about-us bordered rounded-box">
+        <h2 class="translate-es">Acerca de nosotros</h2>
+        <h2 class="translate-en" style="display: none;">About Us</h2>
+        <p class="translate-es">Qué tipos de becas están disponibles y la diferencia entre ayuda Federal y Estatal, la importancia del servicio comunitario, los beneficios de tener calificaciones más altas, la diferencia entre clases de honor y avanzadas, entre otros. Sin embargo, los padres no tienen suficiente conocimiento sobre los temas muy importantes relacionados con los recursos disponibles para sus hijos. La Vía Al Éxito marca la diferencia en la vida de padres y estudiantes que buscan mejores oportunidades y vida para sus hijos. También queremos ayudar a los padres a tener la capacidad de obtener los recursos que están disponibles para que puedan alcanzar sus propias metas y cumplir los sueños de sus hijos.</p>
+        <p class="translate-en" style="display: none;">What types of scholarships are available and the difference between Federal and State aid, the importance of community service, the benefits of having higher grades, the difference between honors and advanced classes, among others. However, parents lack sufficient knowledge about very important topics related to the resources available for their children. La Vía Al Éxito makes a difference in the lives of parents and students seeking better opportunities and life for their children. We also want to help parents have the ability to obtain the resources that are available so they can achieve their own goals and fulfill their children's dreams.</p>
+    </div>
+    <div class="our-work bordered rounded-box">
+        <h2 class="translate-es">Nuestro trabajo</h2>
+        <h2 class="translate-en" style="display: none;">Our Work</h2>
+        <p class="translate-es">Nuestro objetivo es conectar a las comunidades con los recursos educativos necesarios y suficientes, brindar orientación, conocimiento y accesibilidad para lograr una educación exitosa para todos.</p>
+        <p class="translate-en" style="display: none;">Our goal is to connect communities with the necessary and sufficient educational resources, provide guidance, knowledge, and accessibility to achieve successful education for all.</p>
+    </div>
+    <!-- Agrega más pares de valores según sea necesario -->
+</div>
+    <div class="idioma-container">
+        <div class="custom-select" id="customSelect">
+            <span>Español</span>
+            <img src="{% static 'assets/img/idioma_español.png' %}" alt="Español">
+        </div>
+            <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
+        <div class="custom-options" id="customOptions">
+            <div class="custom-option" onclick="selectOption('es', 'Español', '{% static 'assets/img/idioma_español.png' %}')">Español</div>
+            <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
+        </div>
+    </div>
+    
+        <script>
+            function selectOption(value, text, imagePath) {
+                document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+                document.getElementById('customOptions').classList.remove('show');
+            }
+        
+            document.getElementById('customSelect').addEventListener('click', function (event) {
+                // Stop propagation to prevent the outer click event listener from closing the options list
+                event.stopPropagation();
+                document.getElementById('customOptions').classList.toggle('show');
+            });
+        
+            document.addEventListener('click', function () {
+                var options = document.getElementById('customOptions');
+                if (options.classList.contains('show')) {
+                    options.classList.remove('show');
+                }
+            });
+    
+            document.addEventListener('DOMContentLoaded'), function () {
+            // Add a click event listener to all "Ver Más" buttons
+            document.querySelectorAll('.ver-mas').forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    // Check if the user is not logged in (you need to adjust this condition based on your authentication logic)
+                    if (!userIsLoggedIn()) {
+                        // Redirect the user to the login page
+                        window.location.href = '/iniciosesion/';
+                    }
+                });
+            });
+          };
+    
+    
+    
+    
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/google-translate-api-browser@0.1.12"></script>
+        <script>
+            var translateBtn; // Variable global para almacenar el botón de traducción
+        
+            function selectOption(value, text, imagePath) {
+                var customSelect = document.getElementById('customSelect');
+                customSelect.innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+        
+                // Cambiar el idioma de la página
+                document.documentElement.lang = value;
+        
+                // Mostrar/ocultar elementos según el idioma seleccionado
+                var navbarElementsEs = document.querySelectorAll('.translate-es');
+                var navbarElementsEn = document.querySelectorAll('.translate-en');
+        
+                if (value === 'es') {
+                    navbarElementsEs.forEach(element => element.style.display = 'block');
+                    navbarElementsEn.forEach(element => element.style.display = 'none');
+                } else {
+                    navbarElementsEs.forEach(element => element.style.display = 'none');
+                    navbarElementsEn.forEach(element => element.style.display = 'block');
+                }
+        
+        
+                // Activar evento de traducción
+                if (translateBtn) {
+                    translateBtn.click();
+                }
+        
+                var customOptions = document.getElementById('customOptions');
+                customOptions.classList.remove('show');
+            }
+        
+            function changeLanguage(value) {
+                var customSelect = document.getElementById('customSelect');
+                var selectedText = value === 'es' ? 'Español' : 'English';
+                var imagePath = value === 'es' ? '{% static 'assets/img/idioma_español.png' %}' : '{% static 'assets/img/idioma_ingles.png' %}';
+                customSelect.innerHTML = `<span>${selectedText}</span><img src="${imagePath}" alt="${selectedText}">`;
+        
+                // Disparar el evento de cambio de idioma
+                selectOption(value, selectedText, imagePath);
+            }
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Al cargar la página, obtener el botón de traducción
+                translateBtn = document.querySelector('button');
+            });
+        </script>   
+    

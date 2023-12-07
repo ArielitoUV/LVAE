@@ -23,16 +23,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="/acercade/">Acerca de</a>
+                        <a class="nav-link translate-es" style="color: black;" href="/acercade/">Acerca de</a>
+                        <a class="nav-link translate-en" style="color: black; display: none;" href="/acercade/">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="/rs/">Redes</a>
+                        <a class="nav-link translate-es" style="color: black;" href="/rs/">Redes</a>
+                        <a class="nav-link translate-en" style="color: black; display: none;" href="/rs/">Social</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link special-link" href="/iniciosesion/">Inicio sesión</a>
+                        <a class="nav-link special-link translate-es" href="/iniciosesion/">Inicio sesión</a>
+                        <a class="nav-link special-link translate-en" style="display: none;" href="/iniciosesion/">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link special-link" href="/registroap/">Registro</a>
+                        <a class="nav-link special-link translate-es" href="/registroap/">Registro</a>
+                        <a class="nav-link special-link translate-en" style="display: none;" href="/registroap/">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -48,34 +52,39 @@
         <div class="center-container">
             <div class="donation-container">
                 <a href="https://www.paypal.com/donate/?hosted_button_id=7NF37Q4TWRN7N" target="_blank">
-                    <button class="boton-donacion">
+                    <button class="boton-donacion translate-es">
                         <img src="{% static 'assets/img/tarjeta.png' %}" alt="target">
                         ¡Dona Ahora!
                     </button>
+                    <button class="boton-donacion translate-en" style="display: none;">
+                        <img src="{% static 'assets/img/tarjeta.png' %}" alt="target">
+                        Donate Now!
+                    </button>
                 </a>
                 <div class="mt-4">
-                    <h2>¡Gracias por tu apoyo!</h2>
-                    <p>
+                    <h2 class="translate-es">¡Gracias por tu apoyo!</h2>
+                    <h2 class="translate-en" style="display: none;">Thank you for your support!</h2>
+                    <p class="translate-es">
                         Agradecemos sinceramente tu generosidad<br>
                         Con tu ayuda, podemos lograr un impacto significativo y mejorar vidas.
+                    </p>
+                    <p class="translate-en" style="display: none;">
+                        We sincerely appreciate your generosity<br>
+                        With your help, we can make a significant impact and improve lives.
                     </p>
                 </div>
                 <div class="image-container" style="justify-content: center;">
                     <div class="image1">
                         <img src="{% static 'assets/img/corazon.png' %}" alt="">
-
                     </div>
                     <div class="image2">
                         <img src="{% static 'assets/img/corazon.png' %}" alt="">
-
                     </div>
                     <div class="image3">
                         <img src="{% static 'assets/img/corazon.png' %}" alt="">
-
                     </div>
                     <div class="image4">
                         <img src="{% static 'assets/img/corazon.png' %}" alt="">
-
                     </div>
                     <div class="image5">
                         <img src="{% static 'assets/img/corazon.png' %}" alt="">
@@ -85,5 +94,103 @@
         </div>
     </div>
     
+<div class="idioma-container">
+    <div class="custom-select" id="customSelect">
+        <span>Español</span>
+        <img src="{% static 'assets/img/idioma_español.png' %}" alt="Español">
+    </div>
+        <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
+    <div class="custom-options" id="customOptions">
+        <div class="custom-option" onclick="selectOption('es', 'Español', '{% static 'assets/img/idioma_español.png' %}')">Español</div>
+        <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
+    </div>
+</div>
+
+    <script>
+        function selectOption(value, text, imagePath) {
+            document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+            document.getElementById('customOptions').classList.remove('show');
+        }
+    
+        document.getElementById('customSelect').addEventListener('click', function (event) {
+            // Stop propagation to prevent the outer click event listener from closing the options list
+            event.stopPropagation();
+            document.getElementById('customOptions').classList.toggle('show');
+        });
+    
+        document.addEventListener('click', function () {
+            var options = document.getElementById('customOptions');
+            if (options.classList.contains('show')) {
+                options.classList.remove('show');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded'), function () {
+        // Add a click event listener to all "Ver Más" buttons
+        document.querySelectorAll('.ver-mas').forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                // Check if the user is not logged in (you need to adjust this condition based on your authentication logic)
+                if (!userIsLoggedIn()) {
+                    // Redirect the user to the login page
+                    window.location.href = '/iniciosesion/';
+                }
+            });
+        });
+      };
+
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/google-translate-api-browser@0.1.12"></script>
+    <script>
+        var translateBtn; // Variable global para almacenar el botón de traducción
+    
+        function selectOption(value, text, imagePath) {
+            var customSelect = document.getElementById('customSelect');
+            customSelect.innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+    
+            // Cambiar el idioma de la página
+            document.documentElement.lang = value;
+    
+            // Mostrar/ocultar elementos según el idioma seleccionado
+            var navbarElementsEs = document.querySelectorAll('.translate-es');
+            var navbarElementsEn = document.querySelectorAll('.translate-en');
+    
+            if (value === 'es') {
+                navbarElementsEs.forEach(element => element.style.display = 'block');
+                navbarElementsEn.forEach(element => element.style.display = 'none');
+            } else {
+                navbarElementsEs.forEach(element => element.style.display = 'none');
+                navbarElementsEn.forEach(element => element.style.display = 'block');
+            }
+    
+    
+            // Activar evento de traducción
+            if (translateBtn) {
+                translateBtn.click();
+            }
+    
+            var customOptions = document.getElementById('customOptions');
+            customOptions.classList.remove('show');
+        }
+    
+        function changeLanguage(value) {
+            var customSelect = document.getElementById('customSelect');
+            var selectedText = value === 'es' ? 'Español' : 'English';
+            var imagePath = value === 'es' ? '{% static 'assets/img/idioma_español.png' %}' : '{% static 'assets/img/idioma_ingles.png' %}';
+            customSelect.innerHTML = `<span>${selectedText}</span><img src="${imagePath}" alt="${selectedText}">`;
+    
+            // Disparar el evento de cambio de idioma
+            selectOption(value, selectedText, imagePath);
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Al cargar la página, obtener el botón de traducción
+            translateBtn = document.querySelector('button');
+        });
+    </script>   
+
 </body>
 </html>
