@@ -29,13 +29,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="/donaciones/">Donaciones</a>
+                        <a class="nav-link translate-es" style="color: black;" href="/donaciones/">Donaciones</a>
+                        <a class="nav-link translate-en" style="color: black; display: none;" href="/donaciones/">Donations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="/acercade/">Acerca de</a>
+                        <a class="nav-link translate-es" style="color: black;" href="/acercade/">Acerca de</a>
+                        <a class="nav-link translate-en" style="color: black; display: none;" href="/acercade/">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="/rs/">Redes</a>
+                        <a class="nav-link translate-es" style="color: black;" href="/rs/">Redes</a>
+                        <a class="nav-link translate-en" style="color: black; display: none;" href="/rs/">Socials</a>
                     </li>
                 </ul>
             </div>
@@ -43,52 +46,66 @@
     </nav>
 </body>
 </html>
-    <div class="container">
-        <header class="text-center">
-            <h1>Cuando usted es el padre de un:</h1>
-            <h2>Freshman y Sophomore - Estudiante de primer año de secundaria (9º grado) y de segundo año (10º grado)</h2>
-        </header>
-        <div class="row">
-            <div class="col-md-6">
-                <ul class="text-list">
-                    <li>Involúcrese con las metas de su estudiante para el futuro, incluyendo los planes para la universidad.</li>
-                    <li>Hable con el consejero escolar para entender la importancia de las calificaciones en el proceso de admisión a la universidad.</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <img src="{% static 'assets/img/organizador.png' %}" alt="Imagen" class="rounded-circle float-left mr-3" style="width: 240px; height: 220px; object-fit: cover; border-radius: 110px; margin-top: 90px; margin-left: -80px;">
-                <ul class="text-list">
-                    <li>Investigue, junto con su hijo, las universidades que le interesan.</li>
-                    <li>Anime a su hijo a utilizar una agenda académica para recordar los plazos y las tareas importantes.</li>
-                </ul>
-            </div>
-            <div class="col-md-12">
-                <ul class="text-list text-center">
-                    <li>Aliente la realización de pruebas preliminares, como el PSAT (Preliminary Scholastic Aptitude Test).</li>
-                </ul>
-            </div>
+<div class="container">
+    <header class="text-center">
+        <h1 class="translate-es">Cuando usted es el padre de un:</h1>
+        <h2 class="translate-es">Freshman y Sophomore - Estudiante de primer año de secundaria (9º grado) y de segundo año (10º grado)</h2>
+        <h1 class="translate-en display-none" style="display: none;">When you are the parent of a:</h1>
+        <h2 class="translate-en display-none" style="display: none;">Freshman and Sophomore - 9th-grade and 10th-grade high school student</h2>
+    </header>
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="text-list">
+                <li class="translate-es">Involúcrese con las metas de su estudiante para el futuro, incluyendo los planes para la universidad.</li>
+                <li class="translate-es">Hable con el consejero escolar para entender la importancia de las calificaciones en el proceso de admisión a la universidad.</li>
+                <li class="translate-en display-none" style="display: none;">Get involved with your student's goals for the future, including plans for college.</li>
+                <li class="translate-en display-none" style="display: none;">Talk to the school counselor to understand the importance of grades in the college admission process.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'assets/img/organizador.png' %}" alt="Imagen" class="rounded-circle float-left mr-3" style="width: 240px; height: 220px; object-fit: cover; border-radius: 110px; margin-top: 90px; margin-left: -80px;">
+            <ul class="text-list">
+                <li class="translate-es">Investigue, junto con su hijo, las universidades que le interesan.</li>
+                <li class="translate-es">Anime a su hijo a utilizar una agenda académica para recordar los plazos y las tareas importantes.</li>
+                <li class="translate-en display-none" style="display: none;">Research, along with your child, the universities that interest them.</li>
+                <li class="translate-en display-none" style="display: none;">Encourage your child to use an academic planner to remember deadlines and important tasks.</li>
+            </ul>
+        </div>
+        <div class="col-md-12">
+            <ul class="text-list text-center">
+                <li class="translate-es">Aliente la realización de pruebas preliminares, como el PSAT (Preliminary Scholastic Aptitude Test).</li>
+                <li class="translate-en display-none" style="display: none;">Encourage taking preliminary tests, such as the PSAT (Preliminary Scholastic Aptitude Test).</li>
+            </ul>
         </div>
     </div>
+</div>
+
 
     <hr class="hr-separator">
 
     <div class="container">
         <header class="text-center">
-            <h1>Cuando usted es el padre de un:</h1>
-            <h2>Freshman y Sophomore - Estudiante de primer año de secundaria (9º grado) y de segundo año (10º grado)</h2>
+            <h1 class="translate-es">Cuando usted es el padre de un:</h1>
+            <h2 class="translate-es">Freshman y Sophomore - Estudiante de primer año de secundaria (9º grado) y de segundo año (10º grado)</h2>
+            <h1 class="translate-en display-none" style="display: none;">When you are the parent of a:</h1>
+            <h2 class="translate-en display-none" style="display: none;">Freshman and Sophomore - 9th-grade and 10th-grade high school student</h2>
         </header>
         <div class="row">
             <div class="col-md-6">
                 <ul class="text-list">
-                    <li>Organice visitas al campus para conocer las oportunidades de Crédito Dual, que permiten a su estudiante obtener créditos universitarios durante la escuela secundaria.</li>
-                    <li>Ayude a su estudiante a comenzar a desarrollar una lista de logros en la escuela secundaria y en la comunidad, incluyendo premios, honores, trabajo remunerado y voluntario y actividades extracurriculares.</li>
+                    <li class="translate-es">Organice visitas al campus para conocer las oportunidades de Crédito Dual, que permiten a su estudiante obtener créditos universitarios durante la escuela secundaria.</li>
+                    <li class="translate-es">Ayude a su estudiante a comenzar a desarrollar una lista de logros en la escuela secundaria y en la comunidad, incluyendo premios, honores, trabajo remunerado y voluntario y actividades extracurriculares.</li>
+                    <li class="translate-en display-none" style="display: none;">Organize campus visits to learn about Dual Credit opportunities, allowing your student to earn college credits during high school.</li>
+                    <li class="translate-en display-none" style="display: none;">Help your student start developing a list of achievements in high school and the community, including awards, honors, paid and volunteer work, and extracurricular activities.</li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <img src="{% static 'assets/img/ahorro.png' %}" alt="Imagen" class="rounded-circle float-left mr-3" style="width: 240px; height: 220px; object-fit: cover; border-radius: 110px; margin-top: 210px; margin-left: -80px;">
                 <ul class="text-list">
-                    <li>Haga que los veranos cuenten: Ayude a su estudiante a encontrar un trabajo o actividad que se base en sus asignaturas e intereses favoritos.</li>
-                    <li> Empiece a hablar del presupuesto familiar, de un plan de ahorro para la universidad y de cómo pagarla.</li>
+                    <li class="translate-es">Haga que los veranos cuenten: Ayude a su estudiante a encontrar un trabajo o actividad que se base en sus asignaturas e intereses favoritos.</li>
+                    <li class="translate-es">Empiece a hablar del presupuesto familiar, de un plan de ahorro para la universidad y de cómo pagarla.</li>
+                    <li class="translate-en display-none" style="display: none;">Make summers count: Help your student find a job or activity based on their favorite subjects and interests.</li>
+                    <li class="translate-en display-none" style="display: none;">Start discussing the family budget, a savings plan for college, and how to pay for it.</li>
                 </ul>
             </div>
         </div>
@@ -98,78 +115,195 @@
 
     <div class="container">
         <header class="text-center">
-            <h1>Cuando usted es el padre de un:</h1>
-            <h2>Junior - Estudiante de tercer año de secundaria (11º grado)​</h2>
+            <h1 class="translate-es">Cuando usted es el padre de un:</h1>
+            <h2 class="translate-es">Junior - Estudiante de tercer año de secundaria (11º grado)​</h2>
+            <h1 class="translate-en display-none" style="display: none;">When you are the parent of a:</h1>
+            <h2 class="translate-en display-none" style="display: none;">Junior - 11th-grade high school student</h2>
         </header>
         <div class="row">
             <div class="col-md-6">
                 <ul class="text-list">
-                    <li> Acompañe a su estudiante a las noches universitarias, a las presentaciones de preparación para la universidad y a las noches de ayuda financiera.</li>
-                    <li>Anime a su estudiante a solicitar material de las universidades de su interés.</li>
+                    <li class="translate-es">Acompañe a su estudiante a las noches universitarias, a las presentaciones de preparación para la universidad y a las noches de ayuda financiera.</li>
+                    <li class="translate-es">Anime a su estudiante a solicitar material de las universidades de su interés.</li>
+                    <li class="translate-en display-none" style="display: none;">Accompany your student to college nights, college preparation presentations, and financial aid nights.</li>
+                    <li class="translate-en display-none" style="display: none;">Encourage your student to request materials from the universities they are interested in.</li>
                 </ul>
             </div>
-            <div class="col-md-6 ">
+            <div class="col-md-6">
                 <img src="{% static 'assets/img/pensando.png' %}" alt="Imagen" class="rounded-circle float-left mr-3" style="width: 240px; height: 220px; object-fit: cover; border-radius: 110px; margin-top: 80px; margin-left: -90px;">
                 <ul class="text-list">
-                    <li>Anime a su estudiante a explorar carreras y ayúdele a investigar el tipo de educación necesaria para las carreras que le interesan.</li>
-                    <li>Asegúrese de que su estudiante se haya inscrito en las pruebas necesarias para la admisión a la universidad.</li>
+                    <li class="translate-es">Anime a su estudiante a explorar carreras y ayúdele a investigar el tipo de educación necesaria para las carreras que le interesan.</li>
+                    <li class="translate-es">Asegúrese de que su estudiante se haya inscrito en las pruebas necesarias para la admisión a la universidad.</li>
+                    <li class="translate-en display-none" style="display: none;">Encourage your student to explore careers and help them research the type of education needed for the careers they are interested in.</li>
+                    <li class="translate-en display-none" style="display: none;">Ensure that your student has registered for the necessary tests for college admission.</li>
                 </ul>
             </div>
         </div>
     </div>
-
     <hr class="hr-separator">
 
     <div class="container">
         <header class="text-center">
-            <h1>Cuando usted es el padre de un:</h1>
-            <h2>Junior - Estudiante de tercer año de secundaria (11º grado)​</h2>
+            <h1 class="translate-es">Cuando usted es el padre de un:</h1>
+            <h2 class="translate-es">Junior - Estudiante de tercer año de secundaria (11º grado)​</h2>
+            <h1 class="translate-en display-none" style="display: none;">When you are the parent of a:</h1>
+            <h2 class="translate-en display-none" style="display: none;">Junior - 11th-grade high school student</h2>
         </header>
         <div class="row">
             <div class="col-md-6">
                 <ul class="text-list">
-                    <li>Hable con su hijo para ver si necesita ayuda adicional en alguna materia; las notas de estudiante junior son muy importantes para las solicitudes de ingreso a la universidad.</li>
+                    <li class="translate-es">Hable con su hijo para ver si necesita ayuda adicional en alguna materia; las notas de estudiante junior son muy importantes para las solicitudes de ingreso a la universidad.</li>
+                    <li class="translate-en display-none" style="display: none;">Talk to your child to see if they need additional help in any subject; junior year grades are crucial for college admissions.</li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <img src="{% static 'assets/img/beca1.jpg' %}" alt="Imagen" class="rounded-circle float-left mr-3"style="width: 240px; height: 220px; object-fit: cover; border-radius: 110px; margin-top: 40px; margin-left: -80px;">
+                <img src="{% static 'assets/img/beca1.jpg' %}" alt="Imagen" class="rounded-circle float-left mr-3" style="width: 240px; height: 220px; object-fit: cover; border-radius: 110px; margin-top: 40px; margin-left: -80px;">
                 <ul class="text-list">
-                    <li>Hable de los planes de ayuda financiera con su estudiante y anímalo a buscar becas y otros recursos que le ayuden a pagar la universidad.</li>
+                    <li class="translate-es">Hable de los planes de ayuda financiera con su estudiante y anímalo a buscar becas y otros recursos que le ayuden a pagar la universidad.</li>
+                    <li class="translate-en display-none" style="display: none;">Discuss financial aid plans with your student and encourage them to search for scholarships and other resources to help pay for college.</li>
                 </ul>
             </div>
             <div class="col-md-12">
                 <ul class="text-list text-center">
-                    <li>Inscríbase en los exámenes de admisión a la universidad SAT/ACT si su estudiante está interesado en las universidades de 4 años.</li>
+                    <li class="translate-es">Inscríbase en los exámenes de admisión a la universidad SAT/ACT si su estudiante está interesado en las universidades de 4 años.</li>
+                    <li class="translate-en display-none" style="display: none;">Register for the SAT/ACT college admission exams if your student is interested in 4-year universities.</li>
                 </ul>
             </div>
         </div>
     </div>
+    
 
     <hr class="hr-separator">
 
     <div class="container">
         <header class="text-center">
-            <h1>Cuando usted es el padre de un:</h1>
-            <h2>Senior - Estudiante de último año de secundaria (12º grado)​</h2>
+            <h1 class="translate-es">Cuando usted es el padre de un:</h1>
+            <h2 class="translate-es">Senior - Estudiante de último año de secundaria (12º grado)​</h2>
+            <h1 class="translate-en display-none" style="display: none;">When you are the parent of a:</h1>
+            <h2 class="translate-en display-none" style="display: none;">Senior - 12th-grade high school student</h2>
         </header>
         <div class="row">
             <div class="col-md-6">
                 <ul class="text-list">
-                    <li>Anime a su estudiante a mantener sus calificaciones y a seguir participando en sus actividades extracurriculares.</li>
-                    <li>Presente su declaración de impuestos con anticipación, ya que la fecha límite principal para FAFSA (Solicitud Gratuita de Ayuda Federal para Estudiantes) es el 1 de abril de cada año.</li>
+                    <li class="translate-es">Anime a su estudiante a mantener sus calificaciones y a seguir participando en sus actividades extracurriculares.</li>
+                    <li class="translate-en display-none" style="display: none;">Encourage your student to maintain their grades and continue participating in extracurricular activities.</li>
+                    <li class="translate-es">Presente su declaración de impuestos con anticipación, ya que la fecha límite principal para FAFSA (Solicitud Gratuita de Ayuda Federal para Estudiantes) es el 1 de abril de cada año.</li>
+                    <li class="translate-en display-none" style="display: none;">File your taxes early, as the main deadline for FAFSA (Free Application for Federal Student Aid) is April 1st each year.</li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <img src="{% static 'assets/img/universidad.jpg' %}" alt="Imagen" class="float-left mr-3" style="width: 240px; height: 220px; object-fit: cover; border-radius: 110px; margin-top: 130px; margin-left: -80px;">
                 <ul class="text-list">
-                    <li>Organice visitas al campus de las escuelas que le interesan a su estudiante.</li>
-                    <li>Asegúrese de que su estudiante está completando los requisitos de graduación de la escuela secundaria.</li>
+                    <li class="translate-es">Organice visitas al campus de las escuelas que le interesan a su estudiante.</li>
+                    <li class="translate-en display-none" style="display: none;">Organize campus visits to schools your student is interested in.</li>
+                    <li class="translate-es">Asegúrese de que su estudiante está completando los requisitos de graduación de la escuela secundaria.</li>
+                    <li class="translate-en display-none" style="display: none;">Ensure that your student is completing high school graduation requirements.</li>
                 </ul>
             </div>
             <div class="col-md-12">
                 <ul class="text-list text-center">
-                    <li> Trabaje con su estudiante para presentar FAFSA.</li>
+                    <li class="translate-es">Trabaje con su estudiante para presentar FAFSA.</li>
+                    <li class="translate-en display-none" style="display: none;">Work with your student to submit FAFSA.</li>
                 </ul>
             </div>
         </div>
     </div>
+    
+
+    <div class="idioma-container">
+        <div class="custom-select" id="customSelect">
+            <span>Español</span>
+            <img src="{% static 'assets/img/idioma_español.png' %}" alt="Español">
+        </div>
+            <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
+        <div class="custom-options" id="customOptions">
+            <div class="custom-option" onclick="selectOption('es', 'Español', '{% static 'assets/img/idioma_español.png' %}')">Español</div>
+            <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
+        </div>
+    </div>
+    
+        <script>
+            function selectOption(value, text, imagePath) {
+                document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+                document.getElementById('customOptions').classList.remove('show');
+            }
+        
+            document.getElementById('customSelect').addEventListener('click', function (event) {
+                // Stop propagation to prevent the outer click event listener from closing the options list
+                event.stopPropagation();
+                document.getElementById('customOptions').classList.toggle('show');
+            });
+        
+            document.addEventListener('click', function () {
+                var options = document.getElementById('customOptions');
+                if (options.classList.contains('show')) {
+                    options.classList.remove('show');
+                }
+            });
+    
+            document.addEventListener('DOMContentLoaded'), function () {
+            // Add a click event listener to all "Ver Más" buttons
+            document.querySelectorAll('.ver-mas').forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    // Check if the user is not logged in (you need to adjust this condition based on your authentication logic)
+                    if (!userIsLoggedIn()) {
+                        // Redirect the user to the login page
+                        window.location.href = '/iniciosesion/';
+                    }
+                });
+            });
+          };
+    
+    
+    
+    
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/google-translate-api-browser@0.1.12"></script>
+        <script>
+            var translateBtn; // Variable global para almacenar el botón de traducción
+        
+            function selectOption(value, text, imagePath) {
+                var customSelect = document.getElementById('customSelect');
+                customSelect.innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+        
+                // Cambiar el idioma de la página
+                document.documentElement.lang = value;
+        
+                // Mostrar/ocultar elementos según el idioma seleccionado
+                var navbarElementsEs = document.querySelectorAll('.translate-es');
+                var navbarElementsEn = document.querySelectorAll('.translate-en');
+        
+                if (value === 'es') {
+                    navbarElementsEs.forEach(element => element.style.display = 'block');
+                    navbarElementsEn.forEach(element => element.style.display = 'none');
+                } else {
+                    navbarElementsEs.forEach(element => element.style.display = 'none');
+                    navbarElementsEn.forEach(element => element.style.display = 'block');
+                }
+        
+        
+                // Activar evento de traducción
+                if (translateBtn) {
+                    translateBtn.click();
+                }
+        
+                var customOptions = document.getElementById('customOptions');
+                customOptions.classList.remove('show');
+            }
+        
+            function changeLanguage(value) {
+                var customSelect = document.getElementById('customSelect');
+                var selectedText = value === 'es' ? 'Español' : 'English';
+                var imagePath = value === 'es' ? '{% static 'assets/img/idioma_español.png' %}' : '{% static 'assets/img/idioma_ingles.png' %}';
+                customSelect.innerHTML = `<span>${selectedText}</span><img src="${imagePath}" alt="${selectedText}">`;
+        
+                // Disparar el evento de cambio de idioma
+                selectOption(value, selectedText, imagePath);
+            }
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Al cargar la página, obtener el botón de traducción
+                translateBtn = document.querySelector('button');
+            });
+        </script>   

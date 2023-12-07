@@ -18,25 +18,28 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-white bg-white">
         <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo" style="width: 110px; height: 90px; margin-right: 50px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ">
-            <li class="nav-item">
-                <a class="nav-link" style="color: black;" href="/donaciones/">Donaciones</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" style="color: black;" href="/acercade/">Acerca de</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" style="color: black;" href="/rs/">Redes</a>
-            </li>
-            </ul>
-        </div>
+            <a class="navbar-brand" href="/">
+                <img src="{% static 'assets/img/logosinfd.png' %}" alt="Logo" style="width: 110px; height: 90px; margin-right: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link translate-es" style="color: black;" href="/donaciones/">Donaciones</a>
+                        <a class="nav-link translate-en" style="color: black; display: none;" href="/donations/">Donations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link translate-es" style="color: black;" href="/acercade/">Acerca de</a>
+                        <a class="nav-link translate-en" style="color: black; display: none;" href="/about/">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link translate-es" style="color: black;" href="/rs/">Redes</a>
+                        <a class="nav-link translate-en" style="color: black; display: none;" href="/networks/">Socials</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="container">
@@ -46,14 +49,16 @@
             </div>
             <div class="col-md-6">
                 <div class="info-box">
-                    <h1 class="text-center">¿Universidad o College?</h1>
-                    <p>Existen escuelas del tipo “college” que ofrecen programas de 2 años en donde el estudiante obtiene un “Associates Degree” o un certificado, también puede cursar materias que luego le sirvan para completar la universidad, es decir la University ofrece programas de licenciatura, de 4 años, en su departamento de estudios “undergraduate”.</p>
+                    <h1 class="text-center translate-es">¿Universidad o College?</h1>
+                    <h1 class="text-center translate-en" style="display: none;">University or College?</h1>
+                    <p class="translate-es">Existen escuelas del tipo “college” que ofrecen programas de 2 años en donde el estudiante obtiene un “Associates Degree” o un certificado, también puede cursar materias que luego le sirvan para completar la universidad, es decir la University ofrece programas de licenciatura, de 4 años, en su departamento de estudios “undergraduate”.</p>
+                    <p class="translate-en" style="display: none;">There are "college" type schools that offer 2-year programs where students obtain an "Associates Degree" or a certificate. They can also take courses that will later count towards completing a university degree, that is, the University offers 4-year bachelor's degree programs in its "undergraduate" department.</p>
                 </div>
             </div>
         </div>
     </div>
     <hr class="hr-separator">
-
+    
     <div class="container">
         <div class="row">
             <div class="col-md-6 order-md-2">
@@ -61,16 +66,117 @@
             </div>
             <div class="col-md-6 order-md-1">
                 <div class="info-box">
-                    <h1 class="text-center">¿Universidad o College?</h1>
-                    <p>Los términos “undergraduate” y “graduate” suelen causar confusión también a los estudiantes extranjeros, pues ambos son parte de la misma universidad. ​
-
-                        El primero se refiere a los programas de licenciatura, el segundo a maestría y doctorados. (M.A y Ph. D)​
-                        
-                        ​.</p>
-                    <p>Una de las diferencias principales radica en el tamaño del sistema escolar. Las universidades tienden a ofrecer programas más amplios que incluyen licenciaturas, maestrías y doctorados.</p>
-                    <p>Por ejemplo, una universidad típicamente tiene escuelas (en algunos casos llamados colleges) de artes y ciencias, escuelas de ingeniería, de medicina y otros programas, mientras que, con sus excepciones, los Colleges suele ofrecer un programa más limitado y a menudo no tienen programas de maestría.</p>
+                    <h1 class="text-center translate-es">¿Universidad o College?</h1>
+                    <h1 class="text-center translate-en" style="display: none;">University or College?</h1>
+                    <p class="translate-es">Los términos “undergraduate” y “graduate” suelen causar confusión también a los estudiantes extranjeros, pues ambos son parte de la misma universidad.</p>
+                    <p class="translate-en" style="display: none;">The terms "undergraduate" and "graduate" often cause confusion for foreign students, as both are part of the same university.</p>
+                    <p class="translate-es">El primero se refiere a los programas de licenciatura, el segundo a maestría y doctorados. (M.A y Ph. D).</p>
+                    <p class="translate-en" style="display: none;">The first refers to bachelor's degree programs, the second to master's and doctoral programs (M.A and Ph.D).</p>
+                    <p class="translate-es">Una de las diferencias principales radica en el tamaño del sistema escolar. Las universidades tienden a ofrecer programas más amplios que incluyen licenciaturas, maestrías y doctorados.</p>
+                    <p class="translate-en" style="display: none;">One of the main differences lies in the size of the school system. Universities tend to offer broader programs that include bachelor's, master's, and doctoral degrees.</p>
+                    <p class="translate-es">Por ejemplo, una universidad típicamente tiene escuelas (en algunos casos llamados colleges) de artes y ciencias, escuelas de ingeniería, de medicina y otros programas, mientras que, con sus excepciones, los Colleges suele ofrecer un programa más limitado y a menudo no tienen programas de maestría.</p>
+                    <p class="translate-en" style="display: none;">For example, a university typically has schools (sometimes called colleges) of arts and sciences, engineering schools, medical schools, and other programs, while Colleges, with their exceptions, usually offer a more limited program and often do not have master's programs.</p>
                     <hr>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="idioma-container">
+        <div class="custom-select" id="customSelect">
+            <span>Español</span>
+            <img src="{% static 'assets/img/idioma_español.png' %}" alt="Español">
+        </div>
+            <!-- ESTO DA ERROR PERO FUNCIONA BIEN, Y SI FUNCIONA BIEN NO SE TOCA :) -->
+        <div class="custom-options" id="customOptions">
+            <div class="custom-option" onclick="selectOption('es', 'Español', '{% static 'assets/img/idioma_español.png' %}')">Español</div>
+            <div class="custom-option" onclick="selectOption('en', 'Ingles', '{% static 'assets/img/idioma_ingles.png' %}')">Ingles</div>
+        </div>
+    </div>
+    
+        <script>
+            function selectOption(value, text, imagePath) {
+                document.getElementById('customSelect').innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+                document.getElementById('customOptions').classList.remove('show');
+            }
+        
+            document.getElementById('customSelect').addEventListener('click', function (event) {
+                // Stop propagation to prevent the outer click event listener from closing the options list
+                event.stopPropagation();
+                document.getElementById('customOptions').classList.toggle('show');
+            });
+        
+            document.addEventListener('click', function () {
+                var options = document.getElementById('customOptions');
+                if (options.classList.contains('show')) {
+                    options.classList.remove('show');
+                }
+            });
+    
+            document.addEventListener('DOMContentLoaded'), function () {
+            // Add a click event listener to all "Ver Más" buttons
+            document.querySelectorAll('.ver-mas').forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    // Check if the user is not logged in (you need to adjust this condition based on your authentication logic)
+                    if (!userIsLoggedIn()) {
+                        // Redirect the user to the login page
+                        window.location.href = '/iniciosesion/';
+                    }
+                });
+            });
+          };
+    
+    
+    
+    
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/google-translate-api-browser@0.1.12"></script>
+        <script>
+            var translateBtn; // Variable global para almacenar el botón de traducción
+        
+            function selectOption(value, text, imagePath) {
+                var customSelect = document.getElementById('customSelect');
+                customSelect.innerHTML = `<span>${text}</span><img src="${imagePath}" alt="${text}">`;
+        
+                // Cambiar el idioma de la página
+                document.documentElement.lang = value;
+        
+                // Mostrar/ocultar elementos según el idioma seleccionado
+                var navbarElementsEs = document.querySelectorAll('.translate-es');
+                var navbarElementsEn = document.querySelectorAll('.translate-en');
+        
+                if (value === 'es') {
+                    navbarElementsEs.forEach(element => element.style.display = 'block');
+                    navbarElementsEn.forEach(element => element.style.display = 'none');
+                } else {
+                    navbarElementsEs.forEach(element => element.style.display = 'none');
+                    navbarElementsEn.forEach(element => element.style.display = 'block');
+                }
+        
+        
+                // Activar evento de traducción
+                if (translateBtn) {
+                    translateBtn.click();
+                }
+        
+                var customOptions = document.getElementById('customOptions');
+                customOptions.classList.remove('show');
+            }
+        
+            function changeLanguage(value) {
+                var customSelect = document.getElementById('customSelect');
+                var selectedText = value === 'es' ? 'Español' : 'English';
+                var imagePath = value === 'es' ? '{% static 'assets/img/idioma_español.png' %}' : '{% static 'assets/img/idioma_ingles.png' %}';
+                customSelect.innerHTML = `<span>${selectedText}</span><img src="${imagePath}" alt="${selectedText}">`;
+        
+                // Disparar el evento de cambio de idioma
+                selectOption(value, selectedText, imagePath);
+            }
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Al cargar la página, obtener el botón de traducción
+                translateBtn = document.querySelector('button');
+            });
+        </script>   
+
