@@ -65,7 +65,7 @@ class CustomAuthenticationForm(AuthenticationForm):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = Usuario
-        fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono', 'estado', 'ciudad', 'email', 'user_type']
+        fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono','email', 'estado', 'ciudad', 'user_type']
 
 class PasswordChangeForm(forms.Form):
     current_password = forms.CharField(label='Contraseña actual', widget=forms.PasswordInput())

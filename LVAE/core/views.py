@@ -83,7 +83,7 @@ def index(request):
     return render(request, "core/index.html")
 def rs(request):
     return render(request, "core/rs.html")
-def gestionperfil(request):
+def gestion_perfil(request):
     return render(request, "core/gestionperfil.html")
 def donaciones(request):
     return render(request, "core/donaciones.html")

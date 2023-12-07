@@ -40,17 +40,11 @@
                     <li class="nav-item">
                         <a class="nav-link" style="color: black;" href="/rs/">Redes</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link special-link" href="/iniciosesion/">Inicio sesión</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link special-link" href="/registroap/">Registro</a>
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <h1>Gestión de Perfil</h1>
+    <h1 class="titulo">Gestión de Perfil</h1>
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
@@ -64,7 +58,7 @@
         <button type="submit">Actualizar datos</button>
     </form>
     <hr>
-    <h3>Cambiar contraseña</h3>
+    <h3 class="titulo">Cambiar contraseña</h3>
     <form method="post">
         {% csrf_token %}
         {{ password_form.as_p }}

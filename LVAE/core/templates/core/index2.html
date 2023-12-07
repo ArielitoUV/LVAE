@@ -33,7 +33,7 @@
                 <a class="nav-link" style="color: black;" href="/rs/">Redes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link special-link" href="/gestionperfil/">Mi Cuenta</a>
+                <a class="nav-link special-link" href="/gestion_perfil/">Mi Cuenta</a>
               </li>
             </ul>
           </div>
@@ -42,7 +42,7 @@
 
     <main>
         <h1 class="titulo" style="text-align: center; font-family: 'Playfair Display', serif;
-        ">¡Bienvenido, {{ user.name }}!</h1>
+        ">¡Bienvenido,{{ usuario.nombre }}!</h1>
         <p style="text-align: center; font-family: 'PT Serif', serif;
         ;
         ">Agradecemos que hayas iniciado sesión en La Vía al Éxito. Ahora, como usuario registrado, tienes acceso a una variedad de recursos educativos para apoyarte en tu camino académico. Explora las siguientes secciones para obtener la información que necesitas</p>
@@ -100,6 +100,20 @@
                     </div>
                 </div>
             </div>
+
+            <div class="additional-section">
+              <div class="value-container">
+                  <div class="value bordered rounded-box">
+                      <h3 style="font-family: 'Anton', sans-serif">Informacion sobre Becas</h3>
+                      <p style="font-family: 'EB Garamond', serif;
+                      ">Accede a nuestra informacion sobre becas.</p>
+
+                      <a href="/infobecas/" class="btn ver-mas" id="verMas3" style="font-family: 'Teko', sans-serif;
+
+                      ">Ver Más</a>
+                  </div>
+              </div>
+          </div>
 
     </main>
     <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
