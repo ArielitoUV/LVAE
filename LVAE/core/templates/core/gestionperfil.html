@@ -46,95 +46,69 @@
             </div>
         </div>
     </nav>
-    <style>
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
+    <style>/* static/css/styles-gestionperfil.css */
+
+        body {
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
         }
         
-        .form-group {
-            margin-bottom: 20px;
+        h1 {
+            color: #333; /* Color del título */
         }
         
-        .label {
+        form {
+            max-width: 400px; /* Ancho máximo del formulario */
+            margin: 0 auto; /* Centrar el formulario */
+        }
+        
+        label {
             display: block;
-            font-weight: bold;
+            margin-bottom: 8px;
+            color: #555; /* Color de la etiqueta */
         }
         
-        .input {
+        input,
+        select {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd; /* Borde del campo de entrada */
         }
         
-        .button {
-            display: inline-block;
+        button {
+            background-color: #007bff; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
             padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
         }
         
-        .button:hover {
-            background-color: #45a049;
+        button:hover {
+            background-color: #0056b3; /* Cambiar color de fondo al pasar el ratón */
+        }
+        
+        .messages {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8d7da; /* Color de fondo del contenedor de mensajes de error */
+            border: 1px solid #f5c6cb; /* Borde del contenedor de mensajes de error */
+            color: #721c24; /* Color del texto de mensajes de error */
         }
         </style>
-        
-        <h1>Gestionar Perfil</h1>
-        
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        
-        <div class="container">
-            <form method="post" action="">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label class="label" for="{{ perfil_form.nombre.id_for_label }}">Nombre:</label>
-                    {{ perfil_form.nombre }}
-                </div>
-                <div class="form-group">
-                    <label class="label" for="{{ perfil_form.apellido.id_for_label }}">Apellido:</label>
-                    {{ perfil_form.apellido }}
-                </div>
-                <div class="form-group">
-                    <label class="label" for="{{ perfil_form.telefono.id_for_label }}">Teléfono:</label>
-                    {{ perfil_form.telefono }}
-                </div>
-                <div class="form-group">
-                    <label class="label" for="{{ perfil_form.fecha_nacimiento.id_for_label }}">Fecha de nacimiento:</label>
-                    {{ perfil_form.fecha_nacimiento }}
-                </div>
-                <div class="form-group">
-                    <label class="label" for="{{ perfil_form.estado.id_for_label }}">Estado:</label>
-                    {{ perfil_form.estado }}
-                </div>
-                <div class="form-group">
-                    <label class="label" for="{{ perfil_form.ciudad.id_for_label }}">Ciudad:</label>
-                    {{ perfil_form.ciudad }}
-                </div>
-                <div class="form-group">
-                    <label class="label" for="{{ perfil_form.nuevo_campo1.id_for_label }}">Nuevo Campo 1:</label>
-                    {{ perfil_form.nuevo_campo1 }}
-                </div>
-                <div class="form-group">
-                    <label class="label" for="{{ perfil_form.nuevo_campo2.id_for_label }}">Nuevo Campo 2:</label>
-                    {{ perfil_form.nuevo_campo2 }}
-                </div>
-                <button class="button" type="submit">Guardar cambios</button>
-            </form>
-        </div>
+    <h1>Gestionar Perfil</h1>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ perfil_form.as_p }}
+        {{ password_form.as_p }}
+        <button type="submit">Guardar cambios</button>
+    </form>
       
 
 
