@@ -71,9 +71,11 @@ def gestion_perfil(request):
         password_form = PasswordChangeForm(user=usuario)
 
     context = {
-        'form': form,
-        'password_form': password_form,
-    }
+    'form': form,
+    'password_form': password_form,
+}
+    print(form.errors)
+    print(password_form.errors)
     return render(request, 'core/gestionperfil.html', context)
 
 
