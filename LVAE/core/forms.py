@@ -73,16 +73,3 @@ class PerfilForm(forms.ModelForm):
 
 class CambiarContraseñaForm(PasswordChangeForm):
     pass
-
-
-
-
-# class UserProfileForm(forms.ModelForm):
-#     class Meta:
-#         model = Usuario
-#         fields = ['nombre', 'apellido', 'fecha_nacimiento', 'telefono', 'estado', 'ciudad', 'email', 'user_type']
-
-# class PasswordChangeForm(forms.Form):
-#     current_password = forms.CharField(label='Contraseña actual', widget=forms.PasswordInput())
-#     new_password1 = forms.CharField(label='Nueva contraseña', widget=forms.PasswordInput())
-#     new_password2 = forms.CharField(label='Confirmar nueva contraseña', widget=forms.PasswordInput())

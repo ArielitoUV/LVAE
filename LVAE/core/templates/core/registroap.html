@@ -80,24 +80,24 @@
     <form id="registrationForm" method="post" action="{% url 'registrar_usuario' %}">
         {% csrf_token %}
         {% for field in form %}
-            <div class="form-group {% if field.errors %}has-error{% endif %}">
-                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                {% if field.name == 'fecha_nacimiento' %}
-                    <div class="input-group">
-                        <input type="text" class="form-control datepicker" name="{{ field.name }}"
-                               id="{{ field.id_for_label }}" placeholder="{{ field.label }}" readonly>
-                    </div>
-                {% else %}
-                    {{ field }}
-                {% endif %}
-                {% if field.errors %}
-                    <span class="help-block">
-                        {% for error in field.errors %}
-                            {{ error }}
-                        {% endfor %}
-                    </span>
-                {% endif %}
+        <div class="form-group {% if field.errors %}has-error{% endif %}">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {% if field.name == 'fecha_nacimiento' %}
+            <div class="input-group">
+                <input type="text" class="form-control datepicker" name="{{ field.name }}"
+                id="{{ field.id_for_label }}" placeholder="{{ field.label }}" readonly>
             </div>
+            {% else %}
+            {{ field }}
+            {% endif %}
+            {% if field.errors %}
+            <span class="help-block">
+                {% for error in field.errors %}
+                {{ error }}
+                {% endfor %}
+            </span>
+            {% endif %}
+        </div>
         {% endfor %}
         <button type="submit" class="translate-es">Registrar</button>
         <button type="submit" class="translate-en" style="display: none;">Register</button>

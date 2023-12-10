@@ -9,11 +9,6 @@ from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.shortcuts import render, redirect
 from .forms import PerfilForm, CambiarContraseñaForm
-
-
-
-
-
 def registrar_usuario(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
